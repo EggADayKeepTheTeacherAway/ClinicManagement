@@ -90,7 +90,7 @@ class Dosage(models.Model):
 class Patient(models.Model):
     PatientID = models.CharField(max_length=30, primary_key=True)
     Name = models.CharField(max_length=100)
-    # Phone = models.CharField(max_length=15)
+    Phone = models.CharField(max_length=15)
     Email = models.EmailField()
     Birthdate = models.DateField()
     EmergencyContact = models.CharField(max_length=100)
