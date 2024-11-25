@@ -3,7 +3,7 @@
     "model": "clinic_management.medicinerecord",
     "pk": "MR001",
     "fields": {
-      "MedicalRecordID": "MR001",
+      "MedicalRecordID": "MER001",
       "MedicationID": "MED001",
       "DosageID": "DSG001",
       "Quantity": 30,
@@ -14,7 +14,7 @@
     "model": "clinic_management.medicinerecord",
     "pk": "MR002",
     "fields": {
-      "MedicalRecordID": "MR002",
+      "MedicalRecordID": "MER002",
       "MedicationID": "MED002",
       "DosageID": "DSG002",
       "Quantity": 20,

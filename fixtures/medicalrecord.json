@@ -1,7 +1,7 @@
 [
   {
     "model": "clinic_management.medicalrecord",
-    "pk": "MR001",
+    "pk": "MER001",
     "fields": {
       "PatientID": "PAT001",
       "DoctorID": "DOC001",
@@ -14,7 +14,7 @@
   },
   {
     "model": "clinic_management.medicalrecord",
-    "pk": "MR002",
+    "pk": "MER002",
     "fields": {
       "PatientID": "PAT002",
       "DoctorID": "DOC002",
