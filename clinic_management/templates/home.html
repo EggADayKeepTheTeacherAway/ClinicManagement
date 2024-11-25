@@ -1,18 +1,18 @@
 {% extends 'base.html' %}
-{% block title %}Home{% endblock %}
+
+{% block title %}Clinic Management{% endblock %}
 
 {% block content %}
 <div class="py-5">
     <div class="container">
-        <!-- Welcome Section -->
         <div class="text-center mb-4">
             <h1 class="display-5 fw-bold text-dark">Clinic Management System</h1>
             <hr class="w-25 mx-auto bg-gradient border-2 rounded">
             <p class="text-muted">Healthcare Management Dashboard</p>
         </div>
 
-        <!-- Doctor & Patients + Records & Documents Section (Two categories in one row) -->
         <div class="row row-cols-1 row-cols-md-2 g-4 mb-4">
+            <!-- Doctor & Patient section -->
             <div class="col">
                 <div class="card">
                     <div class="card-header bg-primary text-white">
@@ -21,22 +21,22 @@
                     <div class="card-body">
                         <div class="row row-cols-2 g-3">
                             <div class="col">
-                                <a href="{% url 'doctor' %}" class="btn btn-primary w-100 py-3">
+                                <a href="{% url 'doctor' %}" class="btn btn-info w-100 py-3 text-white fw-bold">
                                     <i class="bi bi-person-badge"></i> Doctor
                                 </a>
                             </div>
                             <div class="col">
-                                <a href="{% url 'patient' %}" class="btn btn-primary w-100 py-3">
+                                <a href="{% url 'patient' %}" class="btn btn-info w-100 py-3 text-white fw-bold">
                                     <i class="bi bi-person-fill"></i> Patient
                                 </a>
                             </div>
                             <div class="col">
-                                <a href="{% url 'appointment' %}" class="btn btn-success w-100 py-3">
+                                <a href="{% url 'appointment' %}" class="btn btn-info w-100 py-3 text-white fw-bold">
                                     <i class="bi bi-calendar-check"></i> Appointment
                                 </a>
                             </div>
                             <div class="col">
-                                <a href="{% url 'availability' %}" class="btn btn-danger w-100 py-3">
+                                <a href="{% url 'availability' %}" class="btn btn-info w-100 py-3 text-white fw-bold">
                                     <i class="bi bi-clock"></i> Availability
                                 </a>
                             </div>
@@ -45,25 +45,26 @@
                 </div>
             </div>
 
+            <!-- Financial & Insurance section -->
             <div class="col">
                 <div class="card">
-                    <div class="card-header bg-info text-white">
+                    <div class="card-header bg-success text-white">
                         <h5 class="mb-0">Financial & Insurance</h5>
                     </div>
                     <div class="card-body">
                         <div class="row row-cols-2 g-3">
                             <div class="col">
-                                <a href="{% url 'payment' %}" class="btn btn-warning w-100 py-3">
+                                <a href="{% url 'payment' %}" class="btn btn-success w-100 py-3 fw-bold">
                                     <i class="bi bi-credit-card-fill"></i> Payment
                                 </a>
                             </div>
                             <div class="col">
-                                <a href="{% url 'insurance' %}" class="btn btn-info w-100 py-3">
+                                <a href="{% url 'insurance' %}" class="btn btn-success w-100 py-3 fw-bold">
                                     <i class="bi bi-shield-lock"></i> Insurance
                                 </a>
                             </div>
                             <div class="col">
-                                <a href="{% url 'coverage_policy' %}" class="btn btn-success w-100 py-3">
+                                <a href="{% url 'coverage_policy' %}" class="btn btn-success w-100 py-3 fw-bold">
                                     <i class="bi bi-shield-fill-check"></i> Coverage Policy
                                 </a>
                             </div>
@@ -71,14 +72,13 @@
                     </div>
                 </div>
             </div>
-
         </div>
 
-        <!-- Financial & Insurance + Inventory & Availability Section (Two categories in one row) -->
         <div class="row row-cols-1 row-cols-md-2 g-4 mb-4">
+            <!-- Records section -->
             <div class="col">
                 <div class="card">
-                    <div class="card-header bg-success text-white">
+                    <div class="card-header bg-danger text-white">
                         <h5 class="mb-0">Records</h5>
                     </div>
                     <div class="card-body">
@@ -89,7 +89,7 @@
                                 </a>
                             </div>
                             <div class="col">
-                                <a href="{% url 'medicine_record' %}" class="btn btn-info w-100 py-3">
+                                <a href="{% url 'medicine_record' %}" class="btn btn-warning w-100 py-3">
                                     <i class="bi bi-file-earmark-text"></i> Medicine Record
                                 </a>
                             </div>
@@ -98,7 +98,7 @@
                 </div>
             </div>
 
-
+            <!-- Medicine & Dosage section -->
             <div class="col">
                 <div class="card">
                     <div class="card-header bg-secondary text-white">
@@ -122,8 +122,8 @@
             </div>
         </div>
 
-
         <div class="row row-cols-1 row-cols-md-2 g-4">
+            <!-- Diseases & Treatment section -->
             <div class="col">
                 <div class="card">
                     <div class="card-header bg-info text-white">
