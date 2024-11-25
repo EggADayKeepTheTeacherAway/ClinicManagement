@@ -1,4 +1,7 @@
 {% extends 'base.html' %}
+{% block title %}
+Home Page
+{% endblock %}
 {% block content %}
 {% load static %}
 
@@ -62,10 +65,11 @@
                     <th>Disease Name</th>
                     <th>Disease Description</th>
 
+                    <!-- Medicines -->
                     <th>Medicine ID</th>
                     <th>Medicine Name</th>
                     <th>Medicine Brand</th>
-                    <th>Medicine Instruction</th>
+                    <th>Medicine Instructions</th>
                     <th>Medicine Default Dosage</th>
                     <th>Medicine Price</th>
 
@@ -125,47 +129,47 @@
                     <td>{{ data.disease_name }}</td>
                     <td>{{ data.disease_description }}</td>
 
-
+                    <!-- Medicines -->
                     <td>
                         {% for medicine in data.medicines_for_appointment %}
-                            <div>{{ medicine.MedicationID }}</div>
+                            <div>{{ medicine.MedicineID }}</div>
                         {% empty %}
-                            No medicines
+                            <div>No medicines</div>
                         {% endfor %}
                     </td>
                     <td>
                         {% for medicine in data.medicines_for_appointment %}
-                            <div>{{ medicine.Name }}</div>
+                            <div>{{ medicine.MedicineName }}</div>
                         {% empty %}
-                            No medicines
+                            <div>No medicines</div>
                         {% endfor %}
                     </td>
                     <td>
                         {% for medicine in data.medicines_for_appointment %}
-                            <div>{{ medicine.Brand }}</div>
+                            <div>{{ medicine.MedicineBrand }}</div>
                         {% empty %}
-                            No medicines
+                            <div>No medicines</div>
                         {% endfor %}
                     </td>
                     <td>
                         {% for medicine in data.medicines_for_appointment %}
-                            <div>{{ medicine.Instructions }}</div>
+                            <div>{{ medicine.MedicineInstructions }}</div>
                         {% empty %}
-                            No medicines
+                            <div>No medicines</div>
                         {% endfor %}
                     </td>
                     <td>
                         {% for medicine in data.medicines_for_appointment %}
-                            <div>{{ medicine.DefaultDosage }}</div>
+                            <div>{{ medicine.MedicineDefaultDosage }}</div>
                         {% empty %}
-                            No medicines
+                            <div>No medicines</div>
                         {% endfor %}
                     </td>
                     <td>
                         {% for medicine in data.medicines_for_appointment %}
-                            <div>{{ medicine.Price }}</div>
+                            <div>{{ medicine.MedicinePrice }}</div>
                         {% empty %}
-                            No medicines
+                            <div>No medicines</div>
                         {% endfor %}
                     </td>
 
@@ -198,6 +202,5 @@
             });
         });
     </script>
-
 </body>
 {% endblock %}
