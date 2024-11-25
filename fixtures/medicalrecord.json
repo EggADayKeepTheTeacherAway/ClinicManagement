@@ -1,0 +1,28 @@
+[
+  {
+    "model": "clinic_management.medicalrecord",
+    "pk": "MR001",
+    "fields": {
+      "PatientID": "PAT001",
+      "DoctorID": "DOC001",
+      "DiseaseID": "DIS001",
+      "VisitReason": "General Checkup",
+      "Summary": "Patient visited for regular health checkup.",
+      "DateVisit": "2024-11-23",
+      "Status": "Completed"
+    }
+  },
+  {
+    "model": "clinic_management.medicalrecord",
+    "pk": "MR002",
+    "fields": {
+      "PatientID": "PAT002",
+      "DoctorID": "DOC002",
+      "DiseaseID": "DIS002",
+      "VisitReason": "Fever and Cough",
+      "Summary": "Patient complained of fever and cough.",
+      "DateVisit": "2024-11-24",
+      "Status": "Completed"
+    }
+  }
+]

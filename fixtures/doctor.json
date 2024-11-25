@@ -1,0 +1,24 @@
+[
+  {
+    "model": "clinic_management.doctor",
+    "pk": "DOC001",
+    "fields": {
+      "Name": "Dr. Michael Johnson",
+      "Phone": "555-7890",
+      "Email": "mjohndoe@clinic.com",
+      "Birthdate": "1978-07-15",
+      "Specialization": "Cardiology"
+    }
+  },
+  {
+    "model": "clinic_management.doctor",
+    "pk": "DOC002",
+    "fields": {
+      "Name": "Dr. Emma White",
+      "Phone": "555-2345",
+      "Email": "ewhite@clinic.com",
+      "Birthdate": "1982-11-30",
+      "Specialization": "Dermatology"
+    }
+  }
+]

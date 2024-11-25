@@ -1,0 +1,24 @@
+[
+  {
+    "model": "clinic_management.medicine",
+    "pk": "MED001",
+    "fields": {
+      "Name": "Aspirin",
+      "Brand": "Bayer",
+      "Instructions": "Take one tablet daily after meals.",
+      "DefaultDosage": "1 tablet",
+      "Price": 10
+    }
+  },
+  {
+    "model": "clinic_management.medicine",
+    "pk": "MED002",
+    "fields": {
+      "Name": "Hydrocortisone",
+      "Brand": "Generic",
+      "Instructions": "Apply to affected skin areas twice a day.",
+      "DefaultDosage": "Apply topically",
+      "Price": 20
+    }
+  }
+]
