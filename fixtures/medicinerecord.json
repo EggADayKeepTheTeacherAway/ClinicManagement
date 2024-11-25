@@ -10,9 +10,20 @@
       "Cost": 300
     }
   },
-  {
+    {
     "model": "clinic_management.medicinerecord",
     "pk": "MR002",
+    "fields": {
+      "MedicalRecordID": "MER001",
+      "MedicationID": "MED002",
+      "DosageID": "DSG001",
+      "Quantity": 30,
+      "Cost": 300
+    }
+  },
+  {
+    "model": "clinic_management.medicinerecord",
+    "pk": "MR003",
     "fields": {
       "MedicalRecordID": "MER002",
       "MedicationID": "MED002",

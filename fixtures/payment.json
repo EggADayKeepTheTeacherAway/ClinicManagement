@@ -3,7 +3,7 @@
     "model": "clinic_management.payment",
     "pk": "PAY001",
     "fields": {
-      "MedicalRecordID": "MR001",
+      "MedicalRecordID": "MER001",
       "InsuranceID": "INS001",
       "BaseCharge": 150000,
       "MedicineCost": 5000,
@@ -17,7 +17,7 @@
     "model": "clinic_management.payment",
     "pk": "PAY002",
     "fields": {
-      "MedicalRecordID": "MR002",
+      "MedicalRecordID": "MER002",
       "InsuranceID": "INS002",
       "BaseCharge": 5000,
       "MedicineCost": 200,

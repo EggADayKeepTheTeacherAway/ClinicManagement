@@ -49,9 +49,10 @@ class HomePageView(generic.TemplateView):
             disease = disease_mapping.get(medical_record.DiseaseID.DiseaseID) if medical_record else None
             payment = payment_mapping.get(medical_record.MedicalRecordID) if medical_record else None
             treatment_for_appointment = treatment_mapping.get(disease.TreatmentID.TreatmentID) if disease else None
-
+            print(medical_record)
             # Medicine details and dosage (same as your previous logic)
             medicine_records_for_appointment = medicine_records.filter(MedicalRecordID=medical_record) if medical_record else []
+
             medicine_dosages = []
             medicines_for_appointment = []
 
@@ -123,7 +124,7 @@ class HomePageView(generic.TemplateView):
                 'disease_name': disease.Name if disease else "N/A",
                 'disease_description': disease.Description if disease else "N/A",
 
-                'medicines_for_appointment': medicines_for_appointment if medicines_for_appointment else "N/A",
+                'medicines_for_appointment': medicine_records_for_appointment if medicine_records_for_appointment else "N/A",
                 'medicine_dosages': medicine_dosages if medicine_dosages else "N/A",
 
                 'treatment_id': treatment_for_appointment.TreatmentID if treatment_for_appointment else "N/A",

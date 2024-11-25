@@ -126,42 +126,42 @@
 
                     <td>
                         {% for medicine in data.medicines_for_appointment %}
-                            <div>{{ medicine.MedicationID }}</div>
+                            <div>{{ medicine.MedicationID.MedicationID }}</div>
                         {% empty %}
                             No medicines
                         {% endfor %}
                     </td>
                     <td>
                         {% for medicine in data.medicines_for_appointment %}
-                            <div>{{ medicine.Name }}</div>
+                            <div>{{ medicine.MedicationID.Name }}</div>
                         {% empty %}
                             No medicines
                         {% endfor %}
                     </td>
                     <td>
                         {% for medicine in data.medicines_for_appointment %}
-                            <div>{{ medicine.Brand }}</div>
+                            <div>{{ medicine.MedicationID.Brand }}</div>
                         {% empty %}
                             No medicines
                         {% endfor %}
                     </td>
                     <td>
                         {% for medicine in data.medicines_for_appointment %}
-                            <div>{{ medicine.Instructions }}</div>
+                            <div>{{ medicine.MedicationID.Instructions }}</div>
                         {% empty %}
                             No medicines
                         {% endfor %}
                     </td>
                     <td>
                         {% for medicine in data.medicines_for_appointment %}
-                            <div>{{ medicine.DefaultDosage }}</div>
+                            <div>{{ medicine.MedicationID.DefaultDosage }}</div>
                         {% empty %}
                             No medicines
                         {% endfor %}
                     </td>
                     <td>
                         {% for medicine in data.medicines_for_appointment %}
-                            <div>{{ medicine.Price }}</div>
+                            <div>{{ medicine.MedicationID.Price }}</div>
                         {% empty %}
                             No medicines
                         {% endfor %}
