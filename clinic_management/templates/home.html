@@ -2,7 +2,7 @@
 {% block title %}Home{% endblock %}
 
 {% block content %}
-<div class="bg-light py-5">
+<div class="py-5">
     <div class="container">
         <!-- Welcome Section -->
         <div class="text-center mb-4">
@@ -21,6 +21,11 @@
                     <div class="card-body">
                         <div class="row row-cols-2 g-3">
                             <div class="col">
+                                <a href="{% url 'doctor' %}" class="btn btn-primary w-100 py-3">
+                                    <i class="bi bi-person-badge"></i> Doctor
+                                </a>
+                            </div>
+                            <div class="col">
                                 <a href="{% url 'patient' %}" class="btn btn-primary w-100 py-3">
                                     <i class="bi bi-person-fill"></i> Patient
                                 </a>
@@ -31,13 +36,8 @@
                                 </a>
                             </div>
                             <div class="col">
-                                <a href="{% url 'treatment' %}" class="btn btn-secondary w-100 py-3">
-                                    <i class="bi bi-hospital"></i> Treatment
-                                </a>
-                            </div>
-                            <div class="col">
-                                <a href="{% url 'doctor' %}" class="btn btn-primary w-100 py-3">
-                                    <i class="bi bi-person-badge"></i> Doctor
+                                <a href="{% url 'availability' %}" class="btn btn-danger w-100 py-3">
+                                    <i class="bi bi-clock"></i> Availability
                                 </a>
                             </div>
                         </div>
@@ -45,41 +45,6 @@
                 </div>
             </div>
 
-            <div class="col">
-                <div class="card">
-                    <div class="card-header bg-success text-white">
-                        <h5 class="mb-0">Records & Documents</h5>
-                    </div>
-                    <div class="card-body">
-                        <div class="row row-cols-2 g-3">
-                            <div class="col">
-                                <a href="{% url 'medical_record' %}" class="btn btn-danger w-100 py-3">
-                                    <i class="bi bi-file-earmark-medical"></i> Medical Record
-                                </a>
-                            </div>
-                            <div class="col">
-                                <a href="{% url 'medicine_record' %}" class="btn btn-info w-100 py-3">
-                                    <i class="bi bi-file-earmark-text"></i> Medicine Record
-                                </a>
-                            </div>
-                            <div class="col">
-                                <a href="{% url 'diseases' %}" class="btn btn-danger w-100 py-3">
-                                    <i class="bi bi-bug-fill"></i> Diseases
-                                </a>
-                            </div>
-                            <div class="col">
-                                <a href="{% url 'dosage' %}" class="btn btn-warning w-100 py-3">
-                                    <i class="bi bi-prescription"></i> Dosage
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Financial & Insurance + Inventory & Availability Section (Two categories in one row) -->
-        <div class="row row-cols-1 row-cols-md-2 g-4">
             <div class="col">
                 <div class="card">
                     <div class="card-header bg-info text-white">
@@ -107,10 +72,37 @@
                 </div>
             </div>
 
+        </div>
+
+        <!-- Financial & Insurance + Inventory & Availability Section (Two categories in one row) -->
+        <div class="row row-cols-1 row-cols-md-2 g-4 mb-4">
+            <div class="col">
+                <div class="card">
+                    <div class="card-header bg-success text-white">
+                        <h5 class="mb-0">Records</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="row row-cols-2 g-3">
+                            <div class="col">
+                                <a href="{% url 'medical_record' %}" class="btn btn-danger w-100 py-3">
+                                    <i class="bi bi-file-earmark-medical"></i> Medical Record
+                                </a>
+                            </div>
+                            <div class="col">
+                                <a href="{% url 'medicine_record' %}" class="btn btn-info w-100 py-3">
+                                    <i class="bi bi-file-earmark-text"></i> Medicine Record
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
             <div class="col">
                 <div class="card">
                     <div class="card-header bg-secondary text-white">
-                        <h5 class="mb-0">Inventory & Availability</h5>
+                        <h5 class="mb-0">Medicine & Dosage</h5>
                     </div>
                     <div class="card-body">
                         <div class="row row-cols-2 g-3">
@@ -120,8 +112,8 @@
                                 </a>
                             </div>
                             <div class="col">
-                                <a href="{% url 'availability' %}" class="btn btn-danger w-100 py-3">
-                                    <i class="bi bi-clock"></i> Availability
+                                <a href="{% url 'dosage' %}" class="btn btn-warning w-100 py-3">
+                                    <i class="bi bi-prescription"></i> Dosage
                                 </a>
                             </div>
                         </div>
@@ -130,6 +122,30 @@
             </div>
         </div>
 
+
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+            <div class="col">
+                <div class="card">
+                    <div class="card-header bg-info text-white">
+                        <h5 class="mb-0">Diseases & Treatment</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="row row-cols-2 g-3">
+                            <div class="col">
+                                <a href="{% url 'diseases' %}" class="btn btn-danger w-100 py-3">
+                                    <i class="bi bi-bug-fill"></i> Diseases
+                                </a>
+                            </div>
+                            <div class="col">
+                                <a href="{% url 'treatment' %}" class="btn btn-secondary w-100 py-3">
+                                    <i class="bi bi-hospital"></i> Treatment
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 {% endblock %}
