@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container mx-auto mt-5">
+    <!-- Welcome Section -->
+    <div class="text-center mb-12">
+        <h1 class="text-4xl font-bold text-blue-800 mb-4">Welcome to Clinic Management</h1>
+        <div class="w-24 h-1 bg-blue-600 mx-auto mb-6"></div>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+            A Database project 2024
+        </p>
+    </div>
+
+    <!-- Navigation Buttons -->
+    <div class="d-grid gap-3 text-center">
+        <a href="{% url 'payment' %}" class="btn btn-primary btn-lg">Payment</a>
+        <a href="{% url 'treatment' %}" class="btn btn-secondary btn-lg">Treatment</a>
+        <a href="{% url 'coverage_policy' %}" class="btn btn-success btn-lg">Coverage Policy</a>
+        <a href="{% url 'insurance' %}" class="btn btn-danger btn-lg">Insurance</a>
+        <a href="{% url 'patient' %}" class="btn btn-warning btn-lg">Patient</a>
+        <a href="{% url 'appointment' %}" class="btn btn-info btn-lg">Appointment</a>
+        <a href="{% url 'diseases' %}" class="btn btn-dark btn-lg">Diseases</a>
+        <a href="{% url 'medical_record' %}" class="btn btn-light btn-lg">Medical Record</a>
+        <a href="{% url 'medicine' %}" class="btn btn-primary btn-lg">Medicine</a>
+        <a href="{% url 'medicine_record' %}" class="btn btn-secondary btn-lg">Medicine Record</a>
+        <a href="{% url 'doctor' %}" class="btn btn-success btn-lg">Doctor</a>
+        <a href="{% url 'dosage' %}" class="btn btn-danger btn-lg">Dosage</a>
+        <a href="{% url 'availability' %}" class="btn btn-warning btn-lg">Availability</a>
+    </div>
+
+    <!-- Bottom Banner -->
+    <div class="bg-blue-800 text-white rounded-lg p-6 text-center mt-12">
+        <p class="text-xl font-semibold mb-2">Need immediate assistance?</p>
+        <p class="text-lg">Call our emergency hotline: (555) 999-8888</p>
+    </div>
+</div>
+
+{% block extra_css %}
+<style>
+    .container {
+        max-width: 1200px;
+    }
+</style>
+{% endblock %}
+{% endblock %}
