@@ -1,0 +1,30 @@
+[
+  {
+    "model": "clinic_management.dosage",
+    "pk": "DSG001",
+    "fields": {
+      "MedicationID": "MED001",
+      "MinWeight": "50kg",
+      "MaxWeight": "100kg",
+      "MinAge": 18,
+      "MaxAge": 65,
+      "RecommendDosage": "1 tablet",
+      "Units": "tablets",
+      "Notes": "For cardiovascular treatment"
+    }
+  },
+  {
+    "model": "clinic_management.dosage",
+    "pk": "DSG002",
+    "fields": {
+      "MedicationID": "MED002",
+      "MinWeight": "30kg",
+      "MaxWeight": "90kg",
+      "MinAge": 5,
+      "MaxAge": 80,
+      "RecommendDosage": "Apply a thin layer",
+      "Units": "grams",
+      "Notes": "For eczema treatment"
+    }
+  }
+]

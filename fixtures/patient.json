@@ -1,0 +1,28 @@
+[
+  {
+    "model": "clinic_management.patient",
+    "pk": "PAT001",
+    "fields": {
+      "Name": "John Doe",
+      "Phone": "555-1234",
+      "Email": "johndoe@email.com",
+      "Birthdate": "1990-01-01",
+      "EmergencyContact": "Jane Doe",
+      "Weight": "70kg",
+      "Height": "175cm"
+    }
+  },
+  {
+    "model": "clinic_management.patient",
+    "pk": "PAT002",
+    "fields": {
+      "Name": "Alice Smith",
+      "Phone": "555-5678",
+      "Email": "alicesmith@email.com",
+      "Birthdate": "1985-02-20",
+      "EmergencyContact": "Bob Smith",
+      "Weight": "65kg",
+      "Height": "160cm"
+    }
+  }
+]

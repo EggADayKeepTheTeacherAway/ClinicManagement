@@ -101,11 +101,23 @@ class Patient(models.Model):
         return self.Name
 
 
+class Doctor(models.Model):
+    DoctorID = models.CharField(max_length=30, primary_key=True)
+    Name = models.CharField(max_length=100)
+    Phone = models.CharField(max_length=15)
+    Email = models.EmailField()
+    Birthdate = models.DateField()
+    Specialization = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.Name
+
+
 class MedicalRecord(models.Model):
     MedicalRecordID = models.CharField(max_length=30, primary_key=True)
-    PatientID = models.ForeignKey(Patient, on_delete=models.CASCADE, db_column='PatientID')
+    PatientID = models.ForeignKey('Patient', on_delete=models.CASCADE, db_column='PatientID')
     DoctorID = models.ForeignKey('Doctor', on_delete=models.CASCADE, db_column='DoctorID')
-    DiseaseID = models.ForeignKey(Diseases, on_delete=models.CASCADE, db_column='DiseaseID')
+    DiseaseID = models.ForeignKey('Diseases', on_delete=models.CASCADE, db_column='DiseaseID')
     VisitReason = models.CharField(max_length=200)
     Summary = models.TextField()
     DateVisit = models.DateField()
@@ -117,26 +129,15 @@ class MedicalRecord(models.Model):
 
 class MedicineRecord(models.Model):
     MedicineRecordID = models.CharField(max_length=30, primary_key=True)
-    MedicalRecordID = models.ForeignKey(MedicalRecord, on_delete=models.CASCADE, db_column='MedicalRecordID')
-    MedicationID = models.ForeignKey(Medicine, on_delete=models.CASCADE, db_column='MedicationID')
-    DosageID = models.ForeignKey(Dosage, on_delete=models.CASCADE, db_column='DosageID')
+    MedicalRecordID = models.ForeignKey('MedicalRecord', on_delete=models.CASCADE, db_column='MedicalRecordID')
+    MedicationID = models.ForeignKey('Medicine', on_delete=models.CASCADE, db_column='MedicationID')
+    DosageID = models.ForeignKey('Dosage', on_delete=models.CASCADE, db_column='DosageID')
     Quantity = models.PositiveIntegerField()
     Cost = models.PositiveIntegerField()
 
     def __str__(self):
         return self.MedicineRecordID
 
-
-class Doctor(models.Model):
-    DoctorID = models.CharField(max_length=30, primary_key=True)
-    Name = models.CharField(max_length=100)
-    Phone = models.CharField(max_length=15)
-    Email = models.EmailField()
-    Birthdate = models.DateField()
-    Specialization = models.CharField(max_length=100)
-
-    def __str__(self):
-        return self.Name
 
 
 class Appointment(models.Model):

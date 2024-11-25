@@ -1,0 +1,20 @@
+[
+  {
+    "model": "clinic_management.diseases",
+    "pk": "DIS001",
+    "fields": {
+      "Name": "Flu",
+      "Description": "Seasonal flu causing fever and chills.",
+      "TreatmentID": "TRT001"
+    }
+  },
+  {
+    "model": "clinic_management.diseases",
+    "pk": "DIS002",
+    "fields": {
+      "Name": "Cold",
+      "Description": "Common cold with a runny nose.",
+      "TreatmentID": "TRT002"
+    }
+  }
+]

@@ -1,0 +1,24 @@
+[
+  {
+    "model": "clinic_management.insurance",
+    "pk": "INS001",
+    "fields": {
+      "PatientID": "PAT001",
+      "Provider": "HealthCare Plus",
+      "CoverageAmount": 500000,
+      "ExpireDate": "2025-12-31",
+      "Type": "Health"
+    }
+  },
+  {
+    "model": "clinic_management.insurance",
+    "pk": "INS002",
+    "fields": {
+      "PatientID": "PAT002",
+      "Provider": "Medicare",
+      "CoverageAmount": 300000,
+      "ExpireDate": "2024-05-30",
+      "Type": "Health"
+    }
+  }
+]

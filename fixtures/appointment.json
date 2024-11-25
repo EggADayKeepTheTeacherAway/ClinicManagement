@@ -1,0 +1,24 @@
+[
+  {
+    "model": "clinic_management.appointment",
+    "pk": "APP001",
+    "fields": {
+      "Date": "2024-11-25",
+      "StartTime": "09:00:00",
+      "EndTime": "10:00:00",
+      "PatientID": "PAT001",
+      "DoctorID": "DOC001"
+    }
+  },
+  {
+    "model": "clinic_management.appointment",
+    "pk": "APP002",
+    "fields": {
+      "Date": "2024-11-26",
+      "StartTime": "11:00:00",
+      "EndTime": "12:00:00",
+      "PatientID": "PAT002",
+      "DoctorID": "DOC002"
+    }
+  }
+]

@@ -1,0 +1,24 @@
+[
+  {
+    "model": "clinic_management.medicinerecord",
+    "pk": "MR001",
+    "fields": {
+      "MedicalRecordID": "MR001",
+      "MedicationID": "MED001",
+      "DosageID": "DSG001",
+      "Quantity": 30,
+      "Cost": 300
+    }
+  },
+  {
+    "model": "clinic_management.medicinerecord",
+    "pk": "MR002",
+    "fields": {
+      "MedicalRecordID": "MR002",
+      "MedicationID": "MED002",
+      "DosageID": "DSG002",
+      "Quantity": 20,
+      "Cost": 400
+    }
+  }
+]

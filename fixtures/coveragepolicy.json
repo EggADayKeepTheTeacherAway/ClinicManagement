@@ -1,0 +1,22 @@
+[
+  {
+    "model": "clinic_management.coveragepolicy",
+    "pk": "POL001",
+    "fields": {
+      "InsuranceID": "INS001",
+      "TreatmentID": "TRT001",
+      "CoveragePercentage": 80,
+      "MaxCoverageAmount": 120000
+    }
+  },
+  {
+    "model": "clinic_management.coveragepolicy",
+    "pk": "POL002",
+    "fields": {
+      "InsuranceID": "INS002",
+      "TreatmentID": "TRT002",
+      "CoveragePercentage": 100,
+      "MaxCoverageAmount": 5000
+    }
+  }
+]
