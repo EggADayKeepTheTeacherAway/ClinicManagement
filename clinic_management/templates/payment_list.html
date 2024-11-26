@@ -25,6 +25,7 @@
                     <th>Total Cost</th>
                     <th>Date Paid</th>
                     <th>Payment Status</th>
+                    <th>Actions</th>
                 </tr>
             </thead>
             <tbody>
@@ -39,6 +40,12 @@
                     <td>{{ payment.TotalCost }}</td>
                     <td>{{ payment.DatePaid }}</td>
                     <td>{{ payment.Status }}</td>
+                    <td>
+                        <form action="{% url 'delete_payment' payment.PaymentID %}" method="POST" style="display:inline;">
+                            {% csrf_token %}
+                            <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                        </form>
+                    </td>
                 </tr>
                 {% endfor %}
             </tbody>

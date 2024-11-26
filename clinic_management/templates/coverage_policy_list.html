@@ -21,6 +21,7 @@
                     <th>Treatment ID</th>
                     <th>Coverage Percentage</th>
                     <th>Max Coverage Amount</th>
+                    <th>Actions</th>
                 </tr>
             </thead>
             <tbody>
@@ -31,6 +32,12 @@
                     <td>{{ policy.TreatmentID.TreatmentID }}</td>
                     <td>{{ policy.CoveragePercentage }}</td>
                     <td>{{ policy.MaxCoverageAmount }}</td>
+                    <td>
+                        <form action="{% url 'delete_coverage_policy' policy.PolicyID %}" method="POST" style="display:inline;">
+                            {% csrf_token %}
+                            <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                        </form>
+                    </td>
                 </tr>
                 {% endfor %}
             </tbody>

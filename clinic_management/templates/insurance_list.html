@@ -22,6 +22,7 @@
                     <th>Coverage Amount</th>
                     <th>Expire Date</th>
                     <th>Type</th>
+                    <th>Actions</th>
                 </tr>
             </thead>
             <tbody>
@@ -33,6 +34,12 @@
                     <td>{{ insurance.CoverageAmount }}</td>
                     <td>{{ insurance.ExpireDate }}</td>
                     <td>{{ insurance.Type }}</td>
+                    <td>
+                        <form action="{% url 'delete_insurance' insurance.InsuranceID %}" method="POST" style="display:inline;">
+                            {% csrf_token %}
+                            <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                        </form>
+                    </td>
                 </tr>
                 {% endfor %}
             </tbody>
