@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<h2 class="mt-4">Add New Payment</h2>
+{% endblock %}
+
+{% block content %}
+<div class="container my-4">
+    <hr>
+    <form method="POST" action="{% url 'add_payment' %}">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label for="id_MedicalRecordID" class="form-label">Medical Record ID</label>
+            <input type="text" class="form-control" id="id_MedicalRecordID" name="MedicalRecordID" required>
+        </div>
+        <div class="mb-3">
+            <label for="id_Status" class="form-label">Status</label>
+            <input type="text" class="form-control" id="id_Status" name="Status" required>
+        </div>
+        <div class="mb-3">
+            <label for="id_BaseCharge" class="form-label">Base Charge</label>
+            <input type="text" class="form-control" id="id_BaseCharge" name="BaseCharge" required>
+        </div>
+        <div class="mb-3">
+            <label for="id_MedicineCost" class="form-label">Medicine Cost</label>
+            <input type="text" class="form-control" id="id_MedicineCost" name="MedicineCost" required>
+        </div>
+        <div class="mb-3">
+            <label for="id_InsuranceDiscount" class="form-label">Insurance Discount</label>
+            <input type="text" class="form-control" id="id_InsuranceDiscount" name="InsuranceDiscount" required>
+        </div>
+        <div class="mb-3">
+            <label for="id_TotalCost" class="form-label">Total Cost</label>
+            <input type="text" class="form-control" id="id_TotalCost" name="TotalCost" required>
+        </div>
+        <div class="mb-3">
+            <label for="id_DatePaid" class="form-label">Date Paid</label>
+            <input type="date" class="form-control" id="id_DatePaid" name="DatePaid" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Add Payment</button>
+    </form>
+</div>
+{% endblock %}

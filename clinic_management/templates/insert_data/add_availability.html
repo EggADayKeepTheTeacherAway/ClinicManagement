@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<h2 class="mt-4">Add New Availability</h2>
+{% endblock %}
+
+{% block content %}
+<div class="container my-4">
+    <hr>
+    <form method="POST" action="{% url 'add_availability' %}">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label for="id_DoctorID" class="form-label">Doctor ID</label>
+            <input type="text" class="form-control" id="id_DoctorID" name="DoctorID" required>
+        </div>
+        <div class="mb-3">
+            <label for="id_Date" class="form-label">Date</label>
+            <input type="date" class="form-control" id="id_Date" name="Date" required>
+        </div>
+        <div class="mb-3">
+            <label for="id_StartTime" class="form-label">Start Time</label>
+            <input type="time" class="form-control" id="id_StartTime" name="StartTime" required>
+        </div>
+        <div class="mb-3">
+            <label for="id_EndTime" class="form-label">End Time</label>
+            <input type="time" class="form-control" id="id_EndTime" name="EndTime" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Add Availability</button>
+    </form>
+</div>
+{% endblock %}

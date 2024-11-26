@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<h2 class="mt-4">Add New Treatment</h2>
+{% endblock %}
+
+{% block content %}
+<div class="container my-4">
+    <hr>
+    <form method="POST" action="{% url 'add_treatment' %}">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label for="id_Type" class="form-label">Treatment Type</label>
+            <input type="text" class="form-control" id="id_Type" name="Type" required>
+        </div>
+        <div class="mb-3">
+            <label for="id_BaseCharge" class="form-label">Base Charge</label>
+            <input type="text" class="form-control" id="id_BaseCharge" name="BaseCharge" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Add Treatment</button>
+    </form>
+</div>
+{% endblock %}

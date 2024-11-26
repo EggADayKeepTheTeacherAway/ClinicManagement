@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<h2 class="mt-4">Add New Medicine Record</h2>
+{% endblock %}
+
+{% block content %}
+<div class="container my-4">
+    <hr>
+    <form method="POST" action="{% url 'add_medicine_record' %}">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label for="id_MedicalRecordID" class="form-label">Medical Record ID</label>
+            <input type="text" class="form-control" id="id_MedicalRecordID" name="MedicalRecordID" required>
+        </div>
+        <div class="mb-3">
+            <label for="id_MedicationID" class="form-label">Medication ID</label>
+            <input type="text" class="form-control" id="id_MedicationID" name="MedicationID" required>
+        </div>
+        <div class="mb-3">
+            <label for="id_DosageID" class="form-label">Dosage ID</label>
+            <input type="text" class="form-control" id="id_DosageID" name="DosageID" required>
+        </div>
+        <div class="mb-3">
+            <label for="id_Quantity" class="form-label">Quantity</label>
+            <input type="text" class="form-control" id="id_Quantity" name="Quantity" required>
+        </div>
+        <div class="mb-3">
+            <label for="id_Cost" class="form-label">Cost</label>
+            <input type="text" class="form-control" id="id_Cost" name="Cost" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Add Medicine Record</button>
+    </form>
+</div>
+{% endblock %}
