@@ -874,6 +874,49 @@ def delete_appointment(request, appointment_id):
     return redirect('appointment_list')
 
 
+def edit_appointment(request, appointment_id):
+    # Get the appointment object to edit
+    appointment = get_object_or_404(Appointment, AppointmentID=appointment_id)
+
+    # Define the fields and their labels
+    fields = [
+        ('Date', 'Appointment Date'),
+        ('StartTime', 'Start Time'),
+        ('EndTime', 'End Time'),
+        ('PatientID', 'Patient ID'),
+        ('DoctorID', 'Doctor ID')
+    ]
+
+    # Define input types for each field
+    input_types = {
+        'Date': 'date',
+        'StartTime': 'time',
+        'EndTime': 'time',
+        'PatientID': 'text',
+        'DoctorID': 'text'
+    }
+
+    if request.method == 'POST':
+        appointment.Date = request.POST['Date']
+        appointment.StartTime = request.POST['StartTime']
+        appointment.EndTime = request.POST['EndTime']
+        appointment.PatientID = get_object_or_404(Patient, PatientID=request.POST['PatientID'].strip())
+        appointment.DoctorID = get_object_or_404(Doctor, DoctorID=request.POST['DoctorID'].strip())
+        appointment.save()
+
+        return redirect('appointment_list')
+
+    context = {
+        'model_name': 'Appointment',
+        'fields': fields,
+        'input_types': input_types,
+        'object': appointment,
+        'object_model_name': 'appointment_list'
+        # This will be used to generate the URL for the back button
+    }
+
+    return render(request, 'edit_data/edit_data.html', context)
+
 class AvailabilityListView(generic.ListView):
     model = Availability
     template_name = 'availability_list.html'
