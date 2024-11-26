@@ -1,0 +1,32 @@
+.navbar-brand {
+height : 70px;
+
+}
+
+.hospital_logo {
+height: 50px;
+padding-bottom: 10px
+
+}
+
+.clinic-title {
+    font-size: 36px;
+    font-weight: bold;
+    color: white;
+    font-family: 'roboto', sans-serif;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    transition: color 0.3s ease, font-size 0.3s ease;
+    text-align: center;
+    padding-left: 10px;
+}
+
+.Login_logo {
+    font-size: 36px;
+    font-weight: bold;
+    color: white;
+    font-family: 'roboto', sans-serif;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    transition: color 0.3s ease, font-size 0.3s ease;
+    text-align: center;
+    padding-left: 10px;
+}
