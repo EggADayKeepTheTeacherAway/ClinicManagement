@@ -970,3 +970,40 @@ def delete_availability(request, availability_id):
     if request.method == 'POST':
         availability.delete()
         return redirect('availability_list')
+
+
+def edit_availability(request, availability_id):
+    availability = get_object_or_404(Availability, AvailabilityID=availability_id)
+
+    fields = [
+        ('DoctorID', 'Doctor ID'),
+        ('Date', 'Date'),
+        ('StartTime', 'Start Time'),
+        ('EndTime', 'End Time')
+    ]
+
+    input_types = {
+        'DoctorID': 'text',
+        'Date': 'date',
+        'StartTime': 'time',
+        'EndTime': 'time'
+    }
+
+    if request.method == 'POST':
+        availability.DoctorID = get_object_or_404(Doctor, DoctorID=request.POST['DoctorID'].strip())
+        availability.Day = request.POST['Date']
+        availability.StartTime = request.POST['StartTime']
+        availability.EndTime = request.POST['EndTime']
+        availability.save()
+
+        return redirect('availability_list')
+
+    context = {
+        'model_name': 'Availability',
+        'fields': fields,
+        'input_types': input_types,
+        'object': availability,
+        'object_model_name': 'availability_list'
+    }
+
+    return render(request, 'edit_data/edit_data.html', context)
