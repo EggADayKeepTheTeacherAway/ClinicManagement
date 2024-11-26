@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<h2 class="mt-4">Add New Patient</h2>
+{% endblock %}
+
+{% block content %}
+<div class="container my-4">
+    <hr>
+    <form method="POST" action="{% url 'add_patient' %}">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label for="id_Name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="id_Name" name="Name" required>
+        </div>
+        <div class="mb-3">
+            <label for="id_Phone" class="form-label">Phone</label>
+            <input type="text" class="form-control" id="id_Phone" name="Phone" required>
+        </div>
+        <div class="mb-3">
+            <label for="id_Email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="id_Email" name="Email" required>
+        </div>
+        <div class="mb-3">
+            <label for="id_Birthdate" class="form-label">Birthdate</label>
+            <input type="date" class="form-control" id="id_Birthdate" name="Birthdate" required>
+        </div>
+        <div class="mb-3">
+            <label for="id_Weight" class="form-label">Weight</label>
+            <input type="text" class="form-control" id="id_Weight" name="Weight" required>
+        </div>
+        <div class="mb-3">
+            <label for="id_Height" class="form-label">Height</label>
+            <input type="text" class="form-control" id="id_Height" name="Height" required>
+        </div>
+        <div class="mb-3">
+            <label for="id_EmergencyContact" class="form-label">Emergency Contact</label>
+            <input type="text" class="form-control" id="id_EmergencyContact" name="EmergencyContact" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Add Patient</button>
+    </form>
+</div>
+{% endblock %}
