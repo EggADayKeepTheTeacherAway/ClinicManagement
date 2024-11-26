@@ -1,5 +1,5 @@
 from django.http import HttpResponse
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.views import generic
 from clinic_management.models import *
 
@@ -214,6 +214,13 @@ def add_coverage_policy(request):
     return render(request, 'insert_data/add_data.html', context)
 
 
+def delete_coverage_policy(request, policy_id):
+    policy = get_object_or_404(CoveragePolicy, PolicyID=policy_id)
+    if request.method == 'POST':
+        policy.delete()
+        return redirect('coverage_policy_list')
+
+
 class InsuranceListView(generic.ListView):
     model = Insurance
     template_name = 'insurance_list.html'
@@ -262,6 +269,13 @@ def add_insurance(request):
     }
 
     return render(request, 'insert_data/add_data.html', context)
+
+
+def delete_insurance(request, insurance_id):
+    insurance = get_object_or_404(Insurance, InsuranceID=insurance_id)
+    if request.method == 'POST':
+        insurance.delete()
+        return redirect('insurance_list')
 
 
 class PaymentListView(generic.ListView):
@@ -326,6 +340,13 @@ def add_payment(request):
     return render(request, 'insert_data/add_data.html', context)
 
 
+def delete_payment(request, payment_id):
+    payment = get_object_or_404(Payment, PaymentID=payment_id)
+    if request.method == 'POST':
+        payment.delete()
+        return redirect('payment_list')
+
+
 class DiseaseListView(generic.ListView):
     model = Diseases
     template_name = 'disease_list.html'
@@ -368,6 +389,13 @@ def add_disease(request):
     return render(request, 'insert_data/add_data.html', context)
 
 
+def delete_disease(request, disease_id):
+    disease = get_object_or_404(Diseases, DiseaseID=disease_id)
+    if request.method == 'POST':
+        disease.delete()
+        return redirect('disease_list')
+
+
 class TreatmentListView(generic.ListView):
     model = Treatment
     template_name = 'treatment_list.html'
@@ -404,6 +432,13 @@ def add_treatment(request):
     }
 
     return render(request, 'insert_data/add_data.html', context)
+
+
+def delete_treatment(request, treatment_id):
+    treatment = get_object_or_404(Treatment, TreatmentID=treatment_id)
+    if request.method == 'POST':
+        treatment.delete()
+        return redirect('treatment_list')
 
 
 class MedicineListView(generic.ListView):
@@ -454,6 +489,13 @@ def add_medicine(request):
     }
 
     return render(request, 'insert_data/add_data.html', context)
+
+
+def delete_medicine(request, medicine_id):
+    medicine = get_object_or_404(Medicine, MedicationID=medicine_id)
+    if request.method == 'POST':
+        medicine.delete()
+        return redirect('medicine_list')
 
 
 class DosageListView(generic.ListView):
@@ -518,6 +560,13 @@ def add_dosage(request):
     return render(request, 'insert_data/add_data.html', context)
 
 
+def delete_dosage(request, dosage_id):
+    dosage = get_object_or_404(Dosage, DosageID=dosage_id)
+    if request.method == 'POST':
+        dosage.delete()
+        return redirect('dosage_list')
+
+
 class PatientListView(generic.ListView):
     model = Patient
     template_name = 'patient_list.html'
@@ -576,6 +625,13 @@ def add_patient(request):
     return render(request, 'insert_data/add_data.html', context)
 
 
+def delete_patient(request, patient_id):
+    patient = get_object_or_404(Patient, PatientID=patient_id)
+    if request.method == 'POST':
+        patient.delete()
+        return redirect('patient_list')
+
+
 class DoctorListView(generic.ListView):
     model = Doctor
     template_name = 'doctor_list.html'
@@ -624,6 +680,13 @@ def add_doctor(request):
     }
 
     return render(request, 'insert_data/add_data.html', context)
+
+
+def delete_doctor(request, doctor_id):
+    doctor = get_object_or_404(Doctor, DoctorID=doctor_id)
+    if request.method == 'POST':
+        doctor.delete()
+        return redirect('doctor_list')
 
 
 class MedicalRecordListView(generic.ListView):
@@ -684,6 +747,14 @@ def add_medical_record(request):
     return render(request, 'insert_data/add_data.html', context)
 
 
+def delete_medical_record(request, medical_record_id):
+    medical_record = get_object_or_404(MedicalRecord,
+                                       MedicalRecordID=medical_record_id)
+    if request.method == 'POST':
+        medical_record.delete()
+        return redirect('medical_record_list')
+
+
 class MedicineRecordListView(generic.ListView):
     model = MedicineRecord
     template_name = 'medicine_record_list.html'
@@ -732,6 +803,14 @@ def add_medicine_record(request):
     }
 
     return render(request, 'insert_data/add_data.html', context)
+
+
+def delete_medicine_record(request, medical_record_id):
+    medicine_record = get_object_or_404(MedicineRecord,
+                                        MedicalRecordID=medical_record_id)
+    if request.method == 'POST':
+        medicine_record.delete()
+        return redirect('medicine_record_list')
 
 
 class AppointmentListView(generic.ListView):
@@ -784,6 +863,17 @@ def add_appointment(request):
     return render(request, 'insert_data/add_data.html', context)
 
 
+def delete_appointment(request, appointment_id):
+    # Fetch the appointment object by its ID
+    appointment = get_object_or_404(Appointment, AppointmentID=appointment_id)
+
+    # Delete the appointment
+    appointment.delete()
+
+    # Redirect back to the appointment list page
+    return redirect('appointment_list')
+
+
 class AvailabilityListView(generic.ListView):
     model = Availability
     template_name = 'availability_list.html'
@@ -829,3 +919,11 @@ def add_availability(request):
     }
 
     return render(request, 'insert_data/add_data.html', context)
+
+
+def delete_availability(request, availability_id):
+    availability = get_object_or_404(Availability,
+                                     AvailabilityID=availability_id)
+    if request.method == 'POST':
+        availability.delete()
+        return redirect('availability_list')
