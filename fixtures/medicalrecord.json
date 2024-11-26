@@ -1,28 +1,236 @@
 [
   {
     "model": "clinic_management.medicalrecord",
-    "pk": "MR001",
+    "pk": "MR01",
     "fields": {
-      "PatientID": "PAT001",
-      "DoctorID": "DOC001",
-      "DiseaseID": "DIS001",
-      "VisitReason": "General Checkup",
-      "Summary": "Patient visited for regular health checkup.",
-      "DateVisit": "2024-11-23",
-      "Status": "Completed"
+      "PatientID": "P02",
+      "DoctorID": "D03",
+      "DiseaseID": "DS04",
+      "VisitReason": "Knee Pain",
+      "Summary": "Physiotherapy done",
+      "DateVisit": "2024-10-01",
+      "Status": "Closed"
     }
   },
   {
     "model": "clinic_management.medicalrecord",
-    "pk": "MR002",
+    "pk": "MR02",
     "fields": {
-      "PatientID": "PAT002",
-      "DoctorID": "DOC002",
-      "DiseaseID": "DIS002",
-      "VisitReason": "Fever and Cough",
-      "Summary": "Patient complained of fever and cough.",
+      "PatientID": "P03",
+      "DoctorID": "D01",
+      "DiseaseID": "DS01",
+      "VisitReason": "Routine Checkup",
+      "Summary": "Stable condition",
+      "DateVisit": "2024-10-05",
+      "Status": "Closed"
+    }
+  },
+  {
+    "model": "clinic_management.medicalrecord",
+    "pk": "MR03",
+    "fields": {
+      "PatientID": "P04",
+      "DoctorID": "D02",
+      "DiseaseID": "DS03",
+      "VisitReason": "High Fever",
+      "Summary": "Fever under control",
+      "DateVisit": "2024-11-10",
+      "Status": "Closed"
+    }
+  },
+  {
+    "model": "clinic_management.medicalrecord",
+    "pk": "MR04",
+    "fields": {
+      "PatientID": "P01",
+      "DoctorID": "D04",
+      "DiseaseID": "DS02",
+      "VisitReason": "Skin Allergy",
+      "Summary": "Ointment prescribed",
+      "DateVisit": "2024-11-15",
+      "Status": "Open"
+    }
+  },
+  {
+    "model": "clinic_management.medicalrecord",
+    "pk": "MR05",
+    "fields": {
+      "PatientID": "P01",
+      "DoctorID": "D05",
+      "DiseaseID": "DS06",
+      "VisitReason": "Severe Headache",
+      "Summary": "Migraine diagnosed",
+      "DateVisit": "2024-11-20",
+      "Status": "Open"
+    }
+  },
+  {
+    "model": "clinic_management.medicalrecord",
+    "pk": "MR06",
+    "fields": {
+      "PatientID": "P05",
+      "DoctorID": "D03",
+      "DiseaseID": "DS02",
+      "VisitReason": "Skin Rash",
+      "Summary": "Under recovery",
+      "DateVisit": "2024-10-10",
+      "Status": "Open"
+    }
+  },
+  {
+    "model": "clinic_management.medicalrecord",
+    "pk": "MR07",
+    "fields": {
+      "PatientID": "P06",
+      "DoctorID": "D06",
+      "DiseaseID": "DS05",
+      "VisitReason": "Diabetes Checkup",
+      "Summary": "Insulin prescribed",
+      "DateVisit": "2024-10-15",
+      "Status": "Closed"
+    }
+  },
+  {
+    "model": "clinic_management.medicalrecord",
+    "pk": "MR08",
+    "fields": {
+      "PatientID": "P02",
+      "DoctorID": "D04",
+      "DiseaseID": "DS04",
+      "VisitReason": "Knee Ligament Injury",
+      "Summary": "Fully healed",
+      "DateVisit": "2024-11-22",
+      "Status": "Closed"
+    }
+  },
+  {
+    "model": "clinic_management.medicalrecord",
+    "pk": "MR09",
+    "fields": {
+      "PatientID": "P07",
+      "DoctorID": "D01",
+      "DiseaseID": "DS01",
+      "VisitReason": "High Blood Pressure",
+      "Summary": "Medication prescribed",
+      "DateVisit": "2024-11-23",
+      "Status": "Open"
+    }
+  },
+  {
+    "model": "clinic_management.medicalrecord",
+    "pk": "MR10",
+    "fields": {
+      "PatientID": "P08",
+      "DoctorID": "D06",
+      "DiseaseID": "DS06",
+      "VisitReason": "Chronic Migraine",
+      "Summary": "Therapy recommended",
       "DateVisit": "2024-11-24",
-      "Status": "Completed"
+      "Status": "Open"
+    }
+  },
+  {
+    "model": "clinic_management.medicalrecord",
+    "pk": "MR11",
+    "fields": {
+      "PatientID": "P02",
+      "DoctorID": "D03",
+      "DiseaseID": "DS02",
+      "VisitReason": "Skin Rash",
+      "Summary": "Allergy under treatment",
+      "DateVisit": "2024-11-25",
+      "Status": "Open"
+    }
+  },
+  {
+    "model": "clinic_management.medicalrecord",
+    "pk": "MR12",
+    "fields": {
+      "PatientID": "P09",
+      "DoctorID": "D04",
+      "DiseaseID": "DS03",
+      "VisitReason": "High Fever",
+      "Summary": "Fever under control",
+      "DateVisit": "2024-11-20",
+      "Status": "Closed"
+    }
+  },
+  {
+    "model": "clinic_management.medicalrecord",
+    "pk": "MR13",
+    "fields": {
+      "PatientID": "P01",
+      "DoctorID": "D02",
+      "DiseaseID": "DS05",
+      "VisitReason": "Diabetes Management",
+      "Summary": "Insulin prescription",
+      "DateVisit": "2024-11-22",
+      "Status": "Open"
+    }
+  },
+  {
+    "model": "clinic_management.medicalrecord",
+    "pk": "MR14",
+    "fields": {
+      "PatientID": "P12",
+      "DoctorID": "D11",
+      "DiseaseID": "DS11",
+      "VisitReason": "Severe Cough",
+      "Summary": "Diagnosed and treated",
+      "DateVisit": "2024-11-23",
+      "Status": "Open"
+    }
+  },
+  {
+    "model": "clinic_management.medicalrecord",
+    "pk": "MR15",
+    "fields": {
+      "PatientID": "P13",
+      "DoctorID": "D12",
+      "DiseaseID": "DS08",
+      "VisitReason": "Abdominal Pain",
+      "Summary": "Gallstones detected",
+      "DateVisit": "2024-11-20",
+      "Status": "Closed"
+    }
+  },
+  {
+    "model": "clinic_management.medicalrecord",
+    "pk": "MR16",
+    "fields": {
+      "PatientID": "P14",
+      "DoctorID": "D13",
+      "DiseaseID": "DS10",
+      "VisitReason": "Anxiety and Stress",
+      "Summary": "Counseling recommended",
+      "DateVisit": "2024-11-19",
+      "Status": "Open"
+    }
+  },
+  {
+    "model": "clinic_management.medicalrecord",
+    "pk": "MR17",
+    "fields": {
+      "PatientID": "P15",
+      "DoctorID": "D14",
+      "DiseaseID": "DS09",
+      "VisitReason": "Joint Pain",
+      "Summary": "Physical therapy ongoing",
+      "DateVisit": "2024-11-22",
+      "Status": "Open"
+    }
+  },
+  {
+    "model": "clinic_management.medicalrecord",
+    "pk": "MR18",
+    "fields": {
+      "PatientID": "P16",
+      "DoctorID": "D11",
+      "DiseaseID": "DS07",
+      "VisitReason": "Breathing Difficulty",
+      "Summary": "Asthma treatment started",
+      "DateVisit": "2024-11-21",
+      "Status": "Closed"
     }
   }
 ]

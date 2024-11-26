@@ -10,6 +10,9 @@
 <body>
     <div class="container my-4">
         <hr>
+        <a href="{% url 'add_medical_record' %}" class="btn btn-primary mb-3">
+        Add Medical Record
+        </a>
         <table id="medicalRecordsTable" class="table table-striped table-bordered display nowrap" style="width:100%">
             <thead class="table-dark">
                 <tr>
@@ -21,6 +24,7 @@
                     <th>Summary</th>
                     <th>Date of Visit</th>
                     <th>Status</th>
+                    <th>Actions</th>
                 </tr>
             </thead>
             <tbody>
@@ -34,6 +38,13 @@
                     <td>{{ record.Summary }}</td>
                     <td>{{ record.DateVisit }}</td>
                     <td>{{ record.Status }}</td>
+                    <td>
+                        <form action="{% url 'delete_medical_record' record.MedicalRecordID %}" method="POST" style="display:inline;">
+                            {% csrf_token %}
+                            <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                        </form>
+                    </td>
+
                 </tr>
                 {% endfor %}
             </tbody>

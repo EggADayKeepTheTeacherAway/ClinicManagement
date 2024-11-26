@@ -1,24 +1,178 @@
 [
   {
     "model": "clinic_management.medicinerecord",
-    "pk": "MR001",
+    "pk": "MRD01",
     "fields": {
-      "MedicalRecordID": "MR001",
-      "MedicationID": "MED001",
-      "DosageID": "DSG001",
+      "MedicalRecordID": "MR01",
+      "MedicationID": "M03",
+      "DosageID": "DO03",
+      "Quantity": 15,
+      "Cost": 225
+    }
+  },
+  {
+    "model": "clinic_management.medicinerecord",
+    "pk": "MRD02",
+    "fields": {
+      "MedicalRecordID": "MR03",
+      "MedicationID": "M01",
+      "DosageID": "DO02",
+      "Quantity": 10,
+      "Cost": 100
+    }
+  },
+  {
+    "model": "clinic_management.medicinerecord",
+    "pk": "MRD03",
+    "fields": {
+      "MedicalRecordID": "MR04",
+      "MedicationID": "M02",
+      "DosageID": "DO04",
+      "Quantity": 5,
+      "Cost": 125
+    }
+  },
+  {
+    "model": "clinic_management.medicinerecord",
+    "pk": "MRD04",
+    "fields": {
+      "MedicalRecordID": "MR05",
+      "MedicationID": "M01",
+      "DosageID": "DO02",
+      "Quantity": 12,
+      "Cost": 120
+    }
+  },
+  {
+    "model": "clinic_management.medicinerecord",
+    "pk": "MRD05",
+    "fields": {
+      "MedicalRecordID": "MR06",
+      "MedicationID": "M06",
+      "DosageID": "DO06",
+      "Quantity": 8,
+      "Cost": 160
+    }
+  },
+  {
+    "model": "clinic_management.medicinerecord",
+    "pk": "MRD06",
+    "fields": {
+      "MedicalRecordID": "MR07",
+      "MedicationID": "M04",
+      "DosageID": "DO05",
+      "Quantity": 20,
+      "Cost": 400
+    }
+  },
+  {
+    "model": "clinic_management.medicinerecord",
+    "pk": "MRD07",
+    "fields": {
+      "MedicalRecordID": "MR09",
+      "MedicationID": "M09",
+      "DosageID": "DO08",
       "Quantity": 30,
+      "Cost": 1200
+    }
+  },
+  {
+    "model": "clinic_management.medicinerecord",
+    "pk": "MRD08",
+    "fields": {
+      "MedicalRecordID": "MR10",
+      "MedicationID": "M08",
+      "DosageID": "DO06",
+      "Quantity": 10,
+      "Cost": 250
+    }
+  },
+  {
+    "model": "clinic_management.medicinerecord",
+    "pk": "MRD09",
+    "fields": {
+      "MedicalRecordID": "MR11",
+      "MedicationID": "M06",
+      "DosageID": "DO04",
+      "Quantity": 5,
+      "Cost": 100
+    }
+  },
+  {
+    "model": "clinic_management.medicinerecord",
+    "pk": "MRD10",
+    "fields": {
+      "MedicalRecordID": "MR12",
+      "MedicationID": "M01",
+      "DosageID": "DO02",
+      "Quantity": 8,
+      "Cost": 80
+    }
+  },
+  {
+    "model": "clinic_management.medicinerecord",
+    "pk": "MRD11",
+    "fields": {
+      "MedicalRecordID": "MR13",
+      "MedicationID": "M04",
+      "DosageID": "DO05",
+      "Quantity": 15,
       "Cost": 300
     }
   },
   {
     "model": "clinic_management.medicinerecord",
-    "pk": "MR002",
+    "pk": "MRD12",
     "fields": {
-      "MedicalRecordID": "MR002",
-      "MedicationID": "MED002",
-      "DosageID": "DSG002",
-      "Quantity": 20,
-      "Cost": 400
+      "MedicalRecordID": "MR14",
+      "MedicationID": "M16",
+      "DosageID": "DO11",
+      "Quantity": 5,
+      "Cost": 175
+    }
+  },
+  {
+    "model": "clinic_management.medicinerecord",
+    "pk": "MRD13",
+    "fields": {
+      "MedicalRecordID": "MR15",
+      "MedicationID": "M13",
+      "DosageID": "DO07",
+      "Quantity": 3,
+      "Cost": 60
+    }
+  },
+  {
+    "model": "clinic_management.medicinerecord",
+    "pk": "MRD14",
+    "fields": {
+      "MedicalRecordID": "MR16",
+      "MedicationID": "M15",
+      "DosageID": "DO10",
+      "Quantity": 2,
+      "Cost": 160
+    }
+  },
+  {
+    "model": "clinic_management.medicinerecord",
+    "pk": "MRD15",
+    "fields": {
+      "MedicalRecordID": "MR17",
+      "MedicationID": "M14",
+      "DosageID": "DO09",
+      "Quantity": 1,
+      "Cost": 50
+    }
+  },
+  {
+    "model": "clinic_management.medicinerecord",
+    "pk": "MRD16",
+    "fields": {
+      "MedicalRecordID": "MR18",
+      "MedicationID": "M12",
+      "DosageID": "DO08",
+      "Quantity": 4,
+      "Cost": 480
     }
   }
 ]

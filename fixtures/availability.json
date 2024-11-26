@@ -1,9 +1,9 @@
 [
   {
     "model": "clinic_management.availability",
-    "pk": "AVAIL001",
+    "pk": "AV01",
     "fields": {
-      "DoctorID": "DOC001",
+      "DoctorID": "D01",
       "Day": "Monday",
       "StartTime": "08:00:00",
       "EndTime": "12:00:00"
@@ -11,9 +11,9 @@
   },
   {
     "model": "clinic_management.availability",
-    "pk": "AVAIL002",
+    "pk": "AV02",
     "fields": {
-      "DoctorID": "DOC002",
+      "DoctorID": "D02",
       "Day": "Tuesday",
       "StartTime": "09:00:00",
       "EndTime": "13:00:00"

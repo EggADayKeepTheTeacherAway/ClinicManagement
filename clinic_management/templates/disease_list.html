@@ -10,6 +10,9 @@
 <body>
     <div class="container my-4">
         <hr>
+        <a href="{% url 'add_disease' %}" class="btn btn-primary mb-3">
+        Add Disease
+        </a>
         <table id="diseasesTable" class="table table-striped table-bordered display nowrap" style="width:100%">
             <thead class="table-dark">
                 <tr>
@@ -17,6 +20,7 @@
                     <th>Disease Name</th>
                     <th>Disease Description</th>
                     <th>Treatment ID</th>
+                    <th>Actions</th>
                 </tr>
             </thead>
             <tbody>
@@ -26,6 +30,12 @@
                     <td>{{ disease.Name }}</td>
                     <td>{{ disease.Description }}</td>
                     <td>{{ disease.TreatmentID.TreatmentID }}</td>
+                    <td>
+                        <form action="{% url 'delete_disease' disease.DiseaseID %}" method="POST" style="display:inline;">
+                            {% csrf_token %}
+                            <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                        </form>
+                    </td>
                 </tr>
                 {% endfor %}
             </tbody>

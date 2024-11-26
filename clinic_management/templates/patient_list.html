@@ -7,51 +7,61 @@
 {% block content %}
 {% load static %}
 
-<body>
-    <div class="container my-4">
-        <hr>
-        <table id="patientsTable" class="table table-striped table-bordered display nowrap" style="width:100%">
-            <thead class="table-dark">
-                <tr>
-                    <th>Patient ID</th>
-                    <th>Name</th>
-                    <th>Phone</th>
-                    <th>Email</th>
-                    <th>Birthdate</th>
-                    <th>Weight</th>
-                    <th>Height</th>
-                    <th>Emergency Contact</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for patient in patients %}
-                <tr>
-                    <td>{{ patient.PatientID }}</td>
-                    <td>{{ patient.Name }}</td>
-                    <td>{{ patient.Phone }}</td>
-                    <td>{{ patient.Email }}</td>
-                    <td>{{ patient.Birthdate }}</td>
-                    <td>{{ patient.Weight }}</td>
-                    <td>{{ patient.Height }}</td>
-                    <td>{{ patient.EmergencyContact }}</td>
-                </tr>
-                {% endfor %}
-            </tbody>
-        </table>
+<div class="container my-4">
+    <hr>
+    <a href="{% url 'add_patient' %}" class="btn btn-primary mb-3">
+        Add Patient
+    </a>
 
-    </div>
+    <table id="patientsTable" class="table table-striped table-bordered display nowrap" style="width:100%">
+        <thead class="table-dark">
+            <tr>
+                <th>Patient ID</th>
+                <th>Name</th>
+                <th>Phone</th>
+                <th>Email</th>
+                <th>Birthdate</th>
+                <th>Weight</th>
+                <th>Height</th>
+                <th>Emergency Contact</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for patient in patients %}
+            <tr>
+                <td>{{ patient.PatientID }}</td>
+                <td>{{ patient.Name }}</td>
+                <td>{{ patient.Phone }}</td>
+                <td>{{ patient.Email }}</td>
+                <td>{{ patient.Birthdate }}</td>
+                <td>{{ patient.Weight }}</td>
+                <td>{{ patient.Height }}</td>
+                <td>{{ patient.EmergencyContact }}</td>
+                <td>
+                    <form action="{% url 'delete_patient' patient.PatientID %}" method="POST" style="display:inline;">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
+</div>
 
-    <script>
-        $(document).ready(function() {
-            $('#patientsTable').DataTable({
-                responsive: true,
-                scrollX: true
-            });
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
+
+<script>
+    $(document).ready(function() {
+        $('#patientsTable').DataTable({
+            responsive: true,
+            scrollX: true
         });
-    </script>
-</body>
+    });
+</script>
+
 {% endblock %}
