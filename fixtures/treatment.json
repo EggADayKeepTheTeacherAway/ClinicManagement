@@ -1,0 +1,18 @@
+[
+  {
+    "model": "clinic_management.treatment",
+    "pk": "TRT001",
+    "fields": {
+      "Type": "Cardiac Bypass Surgery",
+      "BaseCharge": 150000
+    }
+  },
+  {
+    "model": "clinic_management.treatment",
+    "pk": "TRT002",
+    "fields": {
+      "Type": "Skin Biopsy",
+      "BaseCharge": 5000
+    }
+  }
+]

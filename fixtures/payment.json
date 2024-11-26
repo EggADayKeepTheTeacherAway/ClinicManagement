@@ -1,0 +1,30 @@
+[
+  {
+    "model": "clinic_management.payment",
+    "pk": "PAY001",
+    "fields": {
+      "MedicalRecordID": "MR001",
+      "InsuranceID": "INS001",
+      "BaseCharge": 150000,
+      "MedicineCost": 5000,
+      "InsuranceDiscount": 10000,
+      "TotalCost": 145000,
+      "DatePaid": "2024-11-23",
+      "Status": "Paid"
+    }
+  },
+  {
+    "model": "clinic_management.payment",
+    "pk": "PAY002",
+    "fields": {
+      "MedicalRecordID": "MR002",
+      "InsuranceID": "INS002",
+      "BaseCharge": 5000,
+      "MedicineCost": 200,
+      "InsuranceDiscount": 100,
+      "TotalCost": 5100,
+      "DatePaid": "2024-11-24",
+      "Status": "Paid"
+    }
+  }
+]
