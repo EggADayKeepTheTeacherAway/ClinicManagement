@@ -7,57 +7,129 @@
 {% block content %}
 {% load static %}
 
-<body>
-    <div class="container my-4">
-        <hr>
-        <a href="{% url 'add_doctor' %}" class="btn btn-primary mb-3">
-        Add Doctor
-        </a>
-        <table id="doctorsTable" class="table table-striped table-bordered display nowrap" style="width:100%">
-            <thead class="table-dark">
-                <tr>
-                    <th>Doctor ID</th>
-                    <th>Name</th>
-                    <th>Phone</th>
-                    <th>Email</th>
-                    <th>Birthdate</th>
-                    <th>Specialization</th>
-                    <th>Actions</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for doctor in doctors %}
-                <tr>
-                    <td>{{ doctor.DoctorID }}</td>
-                    <td>{{ doctor.Name }}</td>
-                    <td>{{ doctor.Phone }}</td>
-                    <td>{{ doctor.Email }}</td>
-                    <td>{{ doctor.Birthdate }}</td>
-                    <td>{{ doctor.Specialization }}</td>
-                    <td>
-                        <form action="{% url 'delete_doctor' doctor.DoctorID %}" method="POST" style="display:inline;">
-                            {% csrf_token %}
-                            <button type="submit" class="btn btn-danger btn-sm">Delete</button>
-                        </form>
-                    </td>
+<link rel="stylesheet" href="{% static 'doctor-table.css' %}">
 
-                </tr>
-                {% endfor %}
-            </tbody>
-        </table>
+<div class="container my-4">
+    <hr>
+    <a href="{% url 'add_doctor' %}" class="btn btn-primary mb-3">Add Doctor</a>
+    <table id="doctorsTable" class="table table-striped table-bordered display nowrap" style="width:100%">
+        <thead class="table-dark">
+            <tr>
+                <th>Doctor ID</th>
+                <th>Name</th>
+                <th>Phone</th>
+                <th>Email</th>
+                <th>Birthdate</th>
+                <th>Specialization</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for doctor in doctors %}
+            <tr>
+                <td>{{ doctor.DoctorID }}</td>
+                <td>{{ doctor.Name }}</td>
+                <td>{{ doctor.Phone }}</td>
+                <td>{{ doctor.Email }}</td>
+                <td>{{ doctor.Birthdate }}</td>
+                <td>{{ doctor.Specialization }}</td>
+                <td>
+                    <form action="{% url 'delete_doctor' doctor.DoctorID %}" method="POST" style="display:inline;">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <div class="timetable">
+      <div class="week-names">
+        <div>monday</div>
+        <div>tuesday</div>
+        <div>wednesday</div>
+        <div>thursday</div>
+        <div>friday</div>
+        <div class="weekend">saturday</div>
+        <div class="weekend">sunday</div>
+      </div>
+      <div class="time-interval">
+        <div>8:00 - 10:00</div>
+        <div>10:00 - 12:00</div>
+        <div>12:00 - 14:00</div>
+        <div>14:00 - 16:00</div>
+        <div>16:00 - 18:00</div>
+        <div>18:00 - 20:00</div>
+      </div>
+      <div class="content">
+        <div>
+          <div class="accent-orange-gradient"></div>
+        </div>
+        <div></div>
+        <div></div>
+        <div></div>
+            <div>
+          <div class="accent-green-gradient"></div>
+        </div>
+        <div class="weekend"></div>
+        <div class="weekend"></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div>
+          <div class="accent-cyan-gradient"></div>
+        </div>
+        <div></div>
+        <div class="weekend"></div>
+        <div class="weekend"></div>
+        <div>
+          <div class="accent-pink-gradient"></div>
+        </div>
+        <div></div>
+        <div>
+          <div class="accent-purple-gradient"></div>
+        </div>
+        <div></div>
+        <div></div>
+        <div class="weekend"></div>
+        <div class="weekend"></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div class="weekend"></div>
+        <div class="weekend"></div>
+        <div>
+          <div class="accent-purple-gradient"></div>
+        </div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div class="weekend"></div>
+        <div class="weekend"></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div class="weekend"></div>
+        <div class="weekend"></div>
+      </div>
     </div>
+</div>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
 
-    <script>
-        $(document).ready(function() {
-            $('#doctorsTable').DataTable({
-                responsive: true,
-                scrollX: true
-            });
+<script>
+    $(document).ready(function() {
+        $('#doctorsTable').DataTable({
+            responsive: true,
+            scrollX: true
         });
-    </script>
-</body>
+    });
+</script>
 {% endblock %}
