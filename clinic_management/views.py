@@ -174,10 +174,56 @@ class CoveragePolicyListView(generic.ListView):
     context_object_name = 'coverage_policies'
 
 
+def add_coverage_policy(request):
+    if request.method == 'POST':
+        # Handle form submission to create a new coverage policy
+        insurance_id = request.POST.get('InsuranceID')
+        coverage_percentage = request.POST.get('CoveragePercentage')
+        max_coverage_amount = request.POST.get('MaxCoverageAmount')
+
+        # Create and save the coverage policy object
+        coverage_policy = CoveragePolicy(
+            InsuranceID_id=insurance_id,
+            CoveragePercentage=coverage_percentage,
+            MaxCoverageAmount=max_coverage_amount
+        )
+        coverage_policy.save()
+
+        # After saving, redirect back to the coverage policy list page
+        return redirect('coverage_policy_list')
+
+    return render(request, 'insert_data/add_coverage_policy.html')
+
+
 class InsuranceListView(generic.ListView):
     model = Insurance
     template_name = 'insurance_list.html'
     context_object_name = 'insurances'
+
+
+def add_insurance(request):
+    if request.method == 'POST':
+        # Handle form submission to create a new insurance
+        patient_id = request.POST.get('PatientID')
+        provider = request.POST.get('Provider')
+        coverage_amount = request.POST.get('CoverageAmount')
+        expire_date = request.POST.get('ExpireDate')
+        insurance_type = request.POST.get('Type')
+
+        # Create and save the insurance object
+        insurance = Insurance(
+            PatientID_id=patient_id,
+            Provider=provider,
+            CoverageAmount=coverage_amount,
+            ExpireDate=expire_date,
+            Type=insurance_type
+        )
+        insurance.save()
+
+        # After saving, redirect back to the insurance list page
+        return redirect('insurance_list')
+
+    return render(request, 'insert_data/add_insurance.html')
 
 
 class PaymentListView(generic.ListView):
@@ -186,10 +232,62 @@ class PaymentListView(generic.ListView):
     context_object_name = 'payments'
 
 
+def add_payment(request):
+    if request.method == 'POST':
+        # Handle form submission to create a new payment
+        medical_record_id = request.POST.get('MedicalRecordID')
+        insurance_id = request.POST.get('InsuranceID')
+        base_charge = request.POST.get('BaseCharge')
+        medicine_cost = request.POST.get('MedicineCost')
+        insurance_discount = request.POST.get('InsuranceDiscount')
+        total_cost = request.POST.get('TotalCost')
+        date_paid = request.POST.get('DatePaid')
+        status = request.POST.get('Status')
+
+        # Create and save the payment object
+        payment = Payment(
+            MedicalRecordID_id=medical_record_id,
+            InsuranceID_id=insurance_id,
+            BaseCharge=base_charge,
+            MedicineCost=medicine_cost,
+            InsuranceDiscount=insurance_discount,
+            TotalCost=total_cost,
+            DatePaid=date_paid,
+            Status=status
+        )
+        payment.save()
+
+        # After saving, redirect back to the payment list page
+        return redirect('payment_list')
+
+    return render(request, 'insert_data/add_payment.html')
+
+
 class DiseaseListView(generic.ListView):
     model = Diseases
     template_name = 'disease_list.html'
     context_object_name = 'diseases'
+
+
+def add_disease(request):
+    if request.method == 'POST':
+        # Handle form submission to create a new disease
+        name = request.POST.get('Name')
+        description = request.POST.get('Description')
+        treatment_id = request.POST.get('TreatmentID')
+
+        # Create and save the disease object
+        disease = Diseases(
+            Name=name,
+            Description=description,
+            TreatmentID_id=treatment_id
+        )
+        disease.save()
+
+        # After saving, redirect back to the disease list page
+        return redirect('disease_list')
+
+    return render(request, 'insert_data/add_disease.html')
 
 
 class TreatmentListView(generic.ListView):
@@ -198,10 +296,54 @@ class TreatmentListView(generic.ListView):
     context_object_name = 'treatments'
 
 
+def add_treatment(request):
+    if request.method == 'POST':
+        # Handle form submission to create a new treatment
+        treatment_type = request.POST.get('Type')
+        base_charge = request.POST.get('BaseCharge')
+
+        # Create and save the treatment object
+        treatment = Treatment(
+            Type=treatment_type,
+            BaseCharge=base_charge
+        )
+        treatment.save()
+
+        # After saving, redirect back to the treatment list page
+        return redirect('treatment_list')
+
+    return render(request, 'insert_data/add_treatment.html')
+
+
 class MedicineListView(generic.ListView):
     model = Medicine
     template_name = 'medicine_list.html'
     context_object_name = 'medicines'
+
+
+def add_medicine(request):
+    if request.method == 'POST':
+        # Handle form submission to create a new medicine
+        name = request.POST.get('Name')
+        brand = request.POST.get('Brand')
+        instructions = request.POST.get('Instructions')
+        default_dosage = request.POST.get('DefaultDosage')
+        price = request.POST.get('Price')
+
+        # Create and save the medicine object
+        medicine = Medicine(
+            Name=name,
+            Brand=brand,
+            Instructions=instructions,
+            DefaultDosage=default_dosage,
+            Price=price
+        )
+        medicine.save()
+
+        # After saving, redirect back to the medicine list page
+        return redirect('medicine_list')
+
+    return render(request, 'insert_data/add_medicine.html')
 
 
 class DosageListView(generic.ListView):
@@ -210,10 +352,43 @@ class DosageListView(generic.ListView):
     context_object_name = 'dosages'
 
 
+def add_dosage(request):
+    if request.method == 'POST':
+        # Handle form submission to create a new dosage
+        medication_id = request.POST.get('MedicationID')
+        min_weight = request.POST.get('MinWeight')
+        max_weight = request.POST.get('MaxWeight')
+        min_age = request.POST.get('MinAge')
+        max_age = request.POST.get('MaxAge')
+        recommend_dosage = request.POST.get('RecommendDosage')
+        units = request.POST.get('Units')
+        notes = request.POST.get('Notes')
+
+        # Create and save the dosage object
+        dosage = Dosage(
+            MedicationID_id=medication_id,
+            MinWeight=min_weight,
+            MaxWeight=max_weight,
+            MinAge=min_age,
+            MaxAge=max_age,
+            RecommendDosage=recommend_dosage,
+            Units=units,
+            Notes=notes
+        )
+        dosage.save()
+
+        # After saving, redirect back to the dosage list page
+        return redirect('dosage_list')
+
+    return render(request, 'insert_data/add_dosage.html')
+
+
 class PatientListView(generic.ListView):
     model = Patient
     template_name = 'patient_list.html'
     context_object_name = 'patients'
+
+
 def add_patient(request):
     if request.method == 'POST':
         # Handle form submission to create a new patient
@@ -240,12 +415,38 @@ def add_patient(request):
         # After saving, redirect back to the patient list page
         return redirect('patient_list')
 
-    return render(request, 'add_patient.html')
+    return render(request, 'insert_data/add_patient.html')
+
 
 class DoctorListView(generic.ListView):
     model = Doctor
     template_name = 'doctor_list.html'
     context_object_name = 'doctors'
+
+
+def add_doctor(request):
+    if request.method == 'POST':
+        # Handle form submission to create a new doctor
+        name = request.POST.get('Name')
+        phone = request.POST.get('Phone')
+        email = request.POST.get('Email')
+        birthdate = request.POST.get('Birthdate')
+        specialization = request.POST.get('Specialization')
+
+        # Create and save the doctor object
+        doctor = Doctor(
+            Name=name,
+            Phone=phone,
+            Email=email,
+            Birthdate=birthdate,
+            Specialization=specialization
+        )
+        doctor.save()
+
+        # After saving, redirect back to the doctor list page
+        return redirect('doctor_list')
+
+    return render(request, 'insert_data/add_doctor.html')
 
 
 class MedicalRecordListView(generic.ListView):
@@ -254,10 +455,64 @@ class MedicalRecordListView(generic.ListView):
     context_object_name = 'medical_records'
 
 
+def add_medical_record(request):
+    if request.method == 'POST':
+        # Handle form submission to create a new medical record
+        patient_id = request.POST.get('PatientID')
+        doctor_id = request.POST.get('DoctorID')
+        disease_id = request.POST.get('DiseaseID')
+        visit_reason = request.POST.get('VisitReason')
+        summary = request.POST.get('Summary')
+        date_visit = request.POST.get('DateVisit')
+        status = request.POST.get('Status')
+
+        # Create and save the medical record object
+        medical_record = MedicalRecord(
+            PatientID_id=patient_id,
+            DoctorID_id=doctor_id,
+            DiseaseID_id=disease_id,
+            VisitReason=visit_reason,
+            Summary=summary,
+            DateVisit=date_visit,
+            Status=status
+        )
+        medical_record.save()
+
+        # After saving, redirect back to the medical record list page
+        return redirect('medical_record_list')
+
+    return render(request, 'insert_data/add_medical_record.html')
+
+
 class MedicineRecordListView(generic.ListView):
     model = MedicineRecord
     template_name = 'medicine_record_list.html'
     context_object_name = 'medicine_records'
+
+
+def add_medicine_record(request):
+    if request.method == 'POST':
+        # Handle form submission to create a new medicine record
+        medical_record_id = request.POST.get('MedicalRecordID')
+        medication_id = request.POST.get('MedicationID')
+        dosage_id = request.POST.get('DosageID')
+        quantity = request.POST.get('Quantity')
+        cost = request.POST.get('Cost')
+
+        # Create and save the medicine record object
+        medicine_record = MedicineRecord(
+            MedicalRecordID_id=medical_record_id,
+            MedicationID_id=medication_id,
+            DosageID_id=dosage_id,
+            Quantity=quantity,
+            Cost=cost
+        )
+        medicine_record.save()
+
+        # After saving, redirect back to the medicine record list page
+        return redirect('medicine_record_list')
+
+    return render(request, 'insert_data/add_medicine_record.html')
 
 
 class AppointmentListView(generic.ListView):
@@ -266,7 +521,55 @@ class AppointmentListView(generic.ListView):
     context_object_name = 'appointments'
 
 
+def add_appointment(request):
+    if request.method == 'POST':
+        # Handle form submission to create a new appointment
+        patient_id = request.POST.get('PatientID')
+        doctor_id = request.POST.get('DoctorID')
+        date = request.POST.get('Date')
+        start_time = request.POST.get('StartTime')
+        end_time = request.POST.get('EndTime')
+
+        # Create and save the appointment object
+        appointment = Appointment(
+            PatientID_id=patient_id,
+            DoctorID_id=doctor_id,
+            Date=date,
+            StartTime=start_time,
+            EndTime=end_time
+        )
+        appointment.save()
+
+        # After saving, redirect back to the appointment list page
+        return redirect('appointment_list')
+
+    return render(request, 'insert_data/add_appointment.html')
+
+
 class AvailabilityListView(generic.ListView):
     model = Availability
     template_name = 'availability_list.html'
     context_object_name = 'availabilities'
+
+
+def add_availability(request):
+    if request.method == 'POST':
+        # Handle form submission to create a new availability
+        doctor_id = request.POST.get('DoctorID')
+        date = request.POST.get('Date')
+        start_time = request.POST.get('StartTime')
+        end_time = request.POST.get('EndTime')
+
+        # Create and save the availability object
+        availability = Availability(
+            DoctorID_id=doctor_id,
+            Date=date,
+            StartTime=start_time,
+            EndTime=end_time
+        )
+        availability.save()
+
+        # After saving, redirect back to the availability list page
+        return redirect('availability_list')
+
+    return render(request, 'insert_data/add_availability.html')
