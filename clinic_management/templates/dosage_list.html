@@ -25,6 +25,7 @@
                     <th>Recommended Dosage</th>
                     <th>Units</th>
                     <th>Notes</th>
+                    <th>Actions</th>
                 </tr>
             </thead>
             <tbody>
@@ -39,6 +40,12 @@
                     <td>{{ dosage.RecommendDosage }}</td>
                     <td>{{ dosage.Units }}</td>
                     <td>{{ dosage.Notes|default:"-" }}</td>
+                    <td>
+                        <form action="{% url 'delete_dosage' dosage.DosageID %}" method="POST" style="display:inline;">
+                            {% csrf_token %}
+                            <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                        </form>
+                    </td>
                 </tr>
                 {% endfor %}
             </tbody>
