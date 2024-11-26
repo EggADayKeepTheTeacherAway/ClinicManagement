@@ -190,3 +190,7 @@ class DosageView(generic.TemplateView):
 
 class AvailabilityView(generic.TemplateView):
     template_name = "availability.html"
+
+
+class LoginView(generic.TemplateView):
+    template_name = "login.html"

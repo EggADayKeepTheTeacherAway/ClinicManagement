@@ -1,1 +1,37 @@
-body {background-color: pink;}
+body {
+    background-image: url(realistic-bokeh-background_23-2148969856.jpg);
+}
+
+.container {
+    background-color: #e4dde2;
+    border-radius: 0px;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+}
+
+h1 {
+    color: #4a4a4a;
+}
+
+hr {
+    border-color: #0d6efd;
+    border-width: 3px;
+}
+
+table.dataTable thead th {
+    background-color: #0d6efd;
+    color: #ffffff;
+}
+
+table.dataTable tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+table.dataTable td {
+    text-align: center;
+}
+
+.no-medicines {
+    color: #6c757d;
+    font-style: italic;
+}
