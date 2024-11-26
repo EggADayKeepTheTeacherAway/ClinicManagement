@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load custom_filters %}
+
+{% block title %}
+<h2 class="mt-4">Add New {{ model_name }}</h2>
+{% endblock %}
+
+{% block content %}
+<div class="container my-4">
+    <hr>
+    <form method="POST" action="{% url add_url_name %}">
+        {% csrf_token %}
+        
+        {% for field, label in fields %}
+        <div class="mb-3">
+            <label for="id_{{ field }}" class="form-label">{{ label }}</label>
+            <input type="{{ input_types|get_item:field }}" class="form-control" id="id_{{ field }}" name="{{ field }}" required>
+        </div>
+        {% endfor %}
+        
+        <button type="submit" class="btn btn-primary">Add {{ model_name }}</button>
+    </form>
+</div>
+{% endblock %}
