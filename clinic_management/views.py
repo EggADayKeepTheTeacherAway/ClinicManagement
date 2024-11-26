@@ -1,5 +1,5 @@
 from django.http import HttpResponse
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.views import generic
 from clinic_management.models import *
 
@@ -214,7 +214,33 @@ class PatientListView(generic.ListView):
     model = Patient
     template_name = 'patient_list.html'
     context_object_name = 'patients'
+def add_patient(request):
+    if request.method == 'POST':
+        # Handle form submission to create a new patient
+        name = request.POST.get('Name')
+        phone = request.POST.get('Phone')
+        email = request.POST.get('Email')
+        birthdate = request.POST.get('Birthdate')
+        weight = request.POST.get('Weight')
+        height = request.POST.get('Height')
+        emergency_contact = request.POST.get('EmergencyContact')
 
+        # Create and save the patient object
+        patient = Patient(
+            Name=name,
+            Phone=phone,
+            Email=email,
+            Birthdate=birthdate,
+            Weight=weight,
+            Height=height,
+            EmergencyContact=emergency_contact
+        )
+        patient.save()
+
+        # After saving, redirect back to the patient list page
+        return redirect('patient_list')
+
+    return render(request, 'add_patient.html')
 
 class DoctorListView(generic.ListView):
     model = Doctor
