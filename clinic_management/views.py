@@ -927,3 +927,8 @@ def delete_availability(request, availability_id):
     if request.method == 'POST':
         availability.delete()
         return redirect('availability_list')
+
+# class DoctorpageView(generic.ListView):
+#     model = Doctor
+#     template_name = 'doctor-page.html'
+#     context_object_name = 'doctors-page'
