@@ -4,16 +4,15 @@ from django.db import models
 def generate_pk(prefix, model_class):
     """
     Generate a unique primary key with the given prefix and model class.
+    The generated primary key will follow the format: <prefix> + 2-digit number.
     """
     last_record = model_class.objects.order_by('-pk').first()
     if last_record:
         last_pk = int(last_record.pk.replace(prefix, ""))
-        return f"{prefix}{last_pk + 1:03d}"
+        return f"{prefix}{last_pk + 1:02d}"
     else:
-        return f"{prefix}001"
+        return f"{prefix}01"
 
-
-# Models with auto-generated PK logic
 
 class CoveragePolicy(models.Model):
     PolicyID = models.CharField(max_length=30, primary_key=True, editable=False)
@@ -24,7 +23,7 @@ class CoveragePolicy(models.Model):
 
     def save(self, *args, **kwargs):
         if not self.PolicyID:
-            self.PolicyID = generate_pk("POLICY", CoveragePolicy)
+            self.PolicyID = generate_pk("CP", CoveragePolicy)
         super().save(*args, **kwargs)
 
     def __str__(self):
@@ -41,7 +40,7 @@ class Insurance(models.Model):
 
     def save(self, *args, **kwargs):
         if not self.InsuranceID:
-            self.InsuranceID = generate_pk("INSUR", Insurance)
+            self.InsuranceID = generate_pk("I", Insurance)
         super().save(*args, **kwargs)
 
     def __str__(self):
@@ -61,7 +60,7 @@ class Payment(models.Model):
 
     def save(self, *args, **kwargs):
         if not self.PaymentID:
-            self.PaymentID = generate_pk("PAY", Payment)
+            self.PaymentID = generate_pk("PYM", Payment)
         super().save(*args, **kwargs)
 
     def __str__(self):
@@ -76,7 +75,7 @@ class Diseases(models.Model):
 
     def save(self, *args, **kwargs):
         if not self.DiseaseID:
-            self.DiseaseID = generate_pk("DISEASE", Diseases)
+            self.DiseaseID = generate_pk("DS", Diseases)
         super().save(*args, **kwargs)
 
     def __str__(self):
@@ -90,7 +89,7 @@ class Treatment(models.Model):
 
     def save(self, *args, **kwargs):
         if not self.TreatmentID:
-            self.TreatmentID = generate_pk("TREAT", Treatment)
+            self.TreatmentID = generate_pk("T", Treatment)
         super().save(*args, **kwargs)
 
     def __str__(self):
@@ -107,7 +106,7 @@ class Medicine(models.Model):
 
     def save(self, *args, **kwargs):
         if not self.MedicationID:
-            self.MedicationID = generate_pk("MED", Medicine)
+            self.MedicationID = generate_pk("M", Medicine)
         super().save(*args, **kwargs)
 
     def __str__(self):
@@ -127,7 +126,7 @@ class Dosage(models.Model):
 
     def save(self, *args, **kwargs):
         if not self.DosageID:
-            self.DosageID = generate_pk("DOSAGE", Dosage)
+            self.DosageID = generate_pk("DO", Dosage)
         super().save(*args, **kwargs)
 
     def __str__(self):
@@ -146,7 +145,7 @@ class Patient(models.Model):
 
     def save(self, *args, **kwargs):
         if not self.PatientID:
-            self.PatientID = generate_pk("PAT", Patient)
+            self.PatientID = generate_pk("P", Patient)
         super().save(*args, **kwargs)
 
     def __str__(self):
@@ -163,7 +162,7 @@ class Doctor(models.Model):
 
     def save(self, *args, **kwargs):
         if not self.DoctorID:
-            self.DoctorID = generate_pk("DOC", Doctor)
+            self.DoctorID = generate_pk("D", Doctor)
         super().save(*args, **kwargs)
 
     def __str__(self):
@@ -182,7 +181,7 @@ class MedicalRecord(models.Model):
 
     def save(self, *args, **kwargs):
         if not self.MedicalRecordID:
-            self.MedicalRecordID = generate_pk("MEDREC", MedicalRecord)
+            self.MedicalRecordID = generate_pk("MR", MedicalRecord)
         super().save(*args, **kwargs)
 
     def __str__(self):
@@ -199,7 +198,7 @@ class MedicineRecord(models.Model):
 
     def save(self, *args, **kwargs):
         if not self.MedicineRecordID:
-            self.MedicineRecordID = generate_pk("MEDREC", MedicineRecord)
+            self.MedicineRecordID = generate_pk("MRD", MedicineRecord)
         super().save(*args, **kwargs)
 
     def __str__(self):
@@ -216,7 +215,7 @@ class Appointment(models.Model):
 
     def save(self, *args, **kwargs):
         if not self.AppointmentID:
-            self.AppointmentID = generate_pk("APPT", Appointment)
+            self.AppointmentID = generate_pk("A", Appointment)
         super().save(*args, **kwargs)
 
     def __str__(self):
@@ -232,7 +231,7 @@ class Availability(models.Model):
 
     def save(self, *args, **kwargs):
         if not self.AvailabilityID:
-            self.AvailabilityID = generate_pk("AVAIL", Availability)
+            self.AvailabilityID = generate_pk("AV", Availability)
         super().save(*args, **kwargs)
 
     def __str__(self):
