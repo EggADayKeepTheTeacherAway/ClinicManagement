@@ -755,6 +755,40 @@ def delete_medical_record(request, medical_record_id):
         return redirect('medical_record_list')
 
 
+def medical_record_list(request):
+    # Fetch all medical records
+    medical_records = MedicalRecord.objects.select_related('PatientID', 'DoctorID', 'DiseaseID').all()
+
+    # Aggregating top diseases per month
+    diseases_per_month = (
+        MedicalRecord.objects
+        .annotate(month=TruncMonth('DateVisit'))
+        .values('month', 'DiseaseID__DiseaseID', 'DiseaseID__Name')
+        .annotate(count=Count('DiseaseID'))
+        .order_by('month', '-count')  # Sort by month and then by count (descending)
+    )
+
+    # Grouping diseases by month
+    diseases_by_month = {}
+    for entry in diseases_per_month:
+        month = entry['month']
+        if month not in diseases_by_month:
+            diseases_by_month[month] = []
+        diseases_by_month[month].append({
+            'disease': {
+                'DiseaseID': entry['DiseaseID__DiseaseID'],
+                'Name': entry['DiseaseID__Name']
+            },
+            'count': entry['count']
+        })
+
+    # Render template with context
+    return render(request, 'medical_records_list.html', {
+        'medical_records': medical_records,
+        'diseases_per_month': diseases_by_month
+    })
+
+
 class MedicineRecordListView(generic.ListView):
     model = MedicineRecord
     template_name = 'medicine_record_list.html'
