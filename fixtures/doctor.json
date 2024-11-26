@@ -1,24 +1,233 @@
 [
   {
     "model": "clinic_management.doctor",
-    "pk": "DOC001",
+    "pk": "D01",
     "fields": {
-      "Name": "Dr. Michael Johnson",
-      "Phone": "555-7890",
-      "Email": "mjohndoe@clinic.com",
-      "Birthdate": "1978-07-15",
+      "Name": "Dr. Emily Y",
+      "Phone": "1122334455",
+      "Email": "emily@example.com",
+      "Birthdate": "1975-04-18",
+      "Specialization": "Pediatrics"
+    }
+  },
+  {
+    "model": "clinic_management.doctor",
+    "pk": "D02",
+    "fields": {
+      "Name": "Dr. Alan P",
+      "Phone": "2233445566",
+      "Email": "alan@example.com",
+      "Birthdate": "1980-11-12",
       "Specialization": "Cardiology"
     }
   },
   {
     "model": "clinic_management.doctor",
-    "pk": "DOC002",
+    "pk": "D03",
     "fields": {
-      "Name": "Dr. Emma White",
-      "Phone": "555-2345",
-      "Email": "ewhite@clinic.com",
-      "Birthdate": "1982-11-30",
+      "Name": "Dr. Rachel K",
+      "Phone": "3344556677",
+      "Email": "rachel@example.com",
+      "Birthdate": "1985-01-25",
       "Specialization": "Dermatology"
+    }
+  },
+  {
+    "model": "clinic_management.doctor",
+    "pk": "D04",
+    "fields": {
+      "Name": "Dr. Eric L",
+      "Phone": "4455667788",
+      "Email": "eric@example.com",
+      "Birthdate": "1990-07-19",
+      "Specialization": "Orthopedics"
+    }
+  },
+  {
+    "model": "clinic_management.doctor",
+    "pk": "D05",
+    "fields": {
+      "Name": "Dr. Nora W",
+      "Phone": "5566778899",
+      "Email": "nora@example.com",
+      "Birthdate": "1988-03-12",
+      "Specialization": "Neurology"
+    }
+  },
+  {
+    "model": "clinic_management.doctor",
+    "pk": "D06",
+    "fields": {
+      "Name": "Dr. Tom C",
+      "Phone": "6677889900",
+      "Email": "tom@example.com",
+      "Birthdate": "1972-05-22",
+      "Specialization": "Endocrinology"
+    }
+  },
+  {
+    "model": "clinic_management.doctor",
+    "pk": "D06",
+    "fields": {
+      "Name": "Dr. Emily Carter",
+      "Phone": "5678901234",
+      "Email": "emily.carter@mail.com",
+      "Birthdate": "1975-05-20",
+      "Specialization": "Neurologist"
+    }
+  },
+  {
+    "model": "clinic_management.doctor",
+    "pk": "D07",
+    "fields": {
+      "Name": "Dr. Oliver Smith",
+      "Phone": "6789012345",
+      "Email": "oliver.smith@mail.com",
+      "Birthdate": "1980-03-12",
+      "Specialization": "Cardiologist"
+    }
+  },
+  {
+    "model": "clinic_management.doctor",
+    "pk": "D08",
+    "fields": {
+      "Name": "Dr. Grace Lee",
+      "Phone": "7890123456",
+      "Email": "grace.lee@mail.com",
+      "Birthdate": "1982-09-19",
+      "Specialization": "Endocrinologist"
+    }
+  },
+  {
+    "model": "clinic_management.doctor",
+    "pk": "D09",
+    "fields": {
+      "Name": "Dr. Liam Walker",
+      "Phone": "8901234567",
+      "Email": "liam.walker@mail.com",
+      "Birthdate": "1987-08-05",
+      "Specialization": "Pediatrician"
+    }
+  },
+  {
+    "model": "clinic_management.doctor",
+    "pk": "D10",
+    "fields": {
+      "Name": "Dr. Chloe Scott",
+      "Phone": "9012345678",
+      "Email": "chloe.scott@mail.com",
+      "Birthdate": "1990-02-24",
+      "Specialization": "Internal Medicine"
+    }
+  },
+  {
+    "model": "clinic_management.doctor",
+    "pk": "D06",
+    "fields": {
+      "Name": "Dr. Emily Carter",
+      "Phone": "5678901234",
+      "Email": "emily.carter@mail.com",
+      "Birthdate": "1975-05-20",
+      "Specialization": "Neurologist"
+    }
+  },
+  {
+    "model": "clinic_management.doctor",
+    "pk": "D07",
+    "fields": {
+      "Name": "Dr. Oliver Smith",
+      "Phone": "6789012345",
+      "Email": "oliver.smith@mail.com",
+      "Birthdate": "1980-03-12",
+      "Specialization": "Cardiologist"
+    }
+  },
+  {
+    "model": "clinic_management.doctor",
+    "pk": "D08",
+    "fields": {
+      "Name": "Dr. Grace Lee",
+      "Phone": "7890123456",
+      "Email": "grace.lee@mail.com",
+      "Birthdate": "1982-09-19",
+      "Specialization": "Endocrinologist"
+    }
+  },
+  {
+    "model": "clinic_management.doctor",
+    "pk": "D09",
+    "fields": {
+      "Name": "Dr. Liam Walker",
+      "Phone": "8901234567",
+      "Email": "liam.walker@mail.com",
+      "Birthdate": "1987-08-05",
+      "Specialization": "Pediatrician"
+    }
+  },
+  {
+    "model": "clinic_management.doctor",
+    "pk": "D10",
+    "fields": {
+      "Name": "Dr. Chloe Scott",
+      "Phone": "9012345678",
+      "Email": "chloe.scott@mail.com",
+      "Birthdate": "1990-02-24",
+      "Specialization": "Internal Medicine"
+    }
+  },
+  {
+    "model": "clinic_management.doctor",
+    "pk": "D11",
+    "fields": {
+      "Name": "Dr. Sarah Bennett",
+      "Phone": "6789056789",
+      "Email": "sarah.bennett@mail.com",
+      "Birthdate": "1982-07-18",
+      "Specialization": "Pulmonologist"
+    }
+  },
+  {
+    "model": "clinic_management.doctor",
+    "pk": "D12",
+    "fields": {
+      "Name": "Dr. Ryan Taylor",
+      "Phone": "7890167890",
+      "Email": "ryan.taylor@mail.com",
+      "Birthdate": "1975-11-05",
+      "Specialization": "Gastroenterologist"
+    }
+  },
+  {
+    "model": "clinic_management.doctor",
+    "pk": "D13",
+    "fields": {
+      "Name": "Dr. Lily Harris",
+      "Phone": "8901246789",
+      "Email": "lily.harris@mail.com",
+      "Birthdate": "1990-03-15",
+      "Specialization": "Psychologist"
+    }
+  },
+  {
+    "model": "clinic_management.doctor",
+    "pk": "D14",
+    "fields": {
+      "Name": "Dr. Lucas King",
+      "Phone": "9012349012",
+      "Email": "lucas.king@mail.com",
+      "Birthdate": "1988-06-22",
+      "Specialization": "Orthopedist"
+    }
+  },
+  {
+    "model": "clinic_management.doctor",
+    "pk": "D15",
+    "fields": {
+      "Name": "Dr. Olivia Moore",
+      "Phone": "5678905678",
+      "Email": "olivia.moore@mail.com",
+      "Birthdate": "1984-09-25",
+      "Specialization": "Internal Medicine"
     }
   }
 ]

@@ -1,29 +1,281 @@
 [
   {
     "model": "clinic_management.payment",
-    "pk": "PAY001",
+    "pk": "PYM01",
     "fields": {
-      "MedicalRecordID": "MR001",
-      "InsuranceID": "INS001",
-      "BaseCharge": 150000,
-      "MedicineCost": 5000,
-      "InsuranceDiscount": 10000,
-      "TotalCost": 145000,
+      "MedicalRecordID": "MR01",
+      "InsuranceID": "I01",
+      "BaseCharge": 400,
+      "MedicineCost": 225,
+      "InsuranceDiscount": 180,
+      "TotalCost": 445,
+      "DatePaid": "2024-11-02",
+      "Status": "Paid"
+    }
+  },
+  {
+    "model": "clinic_management.payment",
+    "pk": "PYM02",
+    "fields": {
+      "MedicalRecordID": "MR03",
+      "InsuranceID": "I02",
+      "BaseCharge": 300,
+      "MedicineCost": 100,
+      "InsuranceDiscount": 70,
+      "TotalCost": 330,
+      "DatePaid": "2024-11-11",
+      "Status": "Paid"
+    }
+  },
+  {
+    "model": "clinic_management.payment",
+    "pk": "PYM03",
+    "fields": {
+      "MedicalRecordID": "MR04",
+      "InsuranceID": "I03",
+      "BaseCharge": 200,
+      "MedicineCost": 125,
+      "InsuranceDiscount": 90,
+      "TotalCost": 235,
+      "DatePaid": "2024-11-16",
+      "Status": "Paid"
+    }
+  },
+  {
+    "model": "clinic_management.payment",
+    "pk": "PYM04",
+    "fields": {
+      "MedicalRecordID": "MR05",
+      "InsuranceID": "I04",
+      "BaseCharge": 400,
+      "MedicineCost": 120,
+      "InsuranceDiscount": 100,
+      "TotalCost": 420,
+      "DatePaid": "2024-11-21",
+      "Status": "Unpaid"
+    }
+  },
+  {
+    "model": "clinic_management.payment",
+    "pk": "PYM05",
+    "fields": {
+      "MedicalRecordID": "MR06",
+      "InsuranceID": "I05",
+      "BaseCharge": 200,
+      "MedicineCost": 160,
+      "InsuranceDiscount": 120,
+      "TotalCost": 240,
+      "DatePaid": "2024-11-22",
+      "Status": "Paid"
+    }
+  },
+  {
+    "model": "clinic_management.payment",
+    "pk": "PY09",
+    "fields": {
+      "MedicalRecordID": "MR09",
+      "InsuranceID": "I07",
+      "BaseCharge": 200,
+      "MedicineCost": 1200,
+      "InsuranceDiscount": 960,
+      "TotalCost": 440,
       "DatePaid": "2024-11-23",
       "Status": "Paid"
     }
   },
   {
     "model": "clinic_management.payment",
-    "pk": "PAY002",
+    "pk": "PY10",
     "fields": {
-      "MedicalRecordID": "MR002",
-      "InsuranceID": "INS002",
-      "BaseCharge": 5000,
-      "MedicineCost": 200,
-      "InsuranceDiscount": 100,
-      "TotalCost": 5100,
+      "MedicalRecordID": "MR10",
+      "InsuranceID": "I08",
+      "BaseCharge": 150,
+      "MedicineCost": 250,
+      "InsuranceDiscount": 70,
+      "TotalCost": 330,
       "DatePaid": "2024-11-24",
+      "Status": "Pending"
+    }
+  },
+  {
+    "model": "clinic_management.payment",
+    "pk": "PY11",
+    "fields": {
+      "MedicalRecordID": "MR11",
+      "InsuranceID": "I01",
+      "BaseCharge": 100,
+      "MedicineCost": 100,
+      "InsuranceDiscount": 70,
+      "TotalCost": 130,
+      "DatePaid": "2024-11-25",
+      "Status": "Paid"
+    }
+  },
+  {
+    "model": "clinic_management.payment",
+    "pk": "PY12",
+    "fields": {
+      "MedicalRecordID": "MR12",
+      "InsuranceID": "I09",
+      "BaseCharge": 250,
+      "MedicineCost": 80,
+      "InsuranceDiscount": 90,
+      "TotalCost": 240,
+      "DatePaid": "2024-11-20",
+      "Status": "Paid"
+    }
+  },
+  {
+    "model": "clinic_management.payment",
+    "pk": "PY13",
+    "fields": {
+      "MedicalRecordID": "MR13",
+      "InsuranceID": "I02",
+      "BaseCharge": 180,
+      "MedicineCost": 300,
+      "InsuranceDiscount": 135,
+      "TotalCost": 345,
+      "DatePaid": "2024-11-22",
+      "Status": "Paid"
+    }
+  },
+  {
+    "model": "clinic_management.payment",
+    "pk": "PY09",
+    "fields": {
+      "MedicalRecordID": "MR09",
+      "InsuranceID": "I07",
+      "BaseCharge": 200,
+      "MedicineCost": 1200,
+      "InsuranceDiscount": 960,
+      "TotalCost": 440,
+      "DatePaid": "2024-11-23",
+      "Status": "Paid"
+    }
+  },
+  {
+    "model": "clinic_management.payment",
+    "pk": "PY10",
+    "fields": {
+      "MedicalRecordID": "MR10",
+      "InsuranceID": "I08",
+      "BaseCharge": 150,
+      "MedicineCost": 250,
+      "InsuranceDiscount": 70,
+      "TotalCost": 330,
+      "DatePaid": "2024-11-24",
+      "Status": "Pending"
+    }
+  },
+  {
+    "model": "clinic_management.payment",
+    "pk": "PY11",
+    "fields": {
+      "MedicalRecordID": "MR11",
+      "InsuranceID": "I01",
+      "BaseCharge": 100,
+      "MedicineCost": 100,
+      "InsuranceDiscount": 70,
+      "TotalCost": 130,
+      "DatePaid": "2024-11-25",
+      "Status": "Paid"
+    }
+  },
+  {
+    "model": "clinic_management.payment",
+    "pk": "PY12",
+    "fields": {
+      "MedicalRecordID": "MR12",
+      "InsuranceID": "I09",
+      "BaseCharge": 250,
+      "MedicineCost": 80,
+      "InsuranceDiscount": 90,
+      "TotalCost": 240,
+      "DatePaid": "2024-11-20",
+      "Status": "Paid"
+    }
+  },
+  {
+    "model": "clinic_management.payment",
+    "pk": "PY13",
+    "fields": {
+      "MedicalRecordID": "MR13",
+      "InsuranceID": "I02",
+      "BaseCharge": 180,
+      "MedicineCost": 300,
+      "InsuranceDiscount": 135,
+      "TotalCost": 345,
+      "DatePaid": "2024-11-22",
+      "Status": "Paid"
+    }
+  },
+  {
+    "model": "clinic_management.payment",
+    "pk": "PY14",
+    "fields": {
+      "MedicalRecordID": "MR14",
+      "InsuranceID": "I10",
+      "BaseCharge": 200,
+      "MedicineCost": 175,
+      "InsuranceDiscount": 300,
+      "TotalCost": 75,
+      "DatePaid": "2024-11-23",
+      "Status": "Paid"
+    }
+  },
+  {
+    "model": "clinic_management.payment",
+    "pk": "PY15",
+    "fields": {
+      "MedicalRecordID": "MR15",
+      "InsuranceID": "I11",
+      "BaseCharge": 500,
+      "MedicineCost": 60,
+      "InsuranceDiscount": 300,
+      "TotalCost": 260,
+      "DatePaid": "2024-11-20",
+      "Status": "Paid"
+    }
+  },
+  {
+    "model": "clinic_management.payment",
+    "pk": "PY16",
+    "fields": {
+      "MedicalRecordID": "MR16",
+      "InsuranceID": "I12",
+      "BaseCharge": 200,
+      "MedicineCost": 160,
+      "InsuranceDiscount": 100,
+      "TotalCost": 260,
+      "DatePaid": "2024-11-19",
+      "Status": "Pending"
+    }
+  },
+  {
+    "model": "clinic_management.payment",
+    "pk": "PY17",
+    "fields": {
+      "MedicalRecordID": "MR17",
+      "InsuranceID": "I13",
+      "BaseCharge": 250,
+      "MedicineCost": 50,
+      "InsuranceDiscount": 200,
+      "TotalCost": 100,
+      "DatePaid": "2024-11-22",
+      "Status": "Paid"
+    }
+  },
+  {
+    "model": "clinic_management.payment",
+    "pk": "PY18",
+    "fields": {
+      "MedicalRecordID": "MR18",
+      "InsuranceID": "I14",
+      "BaseCharge": 150,
+      "MedicineCost": 480,
+      "InsuranceDiscount": 400,
+      "TotalCost": 230,
+      "DatePaid": "2024-11-21",
       "Status": "Paid"
     }
   }

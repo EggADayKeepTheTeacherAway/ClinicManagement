@@ -1,24 +1,167 @@
 [
   {
     "model": "clinic_management.appointment",
-    "pk": "APP001",
+    "pk": "A01",
     "fields": {
-      "Date": "2024-11-25",
-      "StartTime": "09:00:00",
-      "EndTime": "10:00:00",
-      "PatientID": "PAT001",
-      "DoctorID": "DOC001"
+      "Date": "2024-11-01",
+      "StartTime": "10:00",
+      "EndTime": "10:30",
+      "PatientID": "P03",
+      "DoctorID": "D02"
     }
   },
   {
     "model": "clinic_management.appointment",
-    "pk": "APP002",
+    "pk": "A02",
     "fields": {
-      "Date": "2024-11-26",
-      "StartTime": "11:00:00",
-      "EndTime": "12:00:00",
-      "PatientID": "PAT002",
-      "DoctorID": "DOC002"
+      "Date": "2024-11-05",
+      "StartTime": "14:00",
+      "EndTime": "14:45",
+      "PatientID": "P04",
+      "DoctorID": "D04"
+    }
+  },
+  {
+    "model": "clinic_management.appointment",
+    "pk": "A03",
+    "fields": {
+      "Date": "2024-11-10",
+      "StartTime": "09:00",
+      "EndTime": "09:30",
+      "PatientID": "P01",
+      "DoctorID": "D01"
+    }
+  },
+  {
+    "model": "clinic_management.appointment",
+    "pk": "A04",
+    "fields": {
+      "Date": "2024-11-15",
+      "StartTime": "16:00",
+      "EndTime": "16:30",
+      "PatientID": "P02",
+      "DoctorID": "D03"
+    }
+  },
+  {
+    "model": "clinic_management.appointment",
+    "pk": "A05",
+    "fields": {
+      "Date": "2024-11-20",
+      "StartTime": "08:30",
+      "EndTime": "09:15",
+      "PatientID": "P01",
+      "DoctorID": "D05"
+    }
+  },
+  {
+    "model": "clinic_management.appointment",
+    "pk": "A06",
+    "fields": {
+      "Date": "2024-11-23",
+      "StartTime": "09:00",
+      "EndTime": "09:30",
+      "PatientID": "P07",
+      "DoctorID": "D01"
+    }
+  },
+  {
+    "model": "clinic_management.appointment",
+    "pk": "A07",
+    "fields": {
+      "Date": "2024-11-24",
+      "StartTime": "15:00",
+      "EndTime": "15:45",
+      "PatientID": "P08",
+      "DoctorID": "D06"
+    }
+  },
+  {
+    "model": "clinic_management.appointment",
+    "pk": "A08",
+    "fields": {
+      "Date": "2024-11-25",
+      "StartTime": "10:00",
+      "EndTime": "10:45",
+      "PatientID": "P02",
+      "DoctorID": "D03"
+    }
+  },
+  {
+    "model": "clinic_management.appointment",
+    "pk": "A09",
+    "fields": {
+      "Date": "2024-11-20",
+      "StartTime": "11:00",
+      "EndTime": "11:30",
+      "PatientID": "P09",
+      "DoctorID": "D04"
+    }
+  },
+  {
+    "model": "clinic_management.appointment",
+    "pk": "A10",
+    "fields": {
+      "Date": "2024-11-22",
+      "StartTime": "13:00",
+      "EndTime": "13:30",
+      "PatientID": "P01",
+      "DoctorID": "D02"
+    }
+  },
+  {
+    "model": "clinic_management.appointment",
+    "pk": "A11",
+    "fields": {
+      "Date": "2024-11-23",
+      "StartTime": "10:00",
+      "EndTime": "10:30",
+      "PatientID": "P12",
+      "DoctorID": "D11"
+    }
+  },
+  {
+    "model": "clinic_management.appointment",
+    "pk": "A12",
+    "fields": {
+      "Date": "2024-11-20",
+      "StartTime": "14:00",
+      "EndTime": "14:45",
+      "PatientID": "P13",
+      "DoctorID": "D12"
+    }
+  },
+  {
+    "model": "clinic_management.appointment",
+    "pk": "A13",
+    "fields": {
+      "Date": "2024-11-19",
+      "StartTime": "11:00",
+      "EndTime": "11:30",
+      "PatientID": "P14",
+      "DoctorID": "D13"
+    }
+  },
+  {
+    "model": "clinic_management.appointment",
+    "pk": "A14",
+    "fields": {
+      "Date": "2024-11-22",
+      "StartTime": "15:00",
+      "EndTime": "15:45",
+      "PatientID": "P15",
+      "DoctorID": "D14"
+    }
+  },
+  {
+    "model": "clinic_management.appointment",
+    "pk": "A15",
+    "fields": {
+      "Date": "2024-11-21",
+      "StartTime": "09:30",
+      "EndTime": "10:00",
+      "PatientID": "P16",
+      "DoctorID": "D11"
     }
   }
 ]

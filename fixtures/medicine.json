@@ -1,24 +1,180 @@
 [
   {
     "model": "clinic_management.medicine",
-    "pk": "MED001",
+    "pk": "M01",
     "fields": {
-      "Name": "Aspirin",
-      "Brand": "Bayer",
-      "Instructions": "Take one tablet daily after meals.",
-      "DefaultDosage": "1 tablet",
+      "Name": "Paracetamol",
+      "Brand": "PharmaCorp",
+      "Instructions": "Take after meals",
+      "DefaultDosage": "500mg",
       "Price": 10
     }
   },
   {
     "model": "clinic_management.medicine",
-    "pk": "MED002",
+    "pk": "M02",
     "fields": {
-      "Name": "Hydrocortisone",
-      "Brand": "Generic",
-      "Instructions": "Apply to affected skin areas twice a day.",
-      "DefaultDosage": "Apply topically",
+      "Name": "Antihistamine",
+      "Brand": "SkinPro",
+      "Instructions": "Apply twice daily",
+      "DefaultDosage": "50g",
+      "Price": 25
+    }
+  },
+  {
+    "model": "clinic_management.medicine",
+    "pk": "M03",
+    "fields": {
+      "Name": "Ibuprofen",
+      "Brand": "MedCo",
+      "Instructions": "Take before meals",
+      "DefaultDosage": "400mg",
+      "Price": 15
+    }
+  },
+  {
+    "model": "clinic_management.medicine",
+    "pk": "M04",
+    "fields": {
+      "Name": "Insulin",
+      "Brand": "DiabeticPro",
+      "Instructions": "Take once daily",
+      "DefaultDosage": "10ml",
+      "Price": 50
+    }
+  },
+  {
+    "model": "clinic_management.medicine",
+    "pk": "M05",
+    "fields": {
+      "Name": "Cough Syrup",
+      "Brand": "HealWell",
+      "Instructions": "2 tsp after meals",
+      "DefaultDosage": "100ml",
+      "Price": 60
+    }
+  },
+  {
+    "model": "clinic_management.medicine",
+    "pk": "M06",
+    "fields": {
+      "Name": "Anti-Rash Gel",
+      "Brand": "QuickRelief",
+      "Instructions": "Apply once daily",
+      "DefaultDosage": "30ml",
       "Price": 20
+    }
+  },
+  {
+    "model": "clinic_management.medicine",
+    "pk": "M07",
+    "fields": {
+      "Name": "Antacid",
+      "Brand": "StomachCare",
+      "Instructions": "Take after meals",
+      "DefaultDosage": "10ml",
+      "Price": 15
+    }
+  },
+  {
+    "model": "clinic_management.medicine",
+    "pk": "M08",
+    "fields": {
+      "Name": "Pain Reliever",
+      "Brand": "QuickRelief",
+      "Instructions": "Apply on affected area",
+      "DefaultDosage": "30g",
+      "Price": 25
+    }
+  },
+  {
+    "model": "clinic_management.medicine",
+    "pk": "M09",
+    "fields": {
+      "Name": "Blood Thinner",
+      "Brand": "CardioPlus",
+      "Instructions": "Take once daily",
+      "DefaultDosage": "5mg",
+      "Price": 40
+    }
+  },
+  {
+    "model": "clinic_management.medicine",
+    "pk": "M10",
+    "fields": {
+      "Name": "Antiviral Tabs",
+      "Brand": "VirusKill",
+      "Instructions": "Take before meals",
+      "DefaultDosage": "500mg",
+      "Price": 35
+    }
+  },
+  {
+    "model": "clinic_management.medicine",
+    "pk": "M11",
+    "fields": {
+      "Name": "Hydration Salts",
+      "Brand": "ORS",
+      "Instructions": "Mix in water",
+      "DefaultDosage": "1 packet",
+      "Price": 5
+    }
+  },
+  {
+    "model": "clinic_management.medicine",
+    "pk": "M12",
+    "fields": {
+      "Name": "Bronchodilator",
+      "Brand": "AsthmaCare",
+      "Instructions": "Inhale twice daily",
+      "DefaultDosage": "2 puffs",
+      "Price": 120
+    }
+  },
+  {
+    "model": "clinic_management.medicine",
+    "pk": "M13",
+    "fields": {
+      "Name": "Antacid Syrup",
+      "Brand": "DigestSure",
+      "Instructions": "Take after meals",
+      "DefaultDosage": "10ml",
+      "Price": 20
+    }
+  },
+  {
+    "model": "clinic_management.medicine",
+    "pk": "M14",
+    "fields": {
+      "Name": "Pain Balm",
+      "Brand": "PainEase",
+      "Instructions": "Apply on joints",
+      "DefaultDosage": "30g",
+      "Price": 50
+    }
+  },
+  {
+    "model": "clinic_management.medicine",
+    "pk": "M15",
+    "fields": {
+      "Name": "Anti-anxiety Meds",
+      "Brand": "CalmPlus",
+      "Instructions": "Take once daily",
+      "DefaultDosage": "25mg",
+      "Price": 80
+    }
+  },
+  {
+    "model": "clinic_management.medicine",
+    "pk": "M16",
+    "fields": {
+      "Name": "Antibiotic Syrup",
+      "Brand": "BactiKill",
+      "Instructions": "Take twice daily",
+      "DefaultDosage": "10ml",
+      "Price": 35
     }
   }
 ]
+
+

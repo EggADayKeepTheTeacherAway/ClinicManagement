@@ -1,18 +1,74 @@
 [
   {
     "model": "clinic_management.treatment",
-    "pk": "TRT001",
+    "pk": "T01",
     "fields": {
-      "Type": "Cardiac Bypass Surgery",
-      "BaseCharge": 150000
+      "Type": "Ointment Therapy",
+      "BaseCharge": 200
     }
   },
   {
     "model": "clinic_management.treatment",
-    "pk": "TRT002",
+    "pk": "T02",
     "fields": {
-      "Type": "Skin Biopsy",
-      "BaseCharge": 5000
+      "Type": "Physiotherapy",
+      "BaseCharge": 400
+    }
+  },
+  {
+    "model": "clinic_management.treatment",
+    "pk": "T03",
+    "fields": {
+      "Type": "Medication",
+      "BaseCharge": 150
+    }
+  },
+  {
+    "model": "clinic_management.treatment",
+    "pk": "T04",
+    "fields": {
+      "Type": "Antiviral Therapy",
+      "BaseCharge": 300
+    }
+  },
+  {
+    "model": "clinic_management.treatment",
+    "pk": "T05",
+    "fields": {
+      "Type": "Bronchodilator",
+      "BaseCharge": 150
+    }
+  },
+  {
+    "model": "clinic_management.treatment",
+    "pk": "T06",
+    "fields": {
+      "Type": "Cholecystectomy",
+      "BaseCharge": 500
+    }
+  },
+  {
+    "model": "clinic_management.treatment",
+    "pk": "T07",
+    "fields": {
+      "Type": "Physical Therapy",
+      "BaseCharge": 250
+    }
+  },
+  {
+    "model": "clinic_management.treatment",
+    "pk": "T08",
+    "fields": {
+      "Type": "Counseling",
+      "BaseCharge": 200
+    }
+  },
+  {
+    "model": "clinic_management.treatment",
+    "pk": "T09",
+    "fields": {
+      "Type": "Antibiotics",
+      "BaseCharge": 180
     }
   }
 ]
