@@ -1,20 +1,101 @@
 [
   {
     "model": "clinic_management.diseases",
-    "pk": "DIS001",
+    "pk": "DS01",
     "fields": {
-      "Name": "Flu",
-      "Description": "Seasonal flu causing fever and chills.",
-      "TreatmentID": "TRT001"
+      "Name": "Hypertension",
+      "Description": "High blood pressure issue",
+      "TreatmentID": "T03"
     }
   },
   {
     "model": "clinic_management.diseases",
-    "pk": "DIS002",
+    "pk": "DS02",
     "fields": {
-      "Name": "Cold",
-      "Description": "Common cold with a runny nose.",
-      "TreatmentID": "TRT002"
+      "Name": "Eczema",
+      "Description": "Chronic skin condition",
+      "TreatmentID": "T01"
+    }
+  },
+  {
+    "model": "clinic_management.diseases",
+    "pk": "DS03",
+    "fields": {
+      "Name": "Viral Fever",
+      "Description": "Fever due to viral infection",
+      "TreatmentID": "T04"
+    }
+  },
+  {
+    "model": "clinic_management.diseases",
+    "pk": "DS04",
+    "fields": {
+      "Name": "ACL Tear",
+      "Description": "Knee ligament injury",
+      "TreatmentID": "T02"
+    }
+  },
+  {
+    "model": "clinic_management.diseases",
+    "pk": "DS05",
+    "fields": {
+      "Name": "Diabetes",
+      "Description": "Chronic high blood sugar levels",
+      "TreatmentID": "T03"
+    }
+  },
+  {
+    "model": "clinic_management.diseases",
+    "pk": "DS06",
+    "fields": {
+      "Name": "Migraine",
+      "Description": "Chronic severe headaches",
+      "TreatmentID": "T02"
+    }
+  },
+  {
+    "model": "clinic_management.diseases",
+    "pk": "DS07",
+    "fields": {
+      "Name": "Asthma",
+      "Description": "Chronic respiratory condition",
+      "TreatmentID": "T05"
+    }
+  },
+  {
+    "model": "clinic_management.diseases",
+    "pk": "DS08",
+    "fields": {
+      "Name": "Gallstones",
+      "Description": "Digestive system disorder",
+      "TreatmentID": "T06"
+    }
+  },
+  {
+    "model": "clinic_management.diseases",
+    "pk": "DS09",
+    "fields": {
+      "Name": "Arthritis",
+      "Description": "Joint inflammation and pain",
+      "TreatmentID": "T07"
+    }
+  },
+  {
+    "model": "clinic_management.diseases",
+    "pk": "DS10",
+    "fields": {
+      "Name": "Anxiety Disorder",
+      "Description": "Persistent worry and stress",
+      "TreatmentID": "T08"
+    }
+  },
+  {
+    "model": "clinic_management.diseases",
+    "pk": "DS11",
+    "fields": {
+      "Name": "Pneumonia",
+      "Description": "Lung infection",
+      "TreatmentID": "T09"
     }
   }
 ]

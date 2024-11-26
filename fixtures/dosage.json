@@ -1,30 +1,212 @@
 [
   {
     "model": "clinic_management.dosage",
-    "pk": "DSG001",
+    "pk": "DO01",
     "fields": {
-      "MedicationID": "MED001",
-      "MinWeight": "50kg",
-      "MaxWeight": "100kg",
-      "MinAge": 18,
-      "MaxAge": 65,
-      "RecommendDosage": "1 tablet",
-      "Units": "tablets",
-      "Notes": "For cardiovascular treatment"
+      "MedicationID": "M03",
+      "MinWeight": "20kg",
+      "MaxWeight": "90kg",
+      "MinAge": 5,
+      "MaxAge": 50,
+      "RecommendDosage": "2 tsp",
+      "Units": "Bottle",
+      "Notes": "For dry cough relief"
     }
   },
   {
     "model": "clinic_management.dosage",
-    "pk": "DSG002",
+    "pk": "DO02",
     "fields": {
-      "MedicationID": "MED002",
+      "MedicationID": "M01",
+      "MinWeight": "50kg",
+      "MaxWeight": "100kg",
+      "MinAge": 12,
+      "MaxAge": 60,
+      "RecommendDosage": "1 Tablet",
+      "Units": "Tablet",
+      "Notes": "For fever or pain"
+    }
+  },
+  {
+    "model": "clinic_management.dosage",
+    "pk": "DO03",
+    "fields": {
+      "MedicationID": "M03",
+      "MinWeight": "40kg",
+      "MaxWeight": "80kg",
+      "MinAge": 18,
+      "MaxAge": 60,
+      "RecommendDosage": "1 Tablet",
+      "Units": "Tablet",
+      "Notes": "For inflammation/pain"
+    }
+  },
+  {
+    "model": "clinic_management.dosage",
+    "pk": "DO04",
+    "fields": {
+      "MedicationID": "M02",
       "MinWeight": "30kg",
-      "MaxWeight": "90kg",
-      "MinAge": 5,
+      "MaxWeight": "70kg",
+      "MinAge": 10,
+      "MaxAge": 40,
+      "RecommendDosage": "Apply twice daily",
+      "Units": "Tube",
+      "Notes": "For allergies/skin rash"
+    }
+  },
+  {
+    "model": "clinic_management.dosage",
+    "pk": "DO05",
+    "fields": {
+      "MedicationID": "M04",
+      "MinWeight": "50kg",
+      "MaxWeight": "120kg",
+      "MinAge": 15,
       "MaxAge": 80,
-      "RecommendDosage": "Apply a thin layer",
-      "Units": "grams",
-      "Notes": "For eczema treatment"
+      "RecommendDosage": "10 units",
+      "Units": "Injection",
+      "Notes": "For diabetes management"
+    }
+  },
+  {
+    "model": "clinic_management.dosage",
+    "pk": "DO06",
+    "fields": {
+      "MedicationID": "M06",
+      "MinWeight": "20kg",
+      "MaxWeight": "80kg",
+      "MinAge": 5,
+      "MaxAge": 45,
+      "RecommendDosage": "Apply once daily",
+      "Units": "Tube",
+      "Notes": "Anti-inflammatory gel"
+    }
+  },
+  {
+    "model": "clinic_management.dosage",
+    "pk": "DO07",
+    "fields": {
+      "MedicationID": "M07",
+      "MinWeight": 40,
+      "MaxWeight": 120,
+      "MinAge": 12,
+      "MaxAge": 60,
+      "RecommendDosage": "10ml",
+      "Units": "Bottle",
+      "Notes": "For indigestion"
+    }
+  },
+  {
+    "model": "clinic_management.dosage",
+    "pk": "DO08",
+    "fields": {
+      "MedicationID": "M09",
+      "MinWeight": 50,
+      "MaxWeight": 120,
+      "MinAge": 18,
+      "MaxAge": 65,
+      "RecommendDosage": "1 Tablet",
+      "Units": "Tablet",
+      "Notes": "For blood pressure management"
+    }
+  },
+  {
+    "model": "clinic_management.dosage",
+    "pk": "DO09",
+    "fields": {
+      "MedicationID": "M10",
+      "MinWeight": 40,
+      "MaxWeight": 90,
+      "MinAge": 15,
+      "MaxAge": 70,
+      "RecommendDosage": "1 Tablet",
+      "Units": "Tablet",
+      "Notes": "For viral infections"
+    }
+  },
+  {
+    "model": "clinic_management.dosage",
+    "pk": "DO10",
+    "fields": {
+      "MedicationID": "M11",
+      "MinWeight": "Any",
+      "MaxWeight": "Any",
+      "MinAge": 15,
+      "MaxAge": 70,
+      "RecommendDosage": "1 packet",
+      "Units": "Packet",
+      "Notes": "For dehydration"
+    }
+  },
+  {
+    "model": "clinic_management.dosage",
+    "pk": "DO11",
+    "fields": {
+      "MedicationID": "M16",
+      "MinWeight": "50kg",
+      "MaxWeight": "120kg",
+      "MinAge": 10,
+      "MaxAge": 65,
+      "RecommendDosage": "10ml",
+      "Units": "Bottle",
+      "Notes": "For bacterial infections"
+    }
+  },
+  {
+    "model": "clinic_management.dosage",
+    "pk": "DO12",
+    "fields": {
+      "MedicationID": "M15",
+      "MinWeight": "Any",
+      "MaxWeight": "Any",
+      "MinAge": 18,
+      "MaxAge": 70,
+      "RecommendDosage": "25mg",
+      "Units": "Tablet",
+      "Notes": "For managing anxiety"
+    }
+  },
+  {
+    "model": "clinic_management.dosage",
+    "pk": "DO13",
+    "fields": {
+      "MedicationID": "M14",
+      "MinWeight": "40kg",
+      "MaxWeight": "120kg",
+      "MinAge": 15,
+      "MaxAge": 70,
+      "RecommendDosage": "30g",
+      "Units": "Tube",
+      "Notes": "For arthritis joint pain"
+    }
+  },
+  {
+    "model": "clinic_management.dosage",
+    "pk": "DO14",
+    "fields": {
+      "MedicationID": "M13",
+      "MinWeight": "Any",
+      "MaxWeight": "Any",
+      "MinAge": 15,
+      "MaxAge": 70,
+      "RecommendDosage": "10ml",
+      "Units": "Bottle",
+      "Notes": "For indigestion"
+    }
+  },
+  {
+    "model": "clinic_management.dosage",
+    "pk": "DO15",
+    "fields": {
+      "MedicationID": "M12",
+      "MinWeight": "Any",
+      "MaxWeight": "Any",
+      "MinAge": 10,
+      "MaxAge": 65,
+      "RecommendDosage": "2 puffs",
+      "Units": "Inhaler",
+      "Notes": "For asthma management"
     }
   }
 ]
