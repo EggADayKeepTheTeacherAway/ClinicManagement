@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+    <title>Clinic Management System</title>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-dark border-bottom border-body" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="{% url 'home' %}">
+                <img src="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo.svg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+                Clinic Management
+            </a>
+        </div>
+    </nav>
+
+    <div class="container my-5">
+        <div class="text-center mb-4 py-2">
+            <h1 class="display-5 fw-bold text-dark">Clinic Management System</h1>
+            <hr class="w-25 mx-auto bg-gradient border-2 rounded">
+            <p class="text-muted">Healthcare Management Dashboard</p>
+        </div>
+    </div>
+
+    <div class="container mt-4">
+        {% block title %}
+        {% endblock %}
+    </div>
+
+    {% block content %}
+    {% endblock %}
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-VoPfD6D1zy2zjzH1At14i69s2GbykkP+z8fiP5rxL5bC9fE2BJKiEVK58TkcwaHq" crossorigin="anonymous"></script>
+
+
+    <script>
+    $(document).ready(function() {
+    $('#bootstrapSelect').change(function() {
+        var selectedValue = $(this).val();
+        if (selectedValue !== "" && selectedValue !== "Select Table") {
+            window.location.href = '/' + selectedValue + '/';
+        } else if (selectedValue === "") {
+            window.location.href = '/';
+        }
+    });
+})
+
+    </script>
+</body>
+</html>
