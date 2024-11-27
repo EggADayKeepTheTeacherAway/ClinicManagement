@@ -20,6 +20,8 @@
                                name="{{ field }}"
                                {% if input_types|get_item:field == 'number' %}
                                    value="{% if object|get_model_field:field %}{{ object|get_model_field:field }}{% endif %}"
+                               {% elif input_types|get_item:field == 'date' %}
+                                   value="{% if object|get_model_field:field %}{{ object|get_model_field:field|date:"Y-m-d" }}{% endif %}"
                                {% else %}
                                    value="{% if field == 'DoctorID' %}{{ object.DoctorID.DoctorID }}
                                    {% elif field == 'PatientID' %}{{ object.PatientID.PatientID }}
