@@ -2,6 +2,9 @@
 
 {% block title %}
 <h2 class="mt-4">{{ doctor.Name }}'s Appointments</h2>
+<a href="{% url 'doctor_list' %}" class="btn btn-primary mb-3">
+    Doctor List
+</a>
 {% endblock %}
 
 {% block content %}
