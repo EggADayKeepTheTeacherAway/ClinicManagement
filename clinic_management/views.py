@@ -176,8 +176,8 @@ class CoveragePolicyListView(generic.ListView):
 
 def add_coverage_policy(request):
     if request.method == 'POST':
-        insurance_id = request.POST.get('InsuranceID')
-        treatment_id = request.POST.get('TreatmentID')
+        insurance_id = request.POST.get('InsuranceID').strip()
+        treatment_id = request.POST.get('TreatmentID').strip()
         coverage_percentage = request.POST.get('CoveragePercentage')
         max_coverage_amount = request.POST.get('MaxCoverageAmount')
 
@@ -243,8 +243,8 @@ def edit_coverage_policy(request, policy_id):
 
     if request.method == 'POST':
         # Update the fields with new data from the POST request
-        coverage_policy.InsuranceID_id = request.POST['InsuranceID']
-        coverage_policy.TreatmentID_id = request.POST['TreatmentID']
+        coverage_policy.InsuranceID_id = request.POST['InsuranceID'].strip()
+        coverage_policy.TreatmentID_id = request.POST['TreatmentID'].strip()
         coverage_policy.CoveragePercentage = request.POST['CoveragePercentage']
         coverage_policy.MaxCoverageAmount = request.POST['MaxCoverageAmount']
         coverage_policy.save()
@@ -272,11 +272,11 @@ class InsuranceListView(generic.ListView):
 
 def add_insurance(request):
     if request.method == 'POST':
-        patient_id = request.POST.get('PatientID')
-        provider = request.POST.get('Provider')
+        patient_id = request.POST.get('PatientID').strip()
+        provider = request.POST.get('Provider').strip()
         coverage_amount = request.POST.get('CoverageAmount')
         expire_date = request.POST.get('ExpireDate')
-        insurance_type = request.POST.get('Type')
+        insurance_type = request.POST.get('Type').strip()
 
         insurance = Insurance(
             PatientID_id=patient_id,
@@ -344,11 +344,11 @@ def edit_insurance(request, insurance_id):
     }
 
     if request.method == 'POST':
-        insurance.PatientID_id = request.POST['PatientID']
-        insurance.Provider = request.POST['Provider']
+        insurance.PatientID_id = request.POST['PatientID'].strip()
+        insurance.Provider = request.POST['Provider'].strip()
         insurance.CoverageAmount = request.POST['CoverageAmount']
         insurance.ExpireDate = request.POST['ExpireDate']
-        insurance.Type = request.POST['Type']
+        insurance.Type = request.POST['Type'].strip()
         insurance.save()
 
         # Redirect to the insurance list page
@@ -373,14 +373,14 @@ class PaymentListView(generic.ListView):
 
 def add_payment(request):
     if request.method == 'POST':
-        medical_record_id = request.POST.get('MedicalRecordID')
-        insurance_id = request.POST.get('InsuranceID')
+        medical_record_id = request.POST.get('MedicalRecordID').strip()
+        insurance_id = request.POST.get('InsuranceID').strip()
         base_charge = request.POST.get('BaseCharge')
         medicine_cost = request.POST.get('MedicineCost')
         insurance_discount = request.POST.get('InsuranceDiscount')
         total_cost = request.POST.get('TotalCost')
         date_paid = request.POST.get('DatePaid')
-        status = request.POST.get('Status')
+        status = request.POST.get('Status').strip()
 
         payment = Payment(
             MedicalRecordID_id=medical_record_id,
@@ -456,14 +456,14 @@ def edit_payment(request, payment_id):
     }
 
     if request.method == 'POST':
-        payment.MedicalRecordID_id = request.POST['MedicalRecordID']
-        payment.InsuranceID_id = request.POST['InsuranceID']
+        payment.MedicalRecordID_id = request.POST['MedicalRecordID'].strip()
+        payment.InsuranceID_id = request.POST['InsuranceID'].strip()
         payment.BaseCharge = request.POST['BaseCharge']
         payment.MedicineCost = request.POST['MedicineCost']
         payment.InsuranceDiscount = request.POST['InsuranceDiscount']
         payment.TotalCost = request.POST['TotalCost']
         payment.DatePaid = request.POST['DatePaid']
-        payment.Status = request.POST['Status']
+        payment.Status = request.POST['Status'].strip()
         payment.save()
 
         # Redirect to the payment list page
@@ -495,9 +495,9 @@ class DiseaseListView(generic.ListView):
 
 def add_disease(request):
     if request.method == 'POST':
-        name = request.POST.get('Name')
-        description = request.POST.get('Description')
-        treatment_id = request.POST.get('TreatmentID')
+        name = request.POST.get('Name').strip()
+        description = request.POST.get('Description').strip()
+        treatment_id = request.POST.get('TreatmentID').strip()
 
         disease = Diseases(
             Name=name,
@@ -555,9 +555,9 @@ def edit_disease(request, disease_id):
     }
 
     if request.method == 'POST':
-        disease.Name = request.POST['Name']
-        disease.Description = request.POST['Description']
-        disease.TreatmentID_id = request.POST['TreatmentID']
+        disease.Name = request.POST['Name'].strip()
+        disease.Description = request.POST['Description'].strip()
+        disease.TreatmentID_id = request.POST['TreatmentID'].strip()
         disease.save()
 
         # Redirect to the disease list page
@@ -582,7 +582,7 @@ class TreatmentListView(generic.ListView):
 
 def add_treatment(request):
     if request.method == 'POST':
-        treatment_type = request.POST.get('Type')
+        treatment_type = request.POST.get('Type').strip()
         base_charge = request.POST.get('BaseCharge')
 
         treatment = Treatment(
@@ -629,7 +629,7 @@ def edit_treatment(request, treatment_id):
     }
 
     if request.method == 'POST':
-        treatment.Type = request.POST['Type']
+        treatment.Type = request.POST['Type'].strip()
         treatment.BaseCharge = request.POST['BaseCharge']
         treatment.save()
 
@@ -663,10 +663,10 @@ class MedicineListView(generic.ListView):
 
 def add_medicine(request):
     if request.method == 'POST':
-        name = request.POST.get('Name')
-        brand = request.POST.get('Brand')
-        instructions = request.POST.get('Instructions')
-        default_dosage = request.POST.get('DefaultDosage')
+        name = request.POST.get('Name').strip()
+        brand = request.POST.get('Brand').strip()
+        instructions = request.POST.get('Instructions').strip()
+        default_dosage = request.POST.get('DefaultDosage').strip()
         price = request.POST.get('Price')
 
         medicine = Medicine(
@@ -736,10 +736,10 @@ def edit_medicine(request, medicine_id):
 
     if request.method == 'POST':
         # Update the medicine object with form data
-        medicine.Name = request.POST['Name']
-        medicine.Brand = request.POST['Brand']
-        medicine.Instructions = request.POST['Instructions']
-        medicine.DefaultDosage = request.POST['DefaultDosage']
+        medicine.Name = request.POST['Name'].strip()
+        medicine.Brand = request.POST['Brand'].strip()
+        medicine.Instructions = request.POST['Instructions'].strip()
+        medicine.DefaultDosage = request.POST['DefaultDosage'].strip()
         medicine.Price = request.POST['Price']
         medicine.save()
 
@@ -765,14 +765,14 @@ class DosageListView(generic.ListView):
 
 def add_dosage(request):
     if request.method == 'POST':
-        medication_id = request.POST.get('MedicationID')
+        medication_id = request.POST.get('MedicationID').strip()
         min_weight = request.POST.get('MinWeight')
         max_weight = request.POST.get('MaxWeight')
         min_age = request.POST.get('MinAge')
         max_age = request.POST.get('MaxAge')
-        recommend_dosage = request.POST.get('RecommendDosage')
-        units = request.POST.get('Units')
-        notes = request.POST.get('Notes')
+        recommend_dosage = request.POST.get('RecommendDosage').strip()
+        units = request.POST.get('Units').strip()
+        notes = request.POST.get('Notes').strip()
 
         dosage = Dosage(
             MedicationID_id=medication_id,
@@ -859,10 +859,10 @@ def edit_dosage(request, dosage_id):
         dosage.MedicationID = get_object_or_404(Medicine,
                                                 MedicationID=request.POST[
                                                     'MedicationID'].strip())
-        dosage.MinWeight = request.POST['MinWeight'].strip()
-        dosage.MaxWeight = request.POST['MaxWeight'].strip()
-        dosage.MinAge = request.POST['MinAge'].strip()
-        dosage.MaxAge = request.POST['MaxAge'].strip()
+        dosage.MinWeight = request.POST['MinWeight']
+        dosage.MaxWeight = request.POST['MaxWeight']
+        dosage.MinAge = request.POST['MinAge']
+        dosage.MaxAge = request.POST['MaxAge']
         dosage.RecommendDosage = request.POST['RecommendDosage'].strip()
         dosage.Units = request.POST['Units'].strip()
         dosage.Notes = request.POST['Notes'].strip()
@@ -890,13 +890,13 @@ class PatientListView(generic.ListView):
 
 def add_patient(request):
     if request.method == 'POST':
-        name = request.POST.get('Name')
-        phone = request.POST.get('Phone')
-        email = request.POST.get('Email')
+        name = request.POST.get('Name').strip()
+        phone = request.POST.get('Phone').strip()
+        email = request.POST.get('Email').strip()
         birthdate = request.POST.get('Birthdate')
         weight = request.POST.get('Weight')
         height = request.POST.get('Height')
-        emergency_contact = request.POST.get('EmergencyContact')
+        emergency_contact = request.POST.get('EmergencyContact').strip()
 
         patient = Patient(
             Name=name,
@@ -978,9 +978,9 @@ def edit_patient(request, patient_id):
         patient.Name = request.POST['Name'].strip()
         patient.Phone = request.POST['Phone'].strip()
         patient.Email = request.POST['Email'].strip()
-        patient.Birthdate = request.POST['Birthdate'].strip()
-        patient.Weight = request.POST['Weight'].strip()
-        patient.Height = request.POST['Height'].strip()
+        patient.Birthdate = request.POST['Birthdate']
+        patient.Weight = request.POST['Weight']
+        patient.Height = request.POST['Height']
         patient.EmergencyContact = request.POST['EmergencyContact'].strip()
         patient.save()
 
@@ -1006,11 +1006,11 @@ class DoctorListView(generic.ListView):
 
 def add_doctor(request):
     if request.method == 'POST':
-        name = request.POST.get('Name')
-        phone = request.POST.get('Phone')
-        email = request.POST.get('Email')
+        name = request.POST.get('Name').strip()
+        phone = request.POST.get('Phone').strip()
+        email = request.POST.get('Email').strip()
         birthdate = request.POST.get('Birthdate')
-        specialization = request.POST.get('Specialization')
+        specialization = request.POST.get('Specialization').strip()
 
         doctor = Doctor(
             Name=name,
@@ -1082,7 +1082,7 @@ def edit_doctor(request, doctor_id):
         doctor.Name = request.POST['Name'].strip()
         doctor.Phone = request.POST['Phone'].strip()
         doctor.Email = request.POST['Email'].strip()
-        doctor.Birthdate = request.POST['Birthdate'].strip()
+        doctor.Birthdate = request.POST['Birthdate']
         doctor.Specialization = request.POST['Specialization'].strip()
         doctor.save()
 
@@ -1108,13 +1108,13 @@ class MedicalRecordListView(generic.ListView):
 
 def add_medical_record(request):
     if request.method == 'POST':
-        patient_id = request.POST.get('PatientID')
-        doctor_id = request.POST.get('DoctorID')
-        disease_id = request.POST.get('DiseaseID')
-        visit_reason = request.POST.get('VisitReason')
-        summary = request.POST.get('Summary')
+        patient_id = request.POST.get('PatientID').strip()
+        doctor_id = request.POST.get('DoctorID').strip()
+        disease_id = request.POST.get('DiseaseID').strip()
+        visit_reason = request.POST.get('VisitReason').strip()
+        summary = request.POST.get('Summary').strip()
         date_visit = request.POST.get('DateVisit')
-        status = request.POST.get('Status')
+        status = request.POST.get('Status').strip()
 
         medical_record = MedicalRecord(
             PatientID_id=patient_id,
@@ -1206,7 +1206,7 @@ def edit_medical_record(request, medical_record_id):
                                                          'DiseaseID'].strip())
         medical_record.VisitReason = request.POST['VisitReason'].strip()
         medical_record.Summary = request.POST['Summary'].strip()
-        medical_record.DateVisit = request.POST['DateVisit'].strip()
+        medical_record.DateVisit = request.POST['DateVisit']
         medical_record.Status = request.POST['Status'].strip()
         medical_record.save()
 
@@ -1232,9 +1232,9 @@ class MedicineRecordListView(generic.ListView):
 
 def add_medicine_record(request):
     if request.method == 'POST':
-        medical_record_id = request.POST.get('MedicalRecordID')
-        medication_id = request.POST.get('MedicationID')
-        dosage_id = request.POST.get('DosageID')
+        medical_record_id = request.POST.get('MedicalRecordID').strip()
+        medication_id = request.POST.get('MedicationID').strip()
+        dosage_id = request.POST.get('DosageID').strip()
         quantity = request.POST.get('Quantity')
         cost = request.POST.get('Cost')
 
@@ -1346,8 +1346,8 @@ def add_appointment(request):
         date = request.POST.get('Date')
         start_time = request.POST.get('StartTime')
         end_time = request.POST.get('EndTime')
-        patient_id = request.POST.get('PatientID')
-        doctor_id = request.POST.get('DoctorID')
+        patient_id = request.POST.get('PatientID').strip()
+        doctor_id = request.POST.get('DoctorID').strip()
 
         appointment = Appointment(
             Date=date,
@@ -1451,7 +1451,7 @@ class AvailabilityListView(generic.ListView):
 
 def add_availability(request):
     if request.method == 'POST':
-        doctor_id = request.POST.get('DoctorID')
+        doctor_id = request.POST.get('DoctorID').strip()
         date = request.POST.get('Date')
         start_time = request.POST.get('StartTime')
         end_time = request.POST.get('EndTime')
