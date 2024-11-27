@@ -19,8 +19,11 @@
                            id="{{ field }}_{{ object.pk }}"
                            name="{{ field }}"
                            value="{% if field == 'DoctorID' %}{{ object.DoctorID.DoctorID }}
-                           {% elif field == 'PatientID' %}{{ object.PatientID.PatientID }}{% else %}
-                           {{ object|get_model_field:field }}
+                           {% elif field == 'PatientID' %}{{ object.PatientID.PatientID }}
+                           {% elif field == 'MedicationID' %}{{ object.MedicationID.MedicationID }}
+                           {% elif field == 'DiseaseID' %}{{ object.DiseaseID.DiseaseID }}
+                           {% elif field == 'TreatmentID' %}{{ object.TreatmentID.TreatmentID }}
+                           {% else %}{{ object|get_model_field:field }}
                            {% endif %}"
                            required>
                     </div>
