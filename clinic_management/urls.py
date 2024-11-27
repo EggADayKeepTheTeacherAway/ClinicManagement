@@ -93,4 +93,6 @@ urlpatterns = [
          name='edit_coverage_policy'),
     path('doctor/<str:doctor_id>/doctor_timetable/', views.doctor_timetable,
          name='doctor_timetable'),
+    path('patient/<str:patient_id>/patient_appointment_table/', views.patient_appointment_table,
+         name='patient_appointment_table'),
 ]
