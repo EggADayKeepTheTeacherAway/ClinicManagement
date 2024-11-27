@@ -221,6 +221,49 @@ def delete_coverage_policy(request, policy_id):
         return redirect('coverage_policy_list')
 
 
+def edit_coverage_policy(request, policy_id):
+    # Retrieve the coverage policy object
+    coverage_policy = get_object_or_404(CoveragePolicy, PolicyID=policy_id)
+
+    # Define fields and labels for the form
+    fields = [
+        ('InsuranceID', 'Insurance ID'),
+        ('TreatmentID', 'Treatment ID'),
+        ('CoveragePercentage', 'Coverage Percentage'),
+        ('MaxCoverageAmount', 'Max Coverage Amount')
+    ]
+
+    # Define input types for the form
+    input_types = {
+        'InsuranceID': 'text',
+        'TreatmentID': 'text',
+        'CoveragePercentage': 'number',
+        'MaxCoverageAmount': 'number'
+    }
+
+    if request.method == 'POST':
+        # Update the fields with new data from the POST request
+        coverage_policy.InsuranceID_id = request.POST['InsuranceID']
+        coverage_policy.TreatmentID_id = request.POST['TreatmentID']
+        coverage_policy.CoveragePercentage = request.POST['CoveragePercentage']
+        coverage_policy.MaxCoverageAmount = request.POST['MaxCoverageAmount']
+        coverage_policy.save()
+
+        # Redirect back to the list of coverage policies
+        return redirect('coverage_policy_list')
+
+    # Pass the data to the template
+    context = {
+        'model_name': 'CoveragePolicy',
+        'fields': fields,
+        'input_types': input_types,
+        'object': coverage_policy,  # This is the object to edit
+        'object_model_name': 'coverage_policy_list'
+    }
+
+    return render(request, 'edit_data/edit_data.html', context)
+
+
 class InsuranceListView(generic.ListView):
     model = Insurance
     template_name = 'insurance_list.html'
@@ -276,6 +319,50 @@ def delete_insurance(request, insurance_id):
     if request.method == 'POST':
         insurance.delete()
         return redirect('insurance_list')
+
+
+def edit_insurance(request, insurance_id):
+    # Get the insurance object to edit
+    insurance = get_object_or_404(Insurance, InsuranceID=insurance_id)
+
+    # Define the fields and their labels
+    fields = [
+        ('PatientID', 'Patient ID'),
+        ('Provider', 'Provider'),
+        ('CoverageAmount', 'Coverage Amount'),
+        ('ExpireDate', 'Expire Date'),
+        ('Type', 'Type')
+    ]
+
+    # Define input types for each field
+    input_types = {
+        'PatientID': 'text',
+        'Provider': 'text',
+        'CoverageAmount': 'number',
+        'ExpireDate': 'date',
+        'Type': 'text'
+    }
+
+    if request.method == 'POST':
+        insurance.PatientID_id = request.POST['PatientID']
+        insurance.Provider = request.POST['Provider']
+        insurance.CoverageAmount = request.POST['CoverageAmount']
+        insurance.ExpireDate = request.POST['ExpireDate']
+        insurance.Type = request.POST['Type']
+        insurance.save()
+
+        # Redirect to the insurance list page
+        return redirect('insurance_list')
+
+    context = {
+        'model_name': 'Insurance',
+        'fields': fields,
+        'input_types': input_types,
+        'object': insurance,
+        'object_model_name': 'insurance_list'
+    }
+
+    return render(request, 'edit_data/edit_data.html', context)
 
 
 class PaymentListView(generic.ListView):
@@ -340,6 +427,59 @@ def add_payment(request):
     return render(request, 'insert_data/add_data.html', context)
 
 
+def edit_payment(request, payment_id):
+    # Get the payment object to edit
+    payment = get_object_or_404(Payment, PaymentID=payment_id)
+
+    # Define the fields and their labels
+    fields = [
+        ('MedicalRecordID', 'Medical Record ID'),
+        ('InsuranceID', 'Insurance ID'),
+        ('BaseCharge', 'Base Charge'),
+        ('MedicineCost', 'Medicine Cost'),
+        ('InsuranceDiscount', 'Insurance Discount'),
+        ('TotalCost', 'Total Cost'),
+        ('DatePaid', 'Date Paid'),
+        ('Status', 'Status')
+    ]
+
+    # Define input types for each field
+    input_types = {
+        'MedicalRecordID': 'text',
+        'InsuranceID': 'text',
+        'BaseCharge': 'number',
+        'MedicineCost': 'number',
+        'InsuranceDiscount': 'number',
+        'TotalCost': 'number',
+        'DatePaid': 'date',
+        'Status': 'text'
+    }
+
+    if request.method == 'POST':
+        payment.MedicalRecordID_id = request.POST['MedicalRecordID']
+        payment.InsuranceID_id = request.POST['InsuranceID']
+        payment.BaseCharge = request.POST['BaseCharge']
+        payment.MedicineCost = request.POST['MedicineCost']
+        payment.InsuranceDiscount = request.POST['InsuranceDiscount']
+        payment.TotalCost = request.POST['TotalCost']
+        payment.DatePaid = request.POST['DatePaid']
+        payment.Status = request.POST['Status']
+        payment.save()
+
+        # Redirect to the payment list page
+        return redirect('payment_list')
+
+    context = {
+        'model_name': 'Payment',
+        'fields': fields,
+        'input_types': input_types,
+        'object': payment,
+        'object_model_name': 'payment_list'
+    }
+
+    return render(request, 'edit_data/edit_data.html', context)
+
+
 def delete_payment(request, payment_id):
     payment = get_object_or_404(Payment, PaymentID=payment_id)
     if request.method == 'POST':
@@ -396,6 +536,44 @@ def delete_disease(request, disease_id):
         return redirect('disease_list')
 
 
+def edit_disease(request, disease_id):
+    # Get the disease object to edit
+    disease = get_object_or_404(Diseases, DiseaseID=disease_id)
+
+    # Define the fields and their labels
+    fields = [
+        ('Name', 'Disease Name'),
+        ('Description', 'Description'),
+        ('TreatmentID', 'Treatment ID')
+    ]
+
+    # Define input types for each field
+    input_types = {
+        'Name': 'text',
+        'Description': 'text',
+        'TreatmentID': 'text'
+    }
+
+    if request.method == 'POST':
+        disease.Name = request.POST['Name']
+        disease.Description = request.POST['Description']
+        disease.TreatmentID_id = request.POST['TreatmentID']
+        disease.save()
+
+        # Redirect to the disease list page
+        return redirect('disease_list')
+
+    context = {
+        'model_name': 'Diseases',
+        'fields': fields,
+        'input_types': input_types,
+        'object': disease,
+        'object_model_name': 'disease_list'
+    }
+
+    return render(request, 'edit_data/edit_data.html', context)
+
+
 class TreatmentListView(generic.ListView):
     model = Treatment
     template_name = 'treatment_list.html'
@@ -432,6 +610,42 @@ def add_treatment(request):
     }
 
     return render(request, 'insert_data/add_data.html', context)
+
+
+def edit_treatment(request, treatment_id):
+    # Get the treatment object to edit
+    treatment = get_object_or_404(Treatment, TreatmentID=treatment_id)
+
+    # Define the fields and their labels
+    fields = [
+        ('Type', 'Treatment Type'),
+        ('BaseCharge', 'Base Charge')
+    ]
+
+    # Define input types for each field
+    input_types = {
+        'Type': 'text',
+        'BaseCharge': 'number'
+    }
+
+    if request.method == 'POST':
+        treatment.Type = request.POST['Type']
+        treatment.BaseCharge = request.POST['BaseCharge']
+        treatment.save()
+
+        # Redirect to the treatment list page
+        return redirect('treatment_list')
+
+    context = {
+        'model_name': 'Treatment',
+        'fields': fields,
+        'input_types': input_types,
+        'object': treatment,
+        'object_model_name': 'treatment_list'
+        # This will be used to generate the URL for the back button
+    }
+
+    return render(request, 'edit_data/edit_data.html', context)
 
 
 def delete_treatment(request, treatment_id):
@@ -496,6 +710,51 @@ def delete_medicine(request, medicine_id):
     if request.method == 'POST':
         medicine.delete()
         return redirect('medicine_list')
+
+
+def edit_medicine(request, medicine_id):
+    # Get the medicine object to edit
+    medicine = get_object_or_404(Medicine, MedicationID=medicine_id)
+
+    # Define the fields and their labels
+    fields = [
+        ('Name', 'Name'),
+        ('Brand', 'Brand'),
+        ('Instructions', 'Instructions'),
+        ('DefaultDosage', 'Default Dosage'),
+        ('Price', 'Price')
+    ]
+
+    # Define input types for each field
+    input_types = {
+        'Name': 'text',
+        'Brand': 'text',
+        'Instructions': 'text',
+        'DefaultDosage': 'text',
+        'Price': 'number'
+    }
+
+    if request.method == 'POST':
+        # Update the medicine object with form data
+        medicine.Name = request.POST['Name']
+        medicine.Brand = request.POST['Brand']
+        medicine.Instructions = request.POST['Instructions']
+        medicine.DefaultDosage = request.POST['DefaultDosage']
+        medicine.Price = request.POST['Price']
+        medicine.save()
+
+        # Redirect to the medicine list page
+        return redirect('medicine_list')
+
+    context = {
+        'model_name': 'Medicine',
+        'fields': fields,
+        'input_types': input_types,
+        'object': medicine,
+        'object_model_name': 'medicine_list'
+    }
+
+    return render(request, 'edit_data/edit_data.html', context)
 
 
 class DosageListView(generic.ListView):
@@ -567,6 +826,62 @@ def delete_dosage(request, dosage_id):
         return redirect('dosage_list')
 
 
+def edit_dosage(request, dosage_id):
+    # Get the dosage object to edit
+    dosage = get_object_or_404(Dosage, DosageID=dosage_id)
+
+    # Define the fields and their labels
+    fields = [
+        ('MedicationID', 'Medication ID'),
+        ('MinWeight', 'Min Weight'),
+        ('MaxWeight', 'Max Weight'),
+        ('MinAge', 'Min Age'),
+        ('MaxAge', 'Max Age'),
+        ('RecommendDosage', 'Recommended Dosage'),
+        ('Units', 'Units'),
+        ('Notes', 'Notes')
+    ]
+
+    # Define input types for each field
+    input_types = {
+        'MedicationID': 'text',
+        'MinWeight': 'number',
+        'MaxWeight': 'number',
+        'MinAge': 'number',
+        'MaxAge': 'number',
+        'RecommendDosage': 'text',
+        'Units': 'text',
+        'Notes': 'text'
+    }
+
+    if request.method == 'POST':
+        # Update the dosage object with the submitted data
+        dosage.MedicationID = get_object_or_404(Medicine,
+                                                MedicationID=request.POST[
+                                                    'MedicationID'].strip())
+        dosage.MinWeight = request.POST['MinWeight'].strip()
+        dosage.MaxWeight = request.POST['MaxWeight'].strip()
+        dosage.MinAge = request.POST['MinAge'].strip()
+        dosage.MaxAge = request.POST['MaxAge'].strip()
+        dosage.RecommendDosage = request.POST['RecommendDosage'].strip()
+        dosage.Units = request.POST['Units'].strip()
+        dosage.Notes = request.POST['Notes'].strip()
+        dosage.save()
+
+        return redirect('dosage_list')
+
+    context = {
+        'model_name': 'Dosage',
+        'fields': fields,
+        'input_types': input_types,
+        'object': dosage,
+        'object_model_name': 'dosage_list'
+        # For generating the back button URL
+    }
+
+    return render(request, 'edit_data/edit_data.html', context)
+
+
 class PatientListView(generic.ListView):
     model = Patient
     template_name = 'patient_list.html'
@@ -632,6 +947,57 @@ def delete_patient(request, patient_id):
         return redirect('patient_list')
 
 
+def edit_patient(request, patient_id):
+    # Get the patient object to edit
+    patient = get_object_or_404(Patient, PatientID=patient_id)
+
+    # Define the fields and their labels
+    fields = [
+        ('Name', 'Name'),
+        ('Phone', 'Phone'),
+        ('Email', 'Email'),
+        ('Birthdate', 'Birthdate'),
+        ('Weight', 'Weight'),
+        ('Height', 'Height'),
+        ('EmergencyContact', 'Emergency Contact')
+    ]
+
+    # Define input types for each field
+    input_types = {
+        'Name': 'text',
+        'Phone': 'text',
+        'Email': 'email',
+        'Birthdate': 'date',
+        'Weight': 'number',
+        'Height': 'number',
+        'EmergencyContact': 'text'
+    }
+
+    if request.method == 'POST':
+        # Update the patient's information with the submitted data
+        patient.Name = request.POST['Name'].strip()
+        patient.Phone = request.POST['Phone'].strip()
+        patient.Email = request.POST['Email'].strip()
+        patient.Birthdate = request.POST['Birthdate'].strip()
+        patient.Weight = request.POST['Weight'].strip()
+        patient.Height = request.POST['Height'].strip()
+        patient.EmergencyContact = request.POST['EmergencyContact'].strip()
+        patient.save()
+
+        return redirect('patient_list')
+
+    context = {
+        'model_name': 'Patient',
+        'fields': fields,
+        'input_types': input_types,
+        'object': patient,
+        'object_model_name': 'patient_list'
+        # For generating the back button URL
+    }
+
+    return render(request, 'edit_data/edit_data.html', context)
+
+
 class DoctorListView(generic.ListView):
     model = Doctor
     template_name = 'doctor_list.html'
@@ -687,6 +1053,51 @@ def delete_doctor(request, doctor_id):
     if request.method == 'POST':
         doctor.delete()
         return redirect('doctor_list')
+
+
+def edit_doctor(request, doctor_id):
+    # Get the doctor object to edit
+    doctor = get_object_or_404(Doctor, DoctorID=doctor_id)
+
+    # Define the fields and their labels
+    fields = [
+        ('Name', 'Name'),
+        ('Phone', 'Phone'),
+        ('Email', 'Email'),
+        ('Birthdate', 'Birthdate'),
+        ('Specialization', 'Specialization')
+    ]
+
+    # Define input types for each field
+    input_types = {
+        'Name': 'text',
+        'Phone': 'text',
+        'Email': 'email',
+        'Birthdate': 'date',
+        'Specialization': 'text'
+    }
+
+    if request.method == 'POST':
+        # Update the doctor's information with the submitted data
+        doctor.Name = request.POST['Name'].strip()
+        doctor.Phone = request.POST['Phone'].strip()
+        doctor.Email = request.POST['Email'].strip()
+        doctor.Birthdate = request.POST['Birthdate'].strip()
+        doctor.Specialization = request.POST['Specialization'].strip()
+        doctor.save()
+
+        return redirect('doctor_list')
+
+    context = {
+        'model_name': 'Doctor',
+        'fields': fields,
+        'input_types': input_types,
+        'object': doctor,
+        'object_model_name': 'doctor_list'
+        # For generating the back button URL
+    }
+
+    return render(request, 'edit_data/edit_data.html', context)
 
 
 class MedicalRecordListView(generic.ListView):
@@ -755,6 +1166,64 @@ def delete_medical_record(request, medical_record_id):
         return redirect('medical_record_list')
 
 
+def edit_medical_record(request, medical_record_id):
+    # Get the medical record object to edit
+    medical_record = get_object_or_404(MedicalRecord,
+                                       MedicalRecordID=medical_record_id)
+
+    # Define the fields and their labels
+    fields = [
+        ('PatientID', 'Patient ID'),
+        ('DoctorID', 'Doctor ID'),
+        ('DiseaseID', 'Disease ID'),
+        ('VisitReason', 'Visit Reason'),
+        ('Summary', 'Summary'),
+        ('DateVisit', 'Date of Visit'),
+        ('Status', 'Status')
+    ]
+
+    # Define input types for each field
+    input_types = {
+        'PatientID': 'text',
+        'DoctorID': 'text',
+        'DiseaseID': 'text',
+        'VisitReason': 'text',
+        'Summary': 'text',
+        'DateVisit': 'date',
+        'Status': 'text'
+    }
+
+    if request.method == 'POST':
+        # Update the medical record fields with the submitted data
+        medical_record.PatientID = get_object_or_404(Patient,
+                                                     PatientID=request.POST[
+                                                         'PatientID'].strip())
+        medical_record.DoctorID = get_object_or_404(Doctor,
+                                                    DoctorID=request.POST[
+                                                        'DoctorID'].strip())
+        medical_record.DiseaseID = get_object_or_404(Diseases,
+                                                     DiseaseID=request.POST[
+                                                         'DiseaseID'].strip())
+        medical_record.VisitReason = request.POST['VisitReason'].strip()
+        medical_record.Summary = request.POST['Summary'].strip()
+        medical_record.DateVisit = request.POST['DateVisit'].strip()
+        medical_record.Status = request.POST['Status'].strip()
+        medical_record.save()
+
+        return redirect('medical_record_list')
+
+    context = {
+        'model_name': 'Medical Record',
+        'fields': fields,
+        'input_types': input_types,
+        'object': medical_record,
+        'object_model_name': 'medical_record_list'
+        # For generating the back button URL
+    }
+
+    return render(request, 'edit_data/edit_data.html', context)
+
+
 class MedicineRecordListView(generic.ListView):
     model = MedicineRecord
     template_name = 'medicine_record_list.html'
@@ -811,6 +1280,59 @@ def delete_medicine_record(request, medical_record_id):
     if request.method == 'POST':
         medicine_record.delete()
         return redirect('medicine_record_list')
+
+
+def edit_medicine_record(request, medicine_record_id):
+    # Retrieve the MedicineRecord object to edit
+    medicine_record = get_object_or_404(MedicineRecord,
+                                        MedicineRecordID=medicine_record_id)
+
+    # Define the fields and their labels
+    fields = [
+        ('MedicalRecordID', 'Medical Record ID'),
+        ('MedicationID', 'Medication ID'),
+        ('DosageID', 'Dosage ID'),
+        ('Quantity', 'Quantity'),
+        ('Cost', 'Cost')
+    ]
+
+    # Define input types for each field
+    input_types = {
+        'MedicalRecordID': 'text',
+        'MedicationID': 'text',
+        'DosageID': 'text',
+        'Quantity': 'number',
+        'Cost': 'number'
+    }
+
+    if request.method == 'POST':
+        medicine_record.MedicalRecordID = get_object_or_404(MedicalRecord,
+                                                            MedicalRecordID=
+                                                            request.POST[
+                                                                'MedicalRecordID'].strip())
+        medicine_record.MedicationID = get_object_or_404(Medicine,
+                                                         MedicationID=
+                                                         request.POST[
+                                                             'MedicationID'].strip())
+        medicine_record.DosageID = get_object_or_404(Dosage,
+                                                     DosageID=request.POST[
+                                                         'DosageID'].strip())
+        medicine_record.Quantity = request.POST['Quantity']
+        medicine_record.Cost = request.POST['Cost']
+        medicine_record.save()
+
+        # Redirect to the medicine record list page
+        return redirect('medicine_record_list')
+
+    context = {
+        'model_name': 'Medicine Record',
+        'fields': fields,
+        'input_types': input_types,
+        'object': medicine_record,
+        'object_model_name': 'medicine_record_list'
+    }
+
+    return render(request, 'edit_data/edit_data.html', context)
 
 
 class AppointmentListView(generic.ListView):
@@ -900,8 +1422,11 @@ def edit_appointment(request, appointment_id):
         appointment.Date = request.POST['Date']
         appointment.StartTime = request.POST['StartTime']
         appointment.EndTime = request.POST['EndTime']
-        appointment.PatientID = get_object_or_404(Patient, PatientID=request.POST['PatientID'].strip())
-        appointment.DoctorID = get_object_or_404(Doctor, DoctorID=request.POST['DoctorID'].strip())
+        appointment.PatientID = get_object_or_404(Patient,
+                                                  PatientID=request.POST[
+                                                      'PatientID'].strip())
+        appointment.DoctorID = get_object_or_404(Doctor, DoctorID=request.POST[
+            'DoctorID'].strip())
         appointment.save()
 
         return redirect('appointment_list')
@@ -916,6 +1441,7 @@ def edit_appointment(request, appointment_id):
     }
 
     return render(request, 'edit_data/edit_data.html', context)
+
 
 class AvailabilityListView(generic.ListView):
     model = Availability
@@ -973,7 +1499,8 @@ def delete_availability(request, availability_id):
 
 
 def edit_availability(request, availability_id):
-    availability = get_object_or_404(Availability, AvailabilityID=availability_id)
+    availability = get_object_or_404(Availability,
+                                     AvailabilityID=availability_id)
 
     fields = [
         ('DoctorID', 'Doctor ID'),
@@ -990,7 +1517,9 @@ def edit_availability(request, availability_id):
     }
 
     if request.method == 'POST':
-        availability.DoctorID = get_object_or_404(Doctor, DoctorID=request.POST['DoctorID'].strip())
+        availability.DoctorID = get_object_or_404(Doctor,
+                                                  DoctorID=request.POST[
+                                                      'DoctorID'].strip())
         availability.Day = request.POST['Date']
         availability.StartTime = request.POST['StartTime']
         availability.EndTime = request.POST['EndTime']
