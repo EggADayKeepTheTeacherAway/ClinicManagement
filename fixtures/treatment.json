@@ -70,5 +70,22 @@
       "Type": "Antibiotics",
       "BaseCharge": 180
     }
+  },
+  {
+  "model": "clinic_management.treatment",
+  "pk": "T10",
+  "fields": {
+    "Type": "Physical Rehabilitation",
+    "BaseCharge": 350
   }
+},
+{
+  "model": "clinic_management.treatment",
+  "pk": "T11",
+  "fields": {
+    "Type": "Acupuncture Therapy",
+    "BaseCharge": 250
+  }
+}
+
 ]

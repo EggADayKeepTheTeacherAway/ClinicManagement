@@ -229,5 +229,27 @@
       "Birthdate": "1984-09-25",
       "Specialization": "Internal Medicine"
     }
+  },
+  {
+  "model": "clinic_management.doctor",
+  "pk": "D16",
+  "fields": {
+    "Name": "Dr. Sophia Blake",
+    "Phone": "5678901234",
+    "Email": "sophia.blake@example.com",
+    "Birthdate": "1985-06-20",
+    "Specialization": "Neurology"
   }
+},
+{
+  "model": "clinic_management.doctor",
+  "pk": "D17",
+  "fields": {
+    "Name": "Dr. James Lee",
+    "Phone": "6789012345",
+    "Email": "james.lee@example.com",
+    "Birthdate": "1990-03-10",
+    "Specialization": "Cardiology"
+  }
+}
 ]

@@ -232,5 +232,71 @@
       "DateVisit": "2024-11-21",
       "Status": "Closed"
     }
+  },
+  {
+    "model": "clinic_management.medicalrecord",
+    "pk": "MR19",
+    "fields": {
+      "PatientID": "P17",
+      "DoctorID": "D16",
+      "DiseaseID": "DS11",
+      "VisitReason": "Chronic Headaches",
+      "Summary": "Prescribed medication for migraines",
+      "DateVisit": "2024-12-01",
+      "Status": "Open"
+    }
+  },
+  {
+    "model": "clinic_management.medicalrecord",
+    "pk": "MR20",
+    "fields": {
+      "PatientID": "P18",
+      "DoctorID": "D17",
+      "DiseaseID": "DS03",
+      "VisitReason": "Heart Palpitations",
+      "Summary": "Medication prescribed for arrhythmia",
+      "DateVisit": "2024-12-02",
+      "Status": "Open"
+    }
+  },
+  {
+    "model": "clinic_management.medicalrecord",
+    "pk": "MR25",
+    "fields": {
+      "PatientID": "P23",
+      "DoctorID": "D02",
+      "DiseaseID": "DS04",
+      "VisitReason": "Knee Injury",
+      "Summary": "Physiotherapy prescribed",
+      "DateVisit": "2024-12-15",
+      "Status": "Open"
+    }
+  },
+  {
+    "model": "clinic_management.medicalrecord",
+    "pk": "MR26",
+    "fields": {
+      "PatientID": "P24",
+      "DoctorID": "D04",
+      "DiseaseID": "DS05",
+      "VisitReason": "Chronic Fatigue",
+      "Summary": "Blood tests and treatment planned",
+      "DateVisit": "2024-12-16",
+      "Status": "Closed"
+    }
+  },
+  {
+    "model": "clinic_management.medicalrecord",
+    "pk": "MR27",
+    "fields": {
+      "PatientID": "P03",
+      "DoctorID": "D05",
+      "DiseaseID": "DS02",
+      "VisitReason": "Severe Skin Rash",
+      "Summary": "Ointment prescribed",
+      "DateVisit": "2024-12-17",
+      "Status": "Closed"
+    }
   }
 ]
+

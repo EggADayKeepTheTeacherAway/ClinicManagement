@@ -174,5 +174,105 @@
       "Quantity": 4,
       "Cost": 480
     }
+  },
+    {
+    "model": "clinic_management.medicinerecord",
+    "pk": "MRD17",
+    "fields": {
+      "MedicalRecordID": "MR19",
+      "MedicationID": "M10",
+      "DosageID": "D12",
+      "Quantity": 20,
+      "Cost": 700
+    }
+  },
+  {
+    "model": "clinic_management.medicinerecord",
+    "pk": "MRD18",
+    "fields": {
+      "MedicalRecordID": "MR20",
+      "MedicationID": "M07",
+      "DosageID": "D07",
+      "Quantity": 10,
+      "Cost": 150
+    }
+  },
+  {
+    "model": "clinic_management.medicalrecord",
+    "pk": "MR19",
+    "fields": {
+      "PatientID": "P19",
+      "DoctorID": "D02",
+      "DiseaseID": "DS01",
+      "VisitReason": "Routine Checkup",
+      "Summary": "Patient in stable health, follow-up in 6 months",
+      "DateVisit": "2024-12-05",
+      "Status": "Open"
+    }
+  },
+  {
+    "model": "clinic_management.medicalrecord",
+    "pk": "MR20",
+    "fields": {
+      "PatientID": "P20",
+      "DoctorID": "D03",
+      "DiseaseID": "DS03",
+      "VisitReason": "Chest Pain",
+      "Summary": "Prescribed medication for heart palpitations",
+      "DateVisit": "2024-12-06",
+      "Status": "Closed"
+    }
+  },
+  {
+    "model": "clinic_management.medicalrecord",
+    "pk": "MR21",
+    "fields": {
+      "PatientID": "P01",
+      "DoctorID": "D06",
+      "DiseaseID": "DS02",
+      "VisitReason": "Skin Infection",
+      "Summary": "Antibiotics prescribed, patient advised to follow up",
+      "DateVisit": "2024-12-07",
+      "Status": "Open"
+    }
+  },
+  {
+    "model": "clinic_management.medicalrecord",
+    "pk": "MR22",
+    "fields": {
+      "PatientID": "P21",
+      "DoctorID": "D04",
+      "DiseaseID": "DS07",
+      "VisitReason": "Chronic Back Pain",
+      "Summary": "Physical therapy recommended",
+      "DateVisit": "2024-12-10",
+      "Status": "Open"
+    }
+  },
+  {
+    "model": "clinic_management.medicalrecord",
+    "pk": "MR23",
+    "fields": {
+      "PatientID": "P22",
+      "DoctorID": "D05",
+      "DiseaseID": "DS03",
+      "VisitReason": "Anxiety",
+      "Summary": "Prescribed anti-anxiety medication",
+      "DateVisit": "2024-12-11",
+      "Status": "Closed"
+    }
+  },
+  {
+    "model": "clinic_management.medicalrecord",
+    "pk": "MR24",
+    "fields": {
+      "PatientID": "P03",
+      "DoctorID": "D06",
+      "DiseaseID": "DS01",
+      "VisitReason": "Routine Checkup",
+      "Summary": "No major health concerns",
+      "DateVisit": "2024-12-12",
+      "Status": "Closed"
+    }
   }
 ]

@@ -141,5 +141,95 @@
       "ExpireDate": "2025-11-20",
       "Type": "Health"
     }
+  },
+  {
+    "model": "clinic_management.insurance",
+    "pk": "I15",
+    "fields": {
+      "PatientID": "P17",
+      "Provider": "SecureMed",
+      "CoverageAmount": 6000,
+      "ExpireDate": "2025-12-31",
+      "Type": "Health"
+    }
+  },
+  {
+    "model": "clinic_management.insurance",
+    "pk": "I16",
+    "fields": {
+      "PatientID": "P18",
+      "Provider": "HealthFirst",
+      "CoverageAmount": 5000,
+      "ExpireDate": "2026-01-15",
+      "Type": "Premium"
+    }
+  },
+  {
+    "model": "clinic_management.insurance",
+    "pk": "I17",
+    "fields": {
+      "PatientID": "P19",
+      "Provider": "MediAssist",
+      "CoverageAmount": 5000,
+      "ExpireDate": "2026-12-31",
+      "Type": "Premium"
+    }
+  },
+  {
+    "model": "clinic_management.insurance",
+    "pk": "I18",
+    "fields": {
+      "PatientID": "P20",
+      "Provider": "LifeSecure",
+      "CoverageAmount": 4000,
+      "ExpireDate": "2025-06-30",
+      "Type": "Standard"
+    }
+  },
+  {
+    "model": "clinic_management.insurance",
+    "pk": "I19",
+    "fields": {
+      "PatientID": "P21",
+      "Provider": "HealthTrust",
+      "CoverageAmount": 7000,
+      "ExpireDate": "2026-12-31",
+      "Type": "Premium"
+    }
+  },
+  {
+    "model": "clinic_management.insurance",
+    "pk": "I20",
+    "fields": {
+      "PatientID": "P22",
+      "Provider": "SecureMed",
+      "CoverageAmount": 6000,
+      "ExpireDate": "2025-11-30",
+      "Type": "Health"
+    }
+  },
+  [
+  {
+    "model": "clinic_management.insurance",
+    "pk": "I21",
+    "fields": {
+      "PatientID": "P23",
+      "Provider": "MediAssist",
+      "CoverageAmount": 8000,
+      "ExpireDate": "2026-12-31",
+      "Type": "Health"
+    }
+  },
+  {
+    "model": "clinic_management.insurance",
+    "pk": "I22",
+    "fields": {
+      "PatientID": "P24",
+      "Provider": "SecureMed",
+      "CoverageAmount": 7500,
+      "ExpireDate": "2025-10-15",
+      "Type": "Premium"
+    }
   }
 ]
+

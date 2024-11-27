@@ -299,5 +299,149 @@
       "Weight": "60kg",
       "Height": "168cm"
     }
+  },
+  {
+    "model": "clinic_management.patient",
+    "pk": "P17",
+    "fields": {
+      "Name": "Oliver James",
+      "Phone": "9012346789",
+      "Email": "oliver.james@mail.com",
+      "Birthdate": "1992-08-15",
+      "EmergencyContact": "8901234567",
+      "Weight": "72kg",
+      "Height": "178cm"
+    }
+  },
+  {
+    "model": "clinic_management.patient",
+    "pk": "P18",
+    "fields": {
+      "Name": "Sophie Brown",
+      "Phone": "9012347890",
+      "Email": "sophie.brown@mail.com",
+      "Birthdate": "1994-01-20",
+      "EmergencyContact": "8902345678",
+      "Weight": "58kg",
+      "Height": "165cm"
+    }
+  },
+  {
+    "model": "clinic_management.patient",
+    "pk": "P19",
+    "fields": {
+      "Name": "Liam Johnson",
+      "Phone": "9012345671",
+      "Email": "liam.johnson@mail.com",
+      "Birthdate": "1990-11-01",
+      "EmergencyContact": "8901234580",
+      "Weight": "85kg",
+      "Height": "182cm"
+    }
+  },
+  {
+    "model": "clinic_management.patient",
+    "pk": "P20",
+    "fields": {
+      "Name": "Isabella Martinez",
+      "Phone": "9012345672",
+      "Email": "isabella.martinez@mail.com",
+      "Birthdate": "1995-02-17",
+      "EmergencyContact": "8901234590",
+      "Weight": "55kg",
+      "Height": "160cm"
+    }
+  },
+  {
+    "model": "clinic_management.patient",
+    "pk": "P21",
+    "fields": {
+      "Name": "Ethan Carter",
+      "Phone": "9012346790",
+      "Email": "ethan.carter@mail.com",
+      "Birthdate": "1988-03-25",
+      "EmergencyContact": "8901234600",
+      "Weight": "92kg",
+      "Height": "185cm"
+    }
+  },
+  {
+    "model": "clinic_management.patient",
+    "pk": "P22",
+    "fields": {
+      "Name": "Lily Thompson",
+      "Phone": "9012346791",
+      "Email": "lily.thompson@mail.com",
+      "Birthdate": "1994-05-17",
+      "EmergencyContact": "8901234610",
+      "Weight": "58kg",
+      "Height": "163cm"
+    }
+  },
+  {
+    "model": "clinic_management.patient",
+    "pk": "P23",
+    "fields": {
+      "Name": "James Miller",
+      "Phone": "9012346792",
+      "Email": "james.miller@mail.com",
+      "Birthdate": "1987-07-22",
+      "EmergencyContact": "8901234620",
+      "Weight": "80kg",
+      "Height": "175cm"
+    }
+  },
+  {
+    "model": "clinic_management.patient",
+    "pk": "P24",
+    "fields": {
+      "Name": "Ava Lopez",
+      "Phone": "9012346793",
+      "Email": "ava.lopez@mail.com",
+      "Birthdate": "1991-04-10",
+      "EmergencyContact": "8901234630",
+      "Weight": "70kg",
+      "Height": "168cm"
+    }
+  },
+  {
+    "model": "clinic_management.patient",
+    "pk": "P25",
+    "fields": {
+      "Name": "Charlotte Harris",
+      "Phone": "9012346794",
+      "Email": "charlotte.harris@mail.com",
+      "Birthdate": "1989-02-18",
+      "EmergencyContact": "8901234640",
+      "Weight": "68kg",
+      "Height": "167cm"
+    }
+  },
+  {
+    "model": "clinic_management.patient",
+    "pk": "P26",
+    "fields": {
+      "Name": "Benjamin Clark",
+      "Phone": "9012346795",
+      "Email": "benjamin.clark@mail.com",
+      "Birthdate": "1992-11-30",
+      "EmergencyContact": "8901234650",
+      "Weight": "85kg",
+      "Height": "180cm"
+    }
+  },
+  {
+    "model": "clinic_management.patient",
+    "pk": "P27",
+    "fields": {
+      "Name": "Ella Walker",
+      "Phone": "9012346796",
+      "Email": "ella.walker@mail.com",
+      "Birthdate": "1995-08-10",
+      "EmergencyContact": "8901234660",
+      "Weight": "72kg",
+      "Height": "175cm"
+    }
   }
 ]
+

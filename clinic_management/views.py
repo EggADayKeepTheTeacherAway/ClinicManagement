@@ -167,6 +167,9 @@ class HomePageView(generic.TemplateView):
         return context
 
 
+class LoginView(generic.TemplateView):
+    template_name = "login.html"
+
 # Views for each table
 class CoveragePolicyListView(generic.ListView):
     model = CoveragePolicy

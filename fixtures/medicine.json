@@ -174,6 +174,45 @@
       "DefaultDosage": "10ml",
       "Price": 35
     }
+  },
+  {
+    "model": "clinic_management.medicalrecord",
+    "pk": "MR28",
+    "fields": {
+      "PatientID": "P25",
+      "DoctorID": "D06",
+      "DiseaseID": "DS06",
+      "VisitReason": "Severe Back Pain",
+      "Summary": "Physical therapy prescribed",
+      "DateVisit": "2024-12-18",
+      "Status": "Open"
+    }
+  },
+  {
+    "model": "clinic_management.medicalrecord",
+    "pk": "MR29",
+    "fields": {
+      "PatientID": "P26",
+      "DoctorID": "D03",
+      "DiseaseID": "DS03",
+      "VisitReason": "Chronic Fatigue",
+      "Summary": "Blood work scheduled, follow-up visit in 2 weeks",
+      "DateVisit": "2024-12-19",
+      "Status": "Closed"
+    }
+  },
+  {
+    "model": "clinic_management.medicalrecord",
+    "pk": "MR30",
+    "fields": {
+      "PatientID": "P27",
+      "DoctorID": "D02",
+      "DiseaseID": "DS04",
+      "VisitReason": "Ankle Injury",
+      "Summary": "X-ray recommended, brace prescribed",
+      "DateVisit": "2024-12-20",
+      "Status": "Open"
+    }
   }
 ]
 
