@@ -1157,6 +1157,30 @@ def edit_medical_record(request, medical_record_id):
 
     return render(request, 'edit_data/edit_data.html', context)
 
+def disease_statistics_view(request):
+    # Group medical records by month and disease
+    records = (
+        MedicalRecord.objects
+        .annotate(month=TruncMonth('DateVisit'))
+        .values('month', 'DiseaseID__Name')
+        .annotate(count=Count('DiseaseID'))
+        .order_by('month', '-count')
+    )
+
+    # Find the most frequent disease for each month
+    monthly_disease_stats = {}
+    for record in records:
+        month = record['month']
+        disease = record['DiseaseID__Name']
+        count = record['count']
+        if month not in monthly_disease_stats:
+            monthly_disease_stats[month] = {'disease': disease, 'count': count}
+
+    context = {
+        'monthly_disease_stats': monthly_disease_stats,
+        'medical_records': MedicalRecord.objects.all(),  # Optional: Full list of records
+    }
+    return render(request, 'medical_record_statistics.html', context)
 
 class MedicineRecordListView(generic.ListView):
     model = MedicineRecord
