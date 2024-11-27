@@ -1157,6 +1157,7 @@ def edit_medical_record(request, medical_record_id):
 
     return render(request, 'edit_data/edit_data.html', context)
 
+
 def disease_statistics_view(request):
     # Group medical records by month and disease
     records = (
@@ -1178,9 +1179,11 @@ def disease_statistics_view(request):
 
     context = {
         'monthly_disease_stats': monthly_disease_stats,
-        'medical_records': MedicalRecord.objects.all(),  # Optional: Full list of records
+        'medical_records': MedicalRecord.objects.all(),
+        # Optional: Full list of records
     }
     return render(request, 'medical_record_statistics.html', context)
+
 
 class MedicineRecordListView(generic.ListView):
     model = MedicineRecord
@@ -1478,3 +1481,35 @@ def edit_availability(request, availability_id):
     }
 
     return render(request, 'edit_data/edit_data.html', context)
+
+
+def doctor_timetable(request, doctor_id):
+    doctor = get_object_or_404(Doctor, DoctorID=doctor_id)
+    appointments = (Appointment.objects.filter(DoctorID=doctor_id).
+                    order_by('Date', 'StartTime'))
+
+    # Organize appointments by day
+    appointments_by_day = {}
+    for appointment in appointments:
+        day = appointment.Date.strftime(
+            '%A')  # Get the day name (e.g., Monday)
+        if day not in appointments_by_day:
+            appointments_by_day[day] = []
+        appointments_by_day[day].append({
+            'patient': appointment.PatientID.Name,
+            'start_time': appointment.StartTime,
+            'end_time': appointment.EndTime,
+        })
+
+    # Days of the week for display
+    days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday",
+            "Sunday"]
+
+    print("Day", days)
+    print("Appointment", appointments_by_day)
+
+    return render(request, 'doctor_timetable.html', {
+        'doctor': doctor,
+        'appointments_by_day': appointments_by_day,
+        'days': days,
+    })

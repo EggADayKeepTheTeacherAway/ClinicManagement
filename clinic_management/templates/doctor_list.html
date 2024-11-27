@@ -43,24 +43,15 @@
                         <a href="{% url 'edit_doctor' doctor.DoctorID %}" class="btn btn-warning btn-sm">
                             Edit
                         </a>
+                        <a href="{% url 'doctor_timetable' doctor.DoctorID %}" class="btn btn-info btn-sm">
+                            View Timetable
+                        </a>
                     </td>
-
                 </tr>
                 {% endfor %}
             </tbody>
         </table>
         <hr>
-        <!-- Dropdown for Doctor Names -->
-        <div class="mb-4">
-            <h3>Doctor Time Schedule</h3>
-            <lh for="doctorFilter" class="form-label">Filter by Doctor:</lh>
-            <select id="doctorDropdown">
-                <option value="">Select a Doctor</option>
-                {% for doctor in doctors %}
-                    <option value="{{ doctor.DoctorID }}">{{ doctor.Name }}</option>
-                {% endfor %}
-            </select>
-        </div>
         <div class="container">
                 <div class="timetable-img text-center">
                     <img src="img/content/timetable.png" alt="">
