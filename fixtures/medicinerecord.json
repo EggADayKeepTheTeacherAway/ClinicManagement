@@ -174,5 +174,27 @@
       "Quantity": 4,
       "Cost": 480
     }
+  },
+    {
+    "model": "clinic_management.medicinerecord",
+    "pk": "MRD17",
+    "fields": {
+      "MedicalRecordID": "MR19",
+      "MedicationID": "M10",
+      "DosageID": "DO12",
+      "Quantity": 20,
+      "Cost": 700
+    }
+  },
+  {
+    "model": "clinic_management.medicinerecord",
+    "pk": "MRD18",
+    "fields": {
+      "MedicalRecordID": "MR20",
+      "MedicationID": "M07",
+      "DosageID": "DO07",
+      "Quantity": 10,
+      "Cost": 150
+    }
   }
 ]

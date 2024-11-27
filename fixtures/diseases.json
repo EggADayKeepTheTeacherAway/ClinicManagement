@@ -97,5 +97,50 @@
       "Description": "Lung infection",
       "TreatmentID": "T09"
     }
+  },
+  {
+    "model": "clinic_management.diseases",
+    "pk": "DS12",
+    "fields": {
+      "Name": "Chronic Bronchitis",
+      "Description": "Long-term inflammation of the bronchi in the lungs",
+      "TreatmentID": "T05"
+    }
+  },
+  {
+    "model": "clinic_management.diseases",
+    "pk": "DS13",
+    "fields": {
+      "Name": "Epilepsy",
+      "Description": "Neurological disorder causing seizures",
+      "TreatmentID": "T08"
+    }
+  },
+  {
+    "model": "clinic_management.diseases",
+    "pk": "DS14",
+    "fields": {
+      "Name": "Hyperthyroidism",
+      "Description": "Overactive thyroid gland",
+      "TreatmentID": "T03"
+    }
+  },
+  {
+    "model": "clinic_management.diseases",
+    "pk": "DS15",
+    "fields": {
+      "Name": "Sinusitis",
+      "Description": "Inflammation or swelling of the tissue lining the sinuses",
+      "TreatmentID": "T04"
+    }
+  },
+  {
+    "model": "clinic_management.diseases",
+    "pk": "DS16",
+    "fields": {
+      "Name": "Parkinson's Disease",
+      "Description": "Nervous system disorder affecting movement",
+      "TreatmentID": "T07"
+    }
   }
 ]

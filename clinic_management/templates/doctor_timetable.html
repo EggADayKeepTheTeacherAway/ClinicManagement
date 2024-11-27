@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<h2 class="mt-4">{{ doctor.Name }}'s Appointments</h2>
+<a href="{% url 'doctor_list' %}" class="btn btn-primary mb-3">
+    Doctor List
+</a>
+{% endblock %}
+
+{% block content %}
+<div class="container my-4">
+    <h3>Scheduled Appointments</h3>
+    {% if appointments_by_day %}
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Day</th>
+                    <th>Patient</th>
+                    <th>Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for day in days %}
+                    {% if day in appointments_by_day %}
+                        {% load custom_filters %}
+                        {% for appointment in appointments_by_day|get_item:day %}
+                            <tr>
+                                <td>{{ day }}</td>
+                                <td>{{ appointment.patient }}</td>
+                                <td>
+                                    {{ appointment.start_time|time:"H:i" }}
+                                    -
+                                    {{ appointment.end_time|time:"H:i" }}
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    {% else %}
+                        <tr>
+                            <td>{{ day }}</td>
+                            <td colspan="2">No Appointments</td>
+                        </tr>
+                    {% endif %}
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p>No appointments found for this doctor.</p>
+    {% endif %}
+</div>
+{% endblock %}

@@ -174,5 +174,60 @@
       "DefaultDosage": "10ml",
       "Price": 35
     }
+  },
+  {
+    "model": "clinic_management.medicine",
+    "pk": "M17",
+    "fields": {
+      "Name": "Corticosteroid Cream",
+      "Brand": "SkinShield",
+      "Instructions": "Apply thinly once daily",
+      "DefaultDosage": "15g",
+      "Price": 25
+    }
+  },
+  {
+    "model": "clinic_management.medicine",
+    "pk": "M18",
+    "fields": {
+      "Name": "Anti-epileptic Tablets",
+      "Brand": "SeizureGuard",
+      "Instructions": "Take twice daily with meals",
+      "DefaultDosage": "200mg",
+      "Price": 80
+    }
+  },
+  {
+    "model": "clinic_management.medicine",
+    "pk": "M19",
+    "fields": {
+      "Name": "Thyroid Hormone Tablets",
+      "Brand": "ThyroCare",
+      "Instructions": "Take once daily before breakfast",
+      "DefaultDosage": "25mcg",
+      "Price": 15
+    }
+  },
+  {
+    "model": "clinic_management.medicine",
+    "pk": "M20",
+    "fields": {
+      "Name": "Nasal Spray",
+      "Brand": "SinusEase",
+      "Instructions": "Use twice daily",
+      "DefaultDosage": "10ml",
+      "Price": 20
+    }
+  },
+  {
+    "model": "clinic_management.medicine",
+    "pk": "M21",
+    "fields": {
+      "Name": "Levodopa",
+      "Brand": "ParkiRelief",
+      "Instructions": "Take thrice daily",
+      "DefaultDosage": "250mg",
+      "Price": 120
+    }
   }
 ]

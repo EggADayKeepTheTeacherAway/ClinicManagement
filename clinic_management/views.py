@@ -1,6 +1,8 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.views import generic
 from clinic_management.models import *
+from django.db.models.functions import TruncMonth
+from django.db.models import Count
 
 
 class HomePageView(generic.TemplateView):
@@ -1043,6 +1045,35 @@ class MedicalRecordListView(generic.ListView):
     template_name = 'medical_record_list.html'
     context_object_name = 'medical_records'
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+
+        # Group medical records by month and disease
+        records = (
+            MedicalRecord.objects
+            .annotate(month=TruncMonth('DateVisit'))  # Truncate to month
+            .values('month', 'DiseaseID__Name')  # Group by month and disease
+            .annotate(count=Count('DiseaseID'))  # Count occurrences
+            .order_by('month', '-count')  # Order by month and then by count
+        )
+
+        # Find the most frequent disease for each month
+        monthly_disease_stats = {}
+        for record in records:
+            month = record['month']
+            disease = record['DiseaseID__Name']
+            count = record['count']
+
+            if month not in monthly_disease_stats or count > \
+                    monthly_disease_stats[month]['count']:
+                monthly_disease_stats[month] = {'disease': disease,
+                                                'count': count}
+
+        # Add disease statistics to context
+        context['monthly_disease_stats'] = monthly_disease_stats
+
+        return context
+
 
 def add_medical_record(request):
     if request.method == 'POST':
@@ -1371,13 +1402,13 @@ class AvailabilityListView(generic.ListView):
 def add_availability(request):
     if request.method == 'POST':
         doctor_id = request.POST.get('DoctorID').strip()
-        date = request.POST.get('Date')
+        day = request.POST.get('Day')
         start_time = request.POST.get('StartTime')
         end_time = request.POST.get('EndTime')
 
         availability = Availability(
             DoctorID_id=doctor_id,
-            Day=date,
+            Day=day,
             StartTime=start_time,
             EndTime=end_time
         )
@@ -1387,13 +1418,13 @@ def add_availability(request):
 
     fields = [
         ('DoctorID', 'Doctor ID'),
-        ('Date', 'Date'),
+        ('Day', 'Day'),
         ('StartTime', 'Start Time'),
         ('EndTime', 'End Time')
     ]
     input_types = {
         'DoctorID': 'text',
-        'Date': 'date',
+        'Day': 'text',
         'StartTime': 'time',
         'EndTime': 'time'
     }
@@ -1422,14 +1453,14 @@ def edit_availability(request, availability_id):
 
     fields = [
         ('DoctorID', 'Doctor ID'),
-        ('Date', 'Date'),
+        ('Day', 'Day'),
         ('StartTime', 'Start Time'),
         ('EndTime', 'End Time')
     ]
 
     input_types = {
         'DoctorID': 'text',
-        'Date': 'date',
+        'Day': 'text',
         'StartTime': 'time',
         'EndTime': 'time'
     }
@@ -1438,7 +1469,7 @@ def edit_availability(request, availability_id):
         availability.DoctorID = get_object_or_404(Doctor,
                                                   DoctorID=request.POST[
                                                       'DoctorID'].strip())
-        availability.Day = request.POST['Date']
+        availability.Day = request.POST['Day']
         availability.StartTime = request.POST['StartTime']
         availability.EndTime = request.POST['EndTime']
         availability.save()
@@ -1454,3 +1485,35 @@ def edit_availability(request, availability_id):
     }
 
     return render(request, 'edit_data/edit_data.html', context)
+
+
+def doctor_timetable(request, doctor_id):
+    doctor = get_object_or_404(Doctor, DoctorID=doctor_id)
+    appointments = (Appointment.objects.filter(DoctorID=doctor_id).
+                    order_by('Date', 'StartTime'))
+
+    # Organize appointments by day
+    appointments_by_day = {}
+    for appointment in appointments:
+        day = appointment.Date.strftime(
+            '%A')  # Get the day name (e.g., Monday)
+        if day not in appointments_by_day:
+            appointments_by_day[day] = []
+        appointments_by_day[day].append({
+            'patient': appointment.PatientID.Name,
+            'start_time': appointment.StartTime,
+            'end_time': appointment.EndTime,
+        })
+
+    # Days of the week for display
+    days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday",
+            "Sunday"]
+
+    print("Day", days)
+    print("Appointment", appointments_by_day)
+
+    return render(request, 'doctor_timetable.html', {
+        'doctor': doctor,
+        'appointments_by_day': appointments_by_day,
+        'days': days,
+    })

@@ -6,6 +6,7 @@
 
 {% block content %}
 {% load static %}
+<link rel="stylesheet" href="{% static 'doctor-table.css' %}">
 
 <body>
     <div class="container my-4">
@@ -29,7 +30,11 @@
                 {% for doctor in doctors %}
                 <tr>
                     <td>{{ doctor.DoctorID }}</td>
-                    <td>{{ doctor.Name }}</td>
+                    <td>
+                        <a href="{% url 'doctor_timetable' doctor.DoctorID %}">
+                            {{ doctor.Name }}
+                        </a>
+                    </td>
                     <td>{{ doctor.Phone }}</td>
                     <td>{{ doctor.Email }}</td>
                     <td>{{ doctor.Birthdate }}</td>
@@ -43,11 +48,11 @@
                             Edit
                         </a>
                     </td>
-
                 </tr>
                 {% endfor %}
             </tbody>
         </table>
+        <hr>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
