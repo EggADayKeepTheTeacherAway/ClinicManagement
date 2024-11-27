@@ -1371,13 +1371,13 @@ class AvailabilityListView(generic.ListView):
 def add_availability(request):
     if request.method == 'POST':
         doctor_id = request.POST.get('DoctorID').strip()
-        date = request.POST.get('Date')
+        day = request.POST.get('Day')
         start_time = request.POST.get('StartTime')
         end_time = request.POST.get('EndTime')
 
         availability = Availability(
             DoctorID_id=doctor_id,
-            Day=date,
+            Day=day,
             StartTime=start_time,
             EndTime=end_time
         )
@@ -1387,13 +1387,13 @@ def add_availability(request):
 
     fields = [
         ('DoctorID', 'Doctor ID'),
-        ('Date', 'Date'),
+        ('Day', 'Day'),
         ('StartTime', 'Start Time'),
         ('EndTime', 'End Time')
     ]
     input_types = {
         'DoctorID': 'text',
-        'Date': 'date',
+        'Day': 'text',
         'StartTime': 'time',
         'EndTime': 'time'
     }
@@ -1422,14 +1422,14 @@ def edit_availability(request, availability_id):
 
     fields = [
         ('DoctorID', 'Doctor ID'),
-        ('Date', 'Date'),
+        ('Day', 'Day'),
         ('StartTime', 'Start Time'),
         ('EndTime', 'End Time')
     ]
 
     input_types = {
         'DoctorID': 'text',
-        'Date': 'date',
+        'Day': 'text',
         'StartTime': 'time',
         'EndTime': 'time'
     }
@@ -1438,7 +1438,7 @@ def edit_availability(request, availability_id):
         availability.DoctorID = get_object_or_404(Doctor,
                                                   DoctorID=request.POST[
                                                       'DoctorID'].strip())
-        availability.Day = request.POST['Date']
+        availability.Day = request.POST['Day']
         availability.StartTime = request.POST['StartTime']
         availability.EndTime = request.POST['EndTime']
         availability.save()
