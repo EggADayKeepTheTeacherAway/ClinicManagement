@@ -596,6 +596,33 @@
       "DateVisit": "2025-01-03",
       "Status": "Open"
     }
+  },
+  {
+    "model": "clinic_management.medicalrecord",
+    "pk": "MR46",
+    "fields": {
+      "PatientID": "P41",
+      "DoctorID": "D14",
+      "DiseaseID": "DS10",
+      "VisitReason": "Joint Pain",
+      "Summary": "Physical therapy ongoing",
+      "DateVisit": "2025-01-04",
+      "Status": "Open"
+    }
+  },
+  {
+    "model": "clinic_management.medicalrecord",
+    "pk": "MR47",
+    "fields": {
+      "PatientID": "P42",
+      "DoctorID": "D15",
+      "DiseaseID": "DS03",
+      "VisitReason": "Abdominal Pain",
+      "Summary": "Blood tests scheduled",
+      "DateVisit": "2025-01-05",
+      "Status": "Open"
+    }
   }
+
 ]
 

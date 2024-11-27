@@ -684,6 +684,34 @@
       "DatePaid": "2024-12-15",
       "Status": "Paid"
     }
+  },
+  {
+    "model": "clinic_management.payment",
+    "pk": "PY22",
+    "fields": {
+      "MedicalRecordID": "MR46",
+      "InsuranceID": "I17",
+      "BaseCharge": 250,
+      "MedicineCost": 150,
+      "InsuranceDiscount": 100,
+      "TotalCost": 300,
+      "DatePaid": "2025-01-06",
+      "Status": "Pending"
+    }
+  },
+  {
+    "model": "clinic_management.payment",
+    "pk": "PY23",
+    "fields": {
+      "MedicalRecordID": "MR47",
+      "InsuranceID": "I18",
+      "BaseCharge": 200,
+      "MedicineCost": 100,
+      "InsuranceDiscount": 50,
+      "TotalCost": 250,
+      "DatePaid": "2025-01-07",
+      "Status": "Paid"
+    }
   }
 ]
 
