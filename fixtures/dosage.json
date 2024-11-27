@@ -1,7 +1,7 @@
 [
   {
     "model": "clinic_management.dosage",
-    "pk": "D01",
+    "pk": "DO01",
     "fields": {
       "MedicationID": "M03",
       "MinWeight": "20kg",
@@ -15,7 +15,7 @@
   },
   {
     "model": "clinic_management.dosage",
-    "pk": "D02",
+    "pk": "DO02",
     "fields": {
       "MedicationID": "M01",
       "MinWeight": "50kg",
@@ -29,7 +29,7 @@
   },
   {
     "model": "clinic_management.dosage",
-    "pk": "D03",
+    "pk": "DO03",
     "fields": {
       "MedicationID": "M03",
       "MinWeight": "40kg",
@@ -43,7 +43,7 @@
   },
   {
     "model": "clinic_management.dosage",
-    "pk": "D04",
+    "pk": "DO04",
     "fields": {
       "MedicationID": "M02",
       "MinWeight": "30kg",
@@ -57,7 +57,7 @@
   },
   {
     "model": "clinic_management.dosage",
-    "pk": "D05",
+    "pk": "DO05",
     "fields": {
       "MedicationID": "M04",
       "MinWeight": "50kg",
@@ -71,7 +71,7 @@
   },
   {
     "model": "clinic_management.dosage",
-    "pk": "D06",
+    "pk": "DO06",
     "fields": {
       "MedicationID": "M06",
       "MinWeight": "20kg",
@@ -85,7 +85,7 @@
   },
   {
     "model": "clinic_management.dosage",
-    "pk": "D07",
+    "pk": "DO07",
     "fields": {
       "MedicationID": "M07",
       "MinWeight": 40,
@@ -99,7 +99,7 @@
   },
   {
     "model": "clinic_management.dosage",
-    "pk": "D08",
+    "pk": "DO08",
     "fields": {
       "MedicationID": "M09",
       "MinWeight": 50,
@@ -113,7 +113,7 @@
   },
   {
     "model": "clinic_management.dosage",
-    "pk": "D09",
+    "pk": "DO09",
     "fields": {
       "MedicationID": "M10",
       "MinWeight": 40,
@@ -127,7 +127,7 @@
   },
   {
     "model": "clinic_management.dosage",
-    "pk": "D10",
+    "pk": "DO10",
     "fields": {
       "MedicationID": "M11",
       "MinWeight": "Any",
@@ -141,7 +141,7 @@
   },
   {
     "model": "clinic_management.dosage",
-    "pk": "D11",
+    "pk": "DO11",
     "fields": {
       "MedicationID": "M16",
       "MinWeight": "50kg",
@@ -155,7 +155,7 @@
   },
   {
     "model": "clinic_management.dosage",
-    "pk": "D12",
+    "pk": "DO12",
     "fields": {
       "MedicationID": "M15",
       "MinWeight": "Any",
@@ -169,7 +169,7 @@
   },
   {
     "model": "clinic_management.dosage",
-    "pk": "D13",
+    "pk": "DO13",
     "fields": {
       "MedicationID": "M14",
       "MinWeight": "40kg",
@@ -183,7 +183,7 @@
   },
   {
     "model": "clinic_management.dosage",
-    "pk": "D14",
+    "pk": "DO14",
     "fields": {
       "MedicationID": "M13",
       "MinWeight": "Any",
@@ -197,12 +197,306 @@
   },
   {
     "model": "clinic_management.dosage",
-    "pk": "D15",
+    "pk": "DO15",
     "fields": {
       "MedicationID": "M12",
       "MinWeight": "Any",
       "MaxWeight": "Any",
       "MinAge": 10,
+      "MaxAge": 65,
+      "RecommendDosage": "2 puffs",
+      "Units": "Inhaler",
+      "Notes": "For asthma management"
+    }
+  },
+  {
+    "model": "clinic_management.dosage",
+    "pk": "DO16",
+    "fields": {
+      "MedicationID": "M05",
+      "MinWeight": "40kg",
+      "MaxWeight": "100kg",
+      "MinAge": 18,
+      "MaxAge": 60,
+      "RecommendDosage": "10 units",
+      "Units": "Injection",
+      "Notes": "For asthma treatment"
+    }
+  },
+  {
+    "model": "clinic_management.dosage",
+    "pk": "DO17",
+    "fields": {
+      "MedicationID": "M03",
+      "MinWeight": "50kg",
+      "MaxWeight": "90kg",
+      "MinAge": 20,
+      "MaxAge": 60,
+      "RecommendDosage": "2 tablets",
+      "Units": "Tablet",
+      "Notes": "For high blood pressure"
+    }
+  },
+  {
+    "model": "clinic_management.dosage",
+    "pk": "O18",
+    "fields": {
+      "MedicationID": "M06",
+      "MinWeight": "40kg",
+      "MaxWeight": "120kg",
+      "MinAge": 20,
+      "MaxAge": 60,
+      "RecommendDosage": "1 capsule",
+      "Units": "Capsule",
+      "Notes": "For managing chronic back pain"
+    }
+  },
+  {
+    "model": "clinic_management.dosage",
+    "pk": "DO19",
+    "fields": {
+      "MedicationID": "M12",
+      "MinWeight": "50kg",
+      "MaxWeight": "100kg",
+      "MinAge": 18,
+      "MaxAge": 50,
+      "RecommendDosage": "2 puffs",
+      "Units": "Inhaler",
+      "Notes": "For managing asthma symptoms"
+    }
+  },
+  {
+    "model": "clinic_management.dosage",
+    "pk": "DO20",
+    "fields": {
+      "MedicationID": "M03",
+      "MinWeight": "50kg",
+      "MaxWeight": "100kg",
+      "MinAge": 20,
+      "MaxAge": 60,
+      "RecommendDosage": "2 tablets",
+      "Units": "Tablet",
+      "Notes": "For high blood pressure treatment"
+    }
+  },
+  {
+    "model": "clinic_management.dosage",
+    "pk": "DO21",
+    "fields": {
+      "MedicationID": "M04",
+      "MinWeight": "50kg",
+      "MaxWeight": "90kg",
+      "MinAge": 18,
+      "MaxAge": 65,
+      "RecommendDosage": "1 injection",
+      "Units": "Injection",
+      "Notes": "For diabetes management"
+    }
+  },
+  {
+    "model": "clinic_management.dosage",
+    "pk": "DO22",
+    "fields": {
+      "MedicationID": "M07",
+      "MinWeight": "50kg",
+      "MaxWeight": "120kg",
+      "MinAge": 18,
+      "MaxAge": 65,
+      "RecommendDosage": "5 units",
+      "Units": "Syrup",
+      "Notes": "For managing hypertension"
+    }
+  },
+  {
+    "model": "clinic_management.dosage",
+    "pk": "DO23",
+    "fields": {
+      "MedicationID": "M08",
+      "MinWeight": "50kg",
+      "MaxWeight": "100kg",
+      "MinAge": 18,
+      "MaxAge": 60,
+      "RecommendDosage": "1 tablet",
+      "Units": "Tablet",
+      "Notes": "For joint pain management"
+    }
+  },
+  {
+    "model": "clinic_management.dosage",
+    "pk": "DO24",
+    "fields": {
+      "MedicationID": "M11",
+      "MinWeight": "40kg",
+      "MaxWeight": "100kg",
+      "MinAge": 16,
+      "MaxAge": 50,
+      "RecommendDosage": "1 packet",
+      "Units": "Packet",
+      "Notes": "For dehydration"
+    }
+  },
+  {
+    "model": "clinic_management.dosage",
+    "pk": "DO25",
+    "fields": {
+      "MedicationID": "M09",
+      "MinWeight": "40kg",
+      "MaxWeight": "100kg",
+      "MinAge": 18,
+      "MaxAge": 65,
+      "RecommendDosage": "1 tablet",
+      "Units": "Tablet",
+      "Notes": "For pain relief after surgery"
+    }
+  },
+  {
+    "model": "clinic_management.dosage",
+    "pk": "DO26",
+    "fields": {
+      "MedicationID": "M13",
+      "MinWeight": "50kg",
+      "MaxWeight": "120kg",
+      "MinAge": 15,
+      "MaxAge": 65,
+      "RecommendDosage": "10ml",
+      "Units": "Syrup",
+      "Notes": "For managing mild to moderate fever"
+    }
+  },
+  {
+    "model": "clinic_management.dosage",
+    "pk": "DO27",
+    "fields": {
+      "MedicationID": "M14",
+      "MinWeight": "45kg",
+      "MaxWeight": "90kg",
+      "MinAge": 18,
+      "MaxAge": 60,
+      "RecommendDosage": "1 puff",
+      "Units": "Inhaler",
+      "Notes": "For asthma management"
+    }
+  },
+  {
+    "model": "clinic_management.dosage",
+    "pk": "DO28",
+    "fields": {
+      "MedicationID": "M10",
+      "MinWeight": "50kg",
+      "MaxWeight": "90kg",
+      "MinAge": 20,
+      "MaxAge": 65,
+      "RecommendDosage": "1 tablet",
+      "Units": "Tablet",
+      "Notes": "For viral fever management"
+    }
+  },
+  {
+    "model": "clinic_management.dosage",
+    "pk": "DO29",
+    "fields": {
+      "MedicationID": "M12",
+      "MinWeight": "40kg",
+      "MaxWeight": "100kg",
+      "MinAge": 18,
+      "MaxAge": 70,
+      "RecommendDosage": "2 puffs",
+      "Units": "Inhaler",
+      "Notes": "For asthma relief"
+    }
+  },
+  {
+    "model": "clinic_management.dosage",
+    "pk": "DO30",
+    "fields": {
+      "MedicationID": "M15",
+      "MinWeight": "Any",
+      "MaxWeight": "Any",
+      "MinAge": 21,
+      "MaxAge": 65,
+      "RecommendDosage": "50mg",
+      "Units": "Tablet",
+      "Notes": "For anxiety management"
+    }
+  },
+  {
+    "model": "clinic_management.dosage",
+    "pk": "DO31",
+    "fields": {
+      "MedicationID": "M10",
+      "MinWeight": "50kg",
+      "MaxWeight": "100kg",
+      "MinAge": 25,
+      "MaxAge": 60,
+      "RecommendDosage": "1 tablet",
+      "Units": "Tablet",
+      "Notes": "For severe headaches"
+    }
+  },
+  {
+    "model": "clinic_management.dosage",
+    "pk": "DO32",
+    "fields": {
+      "MedicationID": "M11",
+      "MinWeight": "45kg",
+      "MaxWeight": "90kg",
+      "MinAge": 18,
+      "MaxAge": 70,
+      "RecommendDosage": "1 packet",
+      "Units": "Packet",
+      "Notes": "For dehydration recovery"
+    }
+  },
+  {
+    "model": "clinic_management.dosage",
+    "pk": "DO33",
+    "fields": {
+      "MedicationID": "M14",
+      "MinWeight": "Any",
+      "MaxWeight": "Any",
+      "MinAge": 21,
+      "MaxAge": 65,
+      "RecommendDosage": "20ml",
+      "Units": "Syrup",
+      "Notes": "For cough relief"
+    }
+  },
+  {
+    "model": "clinic_management.dosage",
+    "pk": "DO34",
+    "fields": {
+      "MedicationID": "M05",
+      "MinWeight": "40kg",
+      "MaxWeight": "80kg",
+      "MinAge": 18,
+      "MaxAge": 60,
+      "RecommendDosage": "2 tsp",
+      "Units": "Syrup",
+      "Notes": "For dry cough relief"
+    }
+  },
+  {
+    "model": "clinic_management.dosage",
+    "pk": "DO35",
+    "fields": {
+      "MedicationID": "M10",
+      "MinWeight": "50kg",
+      "MaxWeight": "100kg",
+      "MinAge": 18,
+      "MaxAge": 70,
+      "RecommendDosage": "1 tablet",
+      "Units": "Tablet",
+      "Notes": "For fever management"
+    }
+  },
+  {
+    "model": "clinic_management.dosage",
+    "pk": "DO36",
+    "fields": {
+      "MedicationID": "M12",
+      "MinWeight": "60kg",
+      "MaxWeight": "100kg",
+      "MinAge": 20,
       "MaxAge": 65,
       "RecommendDosage": "2 puffs",
       "Units": "Inhaler",
