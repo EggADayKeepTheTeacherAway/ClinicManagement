@@ -18,13 +18,17 @@
                                class="form-control"
                                id="{{ field }}_{{ object.pk }}"
                                name="{{ field }}"
-                               value="{% if field == 'DoctorID' %}{{ object.DoctorID.DoctorID }}
-                               {% elif field == 'PatientID' %}{{ object.PatientID.PatientID }}
-                               {% elif field == 'MedicationID' %}{{ object.MedicationID.MedicationID }}
-                               {% elif field == 'DiseaseID' %}{{ object.DiseaseID.DiseaseID }}
-                               {% elif field == 'TreatmentID' %}{{ object.TreatmentID.TreatmentID }}
-                               {% else %}{{ object|get_model_field:field }}
-                               {% endif %}"
+                               {% if input_types|get_item:field == 'number' %}
+                                   value="{% if object|get_model_field:field %}{{ object|get_model_field:field }}{% endif %}"
+                               {% else %}
+                                   value="{% if field == 'DoctorID' %}{{ object.DoctorID.DoctorID }}
+                                   {% elif field == 'PatientID' %}{{ object.PatientID.PatientID }}
+                                   {% elif field == 'MedicationID' %}{{ object.MedicationID.MedicationID }}
+                                   {% elif field == 'DiseaseID' %}{{ object.DiseaseID.DiseaseID }}
+                                   {% elif field == 'TreatmentID' %}{{ object.TreatmentID.TreatmentID }}
+                                   {% else %}{{ object|get_model_field:field }}
+                                   {% endif %}"
+                               {% endif %}
                                required>
                     </div>
                 {% endfor %}
