@@ -232,5 +232,369 @@
       "DateVisit": "2024-11-21",
       "Status": "Closed"
     }
+  },
+  {
+    "model": "clinic_management.medicalrecord",
+    "pk": "MR19",
+    "fields": {
+      "PatientID": "P19",
+      "DoctorID": "D02",
+      "DiseaseID": "DS01",
+      "VisitReason": "Routine Checkup",
+      "Summary": "Patient in stable health, follow-up in 6 months",
+      "DateVisit": "2024-12-05",
+      "Status": "Open"
+    }
+  },
+  {
+    "model": "clinic_management.medicalrecord",
+    "pk": "MR20",
+    "fields": {
+      "PatientID": "P20",
+      "DoctorID": "D03",
+      "DiseaseID": "DS03",
+      "VisitReason": "Chest Pain",
+      "Summary": "Prescribed medication for heart palpitations",
+      "DateVisit": "2024-12-06",
+      "Status": "Closed"
+    }
+  },
+  {
+    "model": "clinic_management.medicalrecord",
+    "pk": "MR21",
+    "fields": {
+      "PatientID": "P01",
+      "DoctorID": "D06",
+      "DiseaseID": "DS02",
+      "VisitReason": "Skin Infection",
+      "Summary": "Antibiotics prescribed, patient advised to follow up",
+      "DateVisit": "2024-12-07",
+      "Status": "Open"
+    }
+  },
+  {
+    "model": "clinic_management.medicalrecord",
+    "pk": "MR22",
+    "fields": {
+      "PatientID": "P21",
+      "DoctorID": "D04",
+      "DiseaseID": "DS07",
+      "VisitReason": "Chronic Back Pain",
+      "Summary": "Physical therapy recommended",
+      "DateVisit": "2024-12-10",
+      "Status": "Open"
+    }
+  },
+  {
+    "model": "clinic_management.medicalrecord",
+    "pk": "MR23",
+    "fields": {
+      "PatientID": "P22",
+      "DoctorID": "D05",
+      "DiseaseID": "DS03",
+      "VisitReason": "Anxiety",
+      "Summary": "Prescribed anti-anxiety medication",
+      "DateVisit": "2024-12-11",
+      "Status": "Closed"
+    }
+  },
+  {
+    "model": "clinic_management.medicalrecord",
+    "pk": "MR24",
+    "fields": {
+      "PatientID": "P03",
+      "DoctorID": "D06",
+      "DiseaseID": "DS01",
+      "VisitReason": "Routine Checkup",
+      "Summary": "No major health concerns",
+      "DateVisit": "2024-12-12",
+      "Status": "Closed"
+    }
+  },
+  {
+    "model": "clinic_management.medicalrecord",
+    "pk": "MR25",
+    "fields": {
+      "PatientID": "P23",
+      "DoctorID": "D02",
+      "DiseaseID": "DS04",
+      "VisitReason": "Knee Injury",
+      "Summary": "Physiotherapy prescribed",
+      "DateVisit": "2024-12-15",
+      "Status": "Open"
+    }
+  },
+  {
+    "model": "clinic_management.medicalrecord",
+    "pk": "MR26",
+    "fields": {
+      "PatientID": "P24",
+      "DoctorID": "D04",
+      "DiseaseID": "DS05",
+      "VisitReason": "Chronic Fatigue",
+      "Summary": "Blood tests and treatment planned",
+      "DateVisit": "2024-12-16",
+      "Status": "Closed"
+    }
+  },
+  {
+    "model": "clinic_management.medicalrecord",
+    "pk": "MR27",
+    "fields": {
+      "PatientID": "P03",
+      "DoctorID": "D05",
+      "DiseaseID": "DS02",
+      "VisitReason": "Severe Skin Rash",
+      "Summary": "Ointment prescribed",
+      "DateVisit": "2024-12-17",
+      "Status": "Closed"
+    }
+  },
+  {
+    "model": "clinic_management.medicalrecord",
+    "pk": "MR28",
+    "fields": {
+      "PatientID": "P25",
+      "DoctorID": "D06",
+      "DiseaseID": "DS06",
+      "VisitReason": "Severe Back Pain",
+      "Summary": "Physical therapy prescribed",
+      "DateVisit": "2024-12-18",
+      "Status": "Open"
+    }
+  },
+  {
+    "model": "clinic_management.medicalrecord",
+    "pk": "MR29",
+    "fields": {
+      "PatientID": "P26",
+      "DoctorID": "D03",
+      "DiseaseID": "DS03",
+      "VisitReason": "Chronic Fatigue",
+      "Summary": "Blood work scheduled, follow-up visit in 2 weeks",
+      "DateVisit": "2024-12-19",
+      "Status": "Closed"
+    }
+  },
+  {
+    "model": "clinic_management.medicalrecord",
+    "pk": "MR30",
+    "fields": {
+      "PatientID": "P27",
+      "DoctorID": "D02",
+      "DiseaseID": "DS04",
+      "VisitReason": "Ankle Injury",
+      "Summary": "X-ray recommended, brace prescribed",
+      "DateVisit": "2024-12-20",
+      "Status": "Open"
+    }
+  },
+  {
+    "model": "clinic_management.medicalrecord",
+    "pk": "MR24",
+    "fields": {
+      "PatientID": "P03",
+      "DoctorID": "D06",
+      "DiseaseID": "DS01",
+      "VisitReason": "Routine Checkup",
+      "Summary": "No major health concerns",
+      "DateVisit": "2024-12-12",
+      "Status": "Closed"
+    }
+  },
+  {
+    "model": "clinic_management.medicalrecord",
+    "pk": "MR31",
+    "fields": {
+      "PatientID": "P28",
+      "DoctorID": "D03",
+      "DiseaseID": "DS02",
+      "VisitReason": "Severe Cough",
+      "Summary": "Cough syrup prescribed",
+      "DateVisit": "2024-12-21",
+      "Status": "Open"
+    }
+  },
+  {
+    "model": "clinic_management.medicalrecord",
+    "pk": "MR32",
+    "fields": {
+      "PatientID": "P29",
+      "DoctorID": "D05",
+      "DiseaseID": "DS04",
+      "VisitReason": "Back Pain",
+      "Summary": "X-ray recommended, muscle relaxants prescribed",
+      "DateVisit": "2024-12-22",
+      "Status": "Closed"
+    }
+  },
+  {
+    "model": "clinic_management.medicalrecord",
+    "pk": "MR33",
+    "fields": {
+      "PatientID": "P30",
+      "DoctorID": "D06",
+      "DiseaseID": "DS03",
+      "VisitReason": "Abdominal Pain",
+      "Summary": "Ultrasound scheduled, painkillers prescribed",
+      "DateVisit": "2024-12-23",
+      "Status": "Open"
+    }
+  },
+  {
+    "model": "clinic_management.medicalrecord",
+    "pk": "MR34",
+    "fields": {
+      "PatientID": "P31",
+      "DoctorID": "D07",
+      "DiseaseID": "DS09",
+      "VisitReason": "Chronic Arthritis",
+      "Summary": "Physical therapy and pain relief prescribed",
+      "DateVisit": "2024-12-24",
+      "Status": "Open"
+    }
+  },
+  {
+    "model": "clinic_management.medicalrecord",
+    "pk": "MR35",
+    "fields": {
+      "PatientID": "P32",
+      "DoctorID": "D08",
+      "DiseaseID": "DS08",
+      "VisitReason": "Digestive Issues",
+      "Summary": "Dietary changes and antacid prescribed",
+      "DateVisit": "2024-12-25",
+      "Status": "Closed"
+    }
+  },
+  {
+    "model": "clinic_management.medicalrecord",
+    "pk": "MR36",
+    "fields": {
+      "PatientID": "P33",
+      "DoctorID": "D09",
+      "DiseaseID": "DS05",
+      "VisitReason": "Diabetes Checkup",
+      "Summary": "Insulin dosage adjusted, follow-up scheduled",
+      "DateVisit": "2024-12-26",
+      "Status": "Open"
+    }
+  },
+  {
+    "model": "clinic_management.medicalrecord",
+    "pk": "MR37",
+    "fields": {
+      "PatientID": "P34",
+      "DoctorID": "D07",
+      "DiseaseID": "DS10",
+      "VisitReason": "Chronic Anxiety",
+      "Summary": "Therapy sessions recommended, medication prescribed",
+      "DateVisit": "2024-12-27",
+      "Status": "Open"
+    }
+  },
+  {
+    "model": "clinic_management.medicalrecord",
+    "pk": "MR38",
+    "fields": {
+      "PatientID": "P35",
+      "DoctorID": "D08",
+      "DiseaseID": "DS07",
+      "VisitReason": "Breathing Issues",
+      "Summary": "Asthma inhaler prescribed, follow-up in 2 weeks",
+      "DateVisit": "2024-12-28",
+      "Status": "Closed"
+    }
+  },
+  {
+    "model": "clinic_management.medicalrecord",
+    "pk": "MR39",
+    "fields": {
+      "PatientID": "P36",
+      "DoctorID": "D09",
+      "DiseaseID": "DS08",
+      "VisitReason": "Abdominal Discomfort",
+      "Summary": "Medication prescribed, ultrasound scheduled",
+      "DateVisit": "2024-12-29",
+      "Status": "Open"
+    }
+  },
+  {
+    "model": "clinic_management.medicalrecord",
+    "pk": "MR40",
+    "fields": {
+      "PatientID": "P31",
+      "DoctorID": "D03",
+      "DiseaseID": "DS06",
+      "VisitReason": "Severe Headache",
+      "Summary": "Pain relief medication prescribed",
+      "DateVisit": "2024-12-30",
+      "Status": "Closed"
+    }
+  },
+  {
+    "model": "clinic_management.medicalrecord",
+    "pk": "MR41",
+    "fields": {
+      "PatientID": "P33",
+      "DoctorID": "D05",
+      "DiseaseID": "DS02",
+      "VisitReason": "Skin Allergy",
+      "Summary": "Ointment prescribed, avoid allergens",
+      "DateVisit": "2024-12-30",
+      "Status": "Open"
+    }
+  },
+  {
+    "model": "clinic_management.medicalrecord",
+    "pk": "MR42",
+    "fields": {
+      "PatientID": "P37",
+      "DoctorID": "D10",
+      "DiseaseID": "DS04",
+      "VisitReason": "Knee Pain",
+      "Summary": "Physiotherapy recommended, painkillers prescribed",
+      "DateVisit": "2024-12-31",
+      "Status": "Open"
+    }
+  },
+  {
+    "model": "clinic_management.medicalrecord",
+    "pk": "MR43",
+    "fields": {
+      "PatientID": "P38",
+      "DoctorID": "D11",
+      "DiseaseID": "DS06",
+      "VisitReason": "Severe Headache",
+      "Summary": "Migraine diagnosed, follow-up scheduled",
+      "DateVisit": "2025-01-01",
+      "Status": "Open"
+    }
+  },
+  {
+    "model": "clinic_management.medicalrecord",
+    "pk": "MR44",
+    "fields": {
+      "PatientID": "P39",
+      "DoctorID": "D12",
+      "DiseaseID": "DS07",
+      "VisitReason": "Asthma Checkup",
+      "Summary": "Bronchodilator dosage adjusted",
+      "DateVisit": "2025-01-02",
+      "Status": "Closed"
+    }
+  },
+  {
+    "model": "clinic_management.medicalrecord",
+    "pk": "MR45",
+    "fields": {
+      "PatientID": "P40",
+      "DoctorID": "D13",
+      "DiseaseID": "DS03",
+      "VisitReason": "High Fever",
+      "Summary": "Antiviral medication prescribed",
+      "DateVisit": "2025-01-03",
+      "Status": "Open"
+    }
   }
 ]
