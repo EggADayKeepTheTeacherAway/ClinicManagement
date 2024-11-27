@@ -35,40 +35,14 @@
                             {% csrf_token %}
                             <button type="submit" class="btn btn-danger btn-sm">Delete</button>
                         </form>
+                        <a href="{% url 'edit_disease' disease.DiseaseID %}" class="btn btn-warning btn-sm">
+                            Edit
+                        </a>
                     </td>
                 </tr>
                 {% endfor %}
             </tbody>
         </table>
-          <div class="container my-4">
-            <h4>Top Diseases for Each Month</h4>
-            {% if diseases_per_month %}
-                <table class="table table-striped table-bordered display nowrap" style="width:100%">
-                    <thead class="table-dark">
-                        <tr>
-                            <th>Month</th>
-                            <th>Disease ID</th>
-                            <th>Disease Name</th>
-                            <th>Number of Visits</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {% for month, diseases in diseases_per_month.items %}
-                            {% for disease in diseases %}
-                                <tr>
-                                    <td>{{ month|date:"F Y" }}</td>
-                                    <td>{{ disease.disease.DiseaseID }}</td>
-                                    <td>{{ disease.disease.Name }}</td>
-                                    <td>{{ disease.count }}</td>
-                                </tr>
-                            {% endfor %}
-                        {% endfor %}
-                    </tbody>
-                </table>
-            {% else %}
-                <p>No data available for top diseases.</p>
-            {% endif %}
-        </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
