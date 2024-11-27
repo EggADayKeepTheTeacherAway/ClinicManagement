@@ -78,5 +78,4 @@ path('edit_disease/<str:disease_id>/', views.edit_disease, name='edit_disease'),
 path('edit_payment/<str:payment_id>/', views.edit_payment, name='edit_payment'),
 path('edit_insurance/<str:insurance_id>/', views.edit_insurance, name='edit_insurance'),
 path('edit_coverage_policy/<str:policy_id>/', views.edit_coverage_policy, name='edit_coverage_policy'),
-
 ]
