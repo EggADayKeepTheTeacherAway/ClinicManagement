@@ -719,8 +719,8 @@ class DosageListView(generic.ListView):
 def add_dosage(request):
     if request.method == 'POST':
         medication_id = request.POST.get('MedicationID').strip()
-        min_weight = request.POST.get('MinWeight')
-        max_weight = request.POST.get('MaxWeight')
+        min_weight = request.POST.get('MinWeight').strip()
+        max_weight = request.POST.get('MaxWeight').strip()
         min_age = request.POST.get('MinAge')
         max_age = request.POST.get('MaxAge')
         recommend_dosage = request.POST.get('RecommendDosage').strip()
@@ -753,8 +753,8 @@ def add_dosage(request):
     ]
     input_types = {
         'MedicationID': 'text',
-        'MinWeight': 'number',
-        'MaxWeight': 'number',
+        'MinWeight': 'text',
+        'MaxWeight': 'text',
         'MinAge': 'number',
         'MaxAge': 'number',
         'RecommendDosage': 'text',
@@ -795,8 +795,8 @@ def edit_dosage(request, dosage_id):
 
     input_types = {
         'MedicationID': 'text',
-        'MinWeight': 'number',
-        'MaxWeight': 'number',
+        'MinWeight': 'text',
+        'MaxWeight': 'text',
         'MinAge': 'number',
         'MaxAge': 'number',
         'RecommendDosage': 'text',
@@ -808,8 +808,8 @@ def edit_dosage(request, dosage_id):
         dosage.MedicationID = get_object_or_404(Medicine,
                                                 MedicationID=request.POST[
                                                     'MedicationID'].strip())
-        dosage.MinWeight = request.POST['MinWeight']
-        dosage.MaxWeight = request.POST['MaxWeight']
+        dosage.MinWeight = request.POST['MinWeight'].strip()
+        dosage.MaxWeight = request.POST['MaxWeight'].strip()
         dosage.MinAge = request.POST['MinAge']
         dosage.MaxAge = request.POST['MaxAge']
         dosage.RecommendDosage = request.POST['RecommendDosage'].strip()
@@ -843,8 +843,8 @@ def add_patient(request):
         phone = request.POST.get('Phone').strip()
         email = request.POST.get('Email').strip()
         birthdate = request.POST.get('Birthdate')
-        weight = request.POST.get('Weight')
-        height = request.POST.get('Height')
+        weight = request.POST.get('Weight').strip()
+        height = request.POST.get('Height').strip()
         emergency_contact = request.POST.get('EmergencyContact').strip()
 
         patient = Patient(
@@ -874,8 +874,8 @@ def add_patient(request):
         'Phone': 'text',
         'Email': 'email',
         'Birthdate': 'date',
-        'Weight': 'number',
-        'Height': 'number',
+        'Weight': 'text',
+        'Height': 'text',
         'EmergencyContact': 'text'
     }
 
@@ -913,8 +913,8 @@ def edit_patient(request, patient_id):
         'Phone': 'text',
         'Email': 'email',
         'Birthdate': 'date',
-        'Weight': 'number',
-        'Height': 'number',
+        'Weight': 'text',
+        'Height': 'text',
         'EmergencyContact': 'text'
     }
 
@@ -923,8 +923,8 @@ def edit_patient(request, patient_id):
         patient.Phone = request.POST['Phone'].strip()
         patient.Email = request.POST['Email'].strip()
         patient.Birthdate = request.POST['Birthdate']
-        patient.Weight = request.POST['Weight']
-        patient.Height = request.POST['Height']
+        patient.Weight = request.POST['Weight'].strip()
+        patient.Height = request.POST['Height'].strip()
         patient.EmergencyContact = request.POST['EmergencyContact'].strip()
         patient.save()
 
