@@ -208,7 +208,6 @@
       "Type": "Health"
     }
   },
-  [
   {
     "model": "clinic_management.insurance",
     "pk": "I21",
@@ -230,6 +229,183 @@
       "ExpireDate": "2025-10-15",
       "Type": "Premium"
     }
+  },
+  {
+    "model": "clinic_management.insurance",
+    "pk": "I23",
+    "fields": {
+      "PatientID": "P25",
+      "Provider": "CareFirst",
+      "CoverageAmount": 6000,
+      "ExpireDate": "2026-12-31",
+      "Type": "Health"
+    }
+  },
+  {
+    "model": "clinic_management.insurance",
+    "pk": "I24",
+    "fields": {
+      "PatientID": "P26",
+      "Provider": "SecureHealth",
+      "CoverageAmount": 7500,
+      "ExpireDate": "2025-06-30",
+      "Type": "Premium"
+    }
+  },
+  {
+    "model": "clinic_management.insurance",
+    "pk": "I25",
+    "fields": {
+      "PatientID": "P27",
+      "Provider": "MediAssist",
+      "CoverageAmount": 8000,
+      "ExpireDate": "2025-11-15",
+      "Type": "Standard"
+    }
+  },
+  {
+    "model": "clinic_management.insurance",
+    "pk": "I26",
+    "fields": {
+      "PatientID": "P28",
+      "Provider": "HealthCarePro",
+      "CoverageAmount": 9000,
+      "ExpireDate": "2026-12-31",
+      "Type": "Health"
+    }
+  },
+  {
+    "model": "clinic_management.insurance",
+    "pk": "I27",
+    "fields": {
+      "PatientID": "P29",
+      "Provider": "LifeSecure",
+      "CoverageAmount": 8500,
+      "ExpireDate": "2025-06-30",
+      "Type": "Premium"
+    }
+  },
+  {
+    "model": "clinic_management.insurance",
+    "pk": "I28",
+    "fields": {
+      "PatientID": "P30",
+      "Provider": "MediAssist",
+      "CoverageAmount": 7000,
+      "ExpireDate": "2025-11-15",
+      "Type": "Standard"
+    }
+  },
+  {
+    "model": "clinic_management.insurance",
+    "pk": "I29",
+    "fields": {
+      "PatientID": "P31",
+      "Provider": "HealthCarePro",
+      "CoverageAmount": 7000,
+      "ExpireDate": "2026-10-10",
+      "Type": "Health"
+    }
+  },
+  {
+    "model": "clinic_management.insurance",
+    "pk": "I30",
+    "fields": {
+      "PatientID": "P32",
+      "Provider": "MediAssist",
+      "CoverageAmount": 8000,
+      "ExpireDate": "2025-05-30",
+      "Type": "Premium"
+    }
+  },
+  {
+    "model": "clinic_management.insurance",
+    "pk": "I31",
+    "fields": {
+      "PatientID": "P33",
+      "Provider": "SecureHealth",
+      "CoverageAmount": 6000,
+      "ExpireDate": "2025-11-20",
+      "Type": "Standard"
+    }
+  },
+  {
+    "model": "clinic_management.insurance",
+    "pk": "I32",
+    "fields": {
+      "PatientID": "P34",
+      "Provider": "CarePlus",
+      "CoverageAmount": 6500,
+      "ExpireDate": "2025-12-31",
+      "Type": "Standard"
+    }
+  },
+  {
+    "model": "clinic_management.insurance",
+    "pk": "I33",
+    "fields": {
+      "PatientID": "P35",
+      "Provider": "LifeSecure",
+      "CoverageAmount": 7000,
+      "ExpireDate": "2026-05-15",
+      "Type": "Premium"
+    }
+  },
+  {
+    "model": "clinic_management.insurance",
+    "pk": "I34",
+    "fields": {
+      "PatientID": "P36",
+      "Provider": "SecureHealth",
+      "CoverageAmount": 8000,
+      "ExpireDate": "2025-11-20",
+      "Type": "Health"
+    }
+  },
+  {
+    "model": "clinic_management.insurance",
+    "pk": "I35",
+    "fields": {
+      "PatientID": "P37",
+      "Provider": "MediAssist",
+      "CoverageAmount": 7000,
+      "ExpireDate": "2026-01-01",
+      "Type": "Standard"
+    }
+  },
+  {
+    "model": "clinic_management.insurance",
+    "pk": "I36",
+    "fields": {
+      "PatientID": "P38",
+      "Provider": "CareFirst",
+      "CoverageAmount": 8000,
+      "ExpireDate": "2025-12-31",
+      "Type": "Premium"
+    }
+  },
+  {
+    "model": "clinic_management.insurance",
+    "pk": "I37",
+    "fields": {
+      "PatientID": "P39",
+      "Provider": "SecureHealth",
+      "CoverageAmount": 9000,
+      "ExpireDate": "2026-06-30",
+      "Type": "Health"
+    }
+  },
+  {
+    "model": "clinic_management.insurance",
+    "pk": "I38",
+    "fields": {
+      "PatientID": "P40",
+      "Provider": "HealthTrust",
+      "CoverageAmount": 9500,
+      "ExpireDate": "2025-11-15",
+      "Type": "Standard"
+    }
   }
+
 ]
 

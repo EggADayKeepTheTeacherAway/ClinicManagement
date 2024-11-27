@@ -231,17 +231,17 @@
     }
   },
   {
-  "model": "clinic_management.doctor",
-  "pk": "D16",
-  "fields": {
-    "Name": "Dr. Sophia Blake",
-    "Phone": "5678901234",
-    "Email": "sophia.blake@example.com",
-    "Birthdate": "1985-06-20",
-    "Specialization": "Neurology"
+    "model": "clinic_management.doctor",
+    "pk": "D16",
+    "fields": {
+      "Name": "Dr. Sophia Blake",
+      "Phone": "5678901234",
+      "Email": "sophia.blake@example.com",
+      "Birthdate": "1985-06-20",
+      "Specialization": "Neurology"
   }
-},
-{
+ },
+ {
   "model": "clinic_management.doctor",
   "pk": "D17",
   "fields": {
@@ -251,5 +251,38 @@
     "Birthdate": "1990-03-10",
     "Specialization": "Cardiology"
   }
-}
+ },
+  {
+    "model": "clinic_management.doctor",
+    "pk": "D18",
+    "fields": {
+      "Name": "Dr. Riccardo M. Bonato",
+      "Phone": "6969696969",
+      "Email": "RickyROX@gmail.com",
+      "Birthdate": "2005-02-7",
+      "Specialization": "Allergy and Immunology"
+    }
+  },
+  {
+    "model": "clinic_management.doctor",
+    "pk": "D19",
+    "fields": {
+      "Name": "Dr. Michael Rivera",
+      "Phone": "9345678902",
+      "Email": "michael.rivera@mail.com",
+      "Birthdate": "1975-07-09",
+      "Specialization": "Rheumatology"
+    }
+  },
+  {
+    "model": "clinic_management.doctor",
+    "pk": "D20",
+    "fields": {
+      "Name": "Dr. Emma Patel",
+      "Phone": "9345678903",
+      "Email": "emma.patel@mail.com",
+      "Birthdate": "1990-11-22",
+      "Specialization": "Infectious Diseases"
+    }
+  }
 ]

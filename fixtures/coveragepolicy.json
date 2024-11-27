@@ -148,6 +148,106 @@
       "CoveragePercentage": 85,
       "MaxCoverageAmount": 3500
     }
+  },
+  {
+    "model": "clinic_management.coveragepolicy",
+    "pk": "CP15",
+    "fields": {
+      "InsuranceID": "I15",
+      "TreatmentID": "T03",
+      "CoveragePercentage": 80,
+      "MaxCoverageAmount": 6000
+    }
+  },
+  {
+    "model": "clinic_management.coveragepolicy",
+    "pk": "CP16",
+    "fields": {
+      "InsuranceID": "I16",
+      "TreatmentID": "T09",
+      "CoveragePercentage": 70,
+      "MaxCoverageAmount": 4500
+    }
+  },
+  {
+    "model": "clinic_management.coveragepolicy",
+    "pk": "CP17",
+    "fields": {
+      "InsuranceID": "I17",
+      "TreatmentID": "T10",
+      "CoveragePercentage": 85,
+      "MaxCoverageAmount": 7000
+    }
+  },
+  {
+    "model": "clinic_management.coveragepolicy",
+    "pk": "CP18",
+    "fields": {
+      "InsuranceID": "I18",
+      "TreatmentID": "T06",
+      "CoveragePercentage": 90,
+      "MaxCoverageAmount": 10000
+    }
+  },
+  {
+    "model": "clinic_management.coveragepolicy",
+    "pk": "CP19",
+    "fields": {
+      "InsuranceID": "I19",
+      "TreatmentID": "T11",
+      "CoveragePercentage": 75,
+      "MaxCoverageAmount": 6000
+    }
+  },
+  {
+    "model": "clinic_management.coveragepolicy",
+    "pk": "CP20",
+    "fields": {
+      "InsuranceID": "I20",
+      "TreatmentID": "T02",
+      "CoveragePercentage": 80,
+      "MaxCoverageAmount": 5500
+    }
+  },
+  {
+    "model": "clinic_management.coveragepolicy",
+    "pk": "CP21",
+    "fields": {
+      "InsuranceID": "I21",
+      "TreatmentID": "T05",
+      "CoveragePercentage": 65,
+      "MaxCoverageAmount": 4200
+    }
+  },
+  {
+    "model": "clinic_management.coveragepolicy",
+    "pk": "CP22",
+    "fields": {
+      "InsuranceID": "I22",
+      "TreatmentID": "T08",
+      "CoveragePercentage": 60,
+      "MaxCoverageAmount": 2500
+    }
+  },
+  {
+    "model": "clinic_management.coveragepolicy",
+    "pk": "CP23",
+    "fields": {
+      "InsuranceID": "I23",
+      "TreatmentID": "T04",
+      "CoveragePercentage": 90,
+      "MaxCoverageAmount": 12000
+    }
+  },
+  {
+    "model": "clinic_management.coveragepolicy",
+    "pk": "CP24",
+    "fields": {
+      "InsuranceID": "I24",
+      "TreatmentID": "T07",
+      "CoveragePercentage": 75,
+      "MaxCoverageAmount": 8000
+    }
   }
 ]
 

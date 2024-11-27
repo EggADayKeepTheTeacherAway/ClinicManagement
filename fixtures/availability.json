@@ -38,5 +38,235 @@
       "StartTime": "10:00:00",
       "EndTime": "14:00:00"
     }
+  },
+  {
+    "model": "clinic_management.availability",
+    "pk": "AV05",
+    "fields": {
+      "DoctorID": "D05",
+      "Day": "Friday",
+      "StartTime": "08:00:00",
+      "EndTime": "12:00:00"
+    }
+  },
+  {
+    "model": "clinic_management.availability",
+    "pk": "AV06",
+    "fields": {
+      "DoctorID": "D06",
+      "Day": "Monday",
+      "StartTime": "14:00:00",
+      "EndTime": "18:00:00"
+    }
+  },
+  {
+    "model": "clinic_management.availability",
+    "pk": "AV07",
+    "fields": {
+      "DoctorID": "D07",
+      "Day": "Tuesday",
+      "StartTime": "08:00:00",
+      "EndTime": "12:00:00"
+    }
+  },
+  {
+    "model": "clinic_management.availability",
+    "pk": "AV08",
+    "fields": {
+      "DoctorID": "D08",
+      "Day": "Wednesday",
+      "StartTime": "14:00:00",
+      "EndTime": "18:00:00"
+    }
+  },
+  {
+    "model": "clinic_management.availability",
+    "pk": "AV09",
+    "fields": {
+      "DoctorID": "D09",
+      "Day": "Thursday",
+      "StartTime": "08:00:00",
+      "EndTime": "12:00:00"
+    }
+  },
+  {
+    "model": "clinic_management.availability",
+    "pk": "AV10",
+    "fields": {
+      "DoctorID": "D10",
+      "Day": "Friday",
+      "StartTime": "14:00:00",
+      "EndTime": "18:00:00"
+    }
+  },
+  {
+    "model": "clinic_management.availability",
+    "pk": "AV11",
+    "fields": {
+      "DoctorID": "D11",
+      "Day": "Saturday",
+      "StartTime": "09:00:00",
+      "EndTime": "13:00:00"
+    }
+  },
+  {
+    "model": "clinic_management.availability",
+    "pk": "AV12",
+    "fields": {
+      "DoctorID": "D12",
+      "Day": "Monday",
+      "StartTime": "08:00:00",
+      "EndTime": "12:00:00"
+    }
+  },
+  {
+    "model": "clinic_management.availability",
+    "pk": "AV13",
+    "fields": {
+      "DoctorID": "D13",
+      "Day": "Tuesday",
+      "StartTime": "14:00:00",
+      "EndTime": "18:00:00"
+    }
+  },
+  {
+    "model": "clinic_management.availability",
+    "pk": "AV14",
+    "fields": {
+      "DoctorID": "D14",
+      "Day": "Wednesday",
+      "StartTime": "08:00:00",
+      "EndTime": "12:00:00"
+    }
+  },
+  {
+    "model": "clinic_management.availability",
+    "pk": "AV15",
+    "fields": {
+      "DoctorID": "D15",
+      "Day": "Thursday",
+      "StartTime": "14:00:00",
+      "EndTime": "18:00:00"
+    }
+  },
+  {
+    "model": "clinic_management.availability",
+    "pk": "AV16",
+    "fields": {
+      "DoctorID": "D16",
+      "Day": "Friday",
+      "StartTime": "08:00:00",
+      "EndTime": "12:00:00"
+    }
+  },
+  {
+    "model": "clinic_management.availability",
+    "pk": "AV17",
+    "fields": {
+      "DoctorID": "D17",
+      "Day": "Saturday",
+      "StartTime": "10:00:00",
+      "EndTime": "14:00:00"
+    }
+  },
+  {
+    "model": "clinic_management.availability",
+    "pk": "AV18",
+    "fields": {
+      "DoctorID": "D18",
+      "Day": "Sunday",
+      "StartTime": "09:00:00",
+      "EndTime": "13:00:00"
+    }
+  },
+  {
+    "model": "clinic_management.availability",
+    "pk": "AV19",
+    "fields": {
+      "DoctorID": "D19",
+      "Day": "Monday",
+      "StartTime": "08:00:00",
+      "EndTime": "12:00:00"
+    }
+  },
+  {
+    "model": "clinic_management.availability",
+    "pk": "AV20",
+    "fields": {
+      "DoctorID": "D20",
+      "Day": "Tuesday",
+      "StartTime": "14:00:00",
+      "EndTime": "18:00:00"
+    }
+  },
+  {
+    "model": "clinic_management.availability",
+    "pk": "AV21",
+    "fields": {
+      "DoctorID": "D01",
+      "Day": "Saturday",
+      "StartTime": "10:00:00",
+      "EndTime": "14:00:00"
+    }
+  },
+  {
+    "model": "clinic_management.availability",
+    "pk": "AV22",
+    "fields": {
+      "DoctorID": "D02",
+      "Day": "Sunday",
+      "StartTime": "09:00:00",
+      "EndTime": "13:00:00"
+    }
+  },
+  {
+    "model": "clinic_management.availability",
+    "pk": "AV23",
+    "fields": {
+      "DoctorID": "D03",
+      "Day": "Friday",
+      "StartTime": "15:00:00",
+      "EndTime": "19:00:00"
+    }
+  },
+  {
+    "model": "clinic_management.availability",
+    "pk": "AV24",
+    "fields": {
+      "DoctorID": "D04",
+      "Day": "Saturday",
+      "StartTime": "08:00:00",
+      "EndTime": "12:00:00"
+    }
+  },
+  {
+    "model": "clinic_management.availability",
+    "pk": "AV25",
+    "fields": {
+      "DoctorID": "D05",
+      "Day": "Thursday",
+      "StartTime": "14:00:00",
+      "EndTime": "18:00:00"
+    }
+  },
+  {
+    "model": "clinic_management.availability",
+    "pk": "AV26",
+    "fields": {
+      "DoctorID": "D06",
+      "Day": "Wednesday",
+      "StartTime": "08:00:00",
+      "EndTime": "12:00:00"
+    }
+  },
+  {
+    "model": "clinic_management.availability",
+    "pk": "AV27",
+    "fields": {
+      "DoctorID": "D07",
+      "Day": "Tuesday",
+      "StartTime": "14:00:00",
+      "EndTime": "18:00:00"
+    }
   }
 ]

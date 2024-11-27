@@ -264,7 +264,7 @@
       "Units": "Inhaler",
       "Notes": "For managing asthma symptoms"
     }
-  }
+  },
   {
     "model": "clinic_management.dosage",
     "pk": "D20",
@@ -334,6 +334,176 @@
       "Units": "Packet",
       "Notes": "For dehydration"
     }
+  },
+  {
+    "model": "clinic_management.dosage",
+    "pk": "D25",
+    "fields": {
+      "MedicationID": "M09",
+      "MinWeight": "40kg",
+      "MaxWeight": "100kg",
+      "MinAge": 18,
+      "MaxAge": 65,
+      "RecommendDosage": "1 tablet",
+      "Units": "Tablet",
+      "Notes": "For pain relief after surgery"
+    }
+  },
+  {
+    "model": "clinic_management.dosage",
+    "pk": "D26",
+    "fields": {
+      "MedicationID": "M13",
+      "MinWeight": "50kg",
+      "MaxWeight": "120kg",
+      "MinAge": 15,
+      "MaxAge": 65,
+      "RecommendDosage": "10ml",
+      "Units": "Syrup",
+      "Notes": "For managing mild to moderate fever"
+    }
+  },
+  {
+    "model": "clinic_management.dosage",
+    "pk": "D27",
+    "fields": {
+      "MedicationID": "M14",
+      "MinWeight": "45kg",
+      "MaxWeight": "90kg",
+      "MinAge": 18,
+      "MaxAge": 60,
+      "RecommendDosage": "1 puff",
+      "Units": "Inhaler",
+      "Notes": "For asthma management"
+    }
+  },
+  {
+    "model": "clinic_management.dosage",
+    "pk": "D28",
+    "fields": {
+      "MedicationID": "M10",
+      "MinWeight": "50kg",
+      "MaxWeight": "90kg",
+      "MinAge": 20,
+      "MaxAge": 65,
+      "RecommendDosage": "1 tablet",
+      "Units": "Tablet",
+      "Notes": "For viral fever management"
+    }
+  },
+  {
+    "model": "clinic_management.dosage",
+    "pk": "D29",
+    "fields": {
+      "MedicationID": "M12",
+      "MinWeight": "40kg",
+      "MaxWeight": "100kg",
+      "MinAge": 18,
+      "MaxAge": 70,
+      "RecommendDosage": "2 puffs",
+      "Units": "Inhaler",
+      "Notes": "For asthma relief"
+    }
+  },
+  {
+    "model": "clinic_management.dosage",
+    "pk": "D30",
+    "fields": {
+      "MedicationID": "M15",
+      "MinWeight": "Any",
+      "MaxWeight": "Any",
+      "MinAge": 21,
+      "MaxAge": 65,
+      "RecommendDosage": "50mg",
+      "Units": "Tablet",
+      "Notes": "For anxiety management"
+    }
+  },
+  {
+    "model": "clinic_management.dosage",
+    "pk": "D31",
+    "fields": {
+      "MedicationID": "M10",
+      "MinWeight": "50kg",
+      "MaxWeight": "100kg",
+      "MinAge": 25,
+      "MaxAge": 60,
+      "RecommendDosage": "1 tablet",
+      "Units": "Tablet",
+      "Notes": "For severe headaches"
+    }
+  },
+  {
+    "model": "clinic_management.dosage",
+    "pk": "D32",
+    "fields": {
+      "MedicationID": "M11",
+      "MinWeight": "45kg",
+      "MaxWeight": "90kg",
+      "MinAge": 18,
+      "MaxAge": 70,
+      "RecommendDosage": "1 packet",
+      "Units": "Packet",
+      "Notes": "For dehydration recovery"
+    }
+  },
+  {
+    "model": "clinic_management.dosage",
+    "pk": "D33",
+    "fields": {
+      "MedicationID": "M14",
+      "MinWeight": "Any",
+      "MaxWeight": "Any",
+      "MinAge": 21,
+      "MaxAge": 65,
+      "RecommendDosage": "20ml",
+      "Units": "Syrup",
+      "Notes": "For cough relief"
+    }
+  },
+  {
+    "model": "clinic_management.dosage",
+    "pk": "D34",
+    "fields": {
+      "MedicationID": "M05",
+      "MinWeight": "40kg",
+      "MaxWeight": "80kg",
+      "MinAge": 18,
+      "MaxAge": 60,
+      "RecommendDosage": "2 tsp",
+      "Units": "Syrup",
+      "Notes": "For dry cough relief"
+    }
+  },
+  {
+    "model": "clinic_management.dosage",
+    "pk": "D35",
+    "fields": {
+      "MedicationID": "M10",
+      "MinWeight": "50kg",
+      "MaxWeight": "100kg",
+      "MinAge": 18,
+      "MaxAge": 70,
+      "RecommendDosage": "1 tablet",
+      "Units": "Tablet",
+      "Notes": "For fever management"
+    }
+  },
+  {
+    "model": "clinic_management.dosage",
+    "pk": "D36",
+    "fields": {
+      "MedicationID": "M12",
+      "MinWeight": "60kg",
+      "MaxWeight": "100kg",
+      "MinAge": 20,
+      "MaxAge": 65,
+      "RecommendDosage": "2 puffs",
+      "Units": "Inhaler",
+      "Notes": "For asthma management"
+    }
   }
 ]
+
+
 

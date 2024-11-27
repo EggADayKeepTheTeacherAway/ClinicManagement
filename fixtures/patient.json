@@ -442,6 +442,306 @@
       "Weight": "72kg",
       "Height": "175cm"
     }
+  },
+  {
+    "model": "clinic_management.patient",
+    "pk": "P28",
+    "fields": {
+      "Name": "Lucas Perry",
+      "Phone": "9012346797",
+      "Email": "lucas.perry@mail.com",
+      "Birthdate": "1983-06-14",
+      "EmergencyContact": "8901234670",
+      "Weight": "75kg",
+      "Height": "178cm"
+    }
+  },
+  {
+    "model": "clinic_management.patient",
+    "pk": "P29",
+    "fields": {
+      "Name": "Sophia Davis",
+      "Phone": "9012346798",
+      "Email": "sophia.davis@mail.com",
+      "Birthdate": "1993-10-28",
+      "EmergencyContact": "8901234680",
+      "Weight": "63kg",
+      "Height": "165cm"
+    }
+  },
+  {
+    "model": "clinic_management.patient",
+    "pk": "P30",
+    "fields": {
+      "Name": "Mason Lee",
+      "Phone": "9012346799",
+      "Email": "mason.lee@mail.com",
+      "Birthdate": "1990-02-20",
+      "EmergencyContact": "8901234690",
+      "Weight": "82kg",
+      "Height": "180cm"
+    }
+  },
+  {
+    "model": "clinic_management.patient",
+    "pk": "P31",
+    "fields": {
+      "Name": "Emily Wilson",
+      "Phone": "9123456791",
+      "Email": "emily.wilson@mail.com",
+      "Birthdate": "1985-11-12",
+      "EmergencyContact": "9012345700",
+      "Weight": "67kg",
+      "Height": "165cm"
+    }
+  },
+  {
+    "model": "clinic_management.patient",
+    "pk": "P32",
+    "fields": {
+      "Name": "David Taylor",
+      "Phone": "9123456792",
+      "Email": "david.taylor@mail.com",
+      "Birthdate": "1990-03-07",
+      "EmergencyContact": "9012345710",
+      "Weight": "78kg",
+      "Height": "180cm"
+    }
+  },
+  {
+    "model": "clinic_management.patient",
+    "pk": "P33",
+    "fields": {
+      "Name": "Liam Brown",
+      "Phone": "9123456793",
+      "Email": "liam.brown@mail.com",
+      "Birthdate": "1995-08-15",
+      "EmergencyContact": "9012345720",
+      "Weight": "85kg",
+      "Height": "175cm"
+    }
+  },
+  {
+    "model": "clinic_management.patient",
+    "pk": "P34",
+    "fields": {
+      "Name": "Aiden Wright",
+      "Phone": "9123456701",
+      "Email": "aiden.wright@mail.com",
+      "Birthdate": "1987-04-12",
+      "EmergencyContact": "9123456711",
+      "Weight": "80kg",
+      "Height": "175cm"
+    }
+  },
+  {
+    "model": "clinic_management.patient",
+    "pk": "P35",
+    "fields": {
+      "Name": "Olivia Martinez",
+      "Phone": "9123456702",
+      "Email": "olivia.martinez@mail.com",
+      "Birthdate": "1992-09-25",
+      "EmergencyContact": "9123456722",
+      "Weight": "62kg",
+      "Height": "165cm"
+    }
+  },
+  {
+    "model": "clinic_management.patient",
+    "pk": "P36",
+    "fields": {
+      "Name": "Isabella Johnson",
+      "Phone": "9123456703",
+      "Email": "isabella.johnson@mail.com",
+      "Birthdate": "1985-02-17",
+      "EmergencyContact": "9123456733",
+      "Weight": "68kg",
+      "Height": "170cm"
+    }
+  },
+  {
+    "model": "clinic_management.patient",
+    "pk": "P37",
+    "fields": {
+      "Name": "Evelyn Harper",
+      "Phone": "9234567801",
+      "Email": "evelyn.harper@mail.com",
+      "Birthdate": "1991-07-15",
+      "EmergencyContact": "9123456781",
+      "Weight": "64kg",
+      "Height": "162cm"
+    }
+  },
+  {
+    "model": "clinic_management.patient",
+    "pk": "P38",
+    "fields": {
+      "Name": "Henry Morgan",
+      "Phone": "9234567802",
+      "Email": "henry.morgan@mail.com",
+      "Birthdate": "1980-03-19",
+      "EmergencyContact": "9123456782",
+      "Weight": "92kg",
+      "Height": "185cm"
+    }
+  },
+  {
+    "model": "clinic_management.patient",
+    "pk": "P39",
+    "fields": {
+      "Name": "Sophia Thomas",
+      "Phone": "9234567803",
+      "Email": "sophia.thomas@mail.com",
+      "Birthdate": "1998-09-23",
+      "EmergencyContact": "9123456783",
+      "Weight": "59kg",
+      "Height": "168cm"
+    }
+  },
+  {
+    "model": "clinic_management.patient",
+    "pk": "P40",
+    "fields": {
+      "Name": "Benjamin Foster",
+      "Phone": "9234567804",
+      "Email": "benjamin.foster@mail.com",
+      "Birthdate": "1995-12-30",
+      "EmergencyContact": "9123456784",
+      "Weight": "81kg",
+      "Height": "178cm"
+    }
+  },
+  {
+    "model": "clinic_management.patient",
+    "pk": "P41",
+    "fields": {
+      "Name": "Samantha Hayes",
+      "Phone": "9123456781",
+      "Email": "samantha.hayes@mail.com",
+      "Birthdate": "1987-03-14",
+      "EmergencyContact": "9234567812",
+      "Weight": "65kg",
+      "Height": "165cm"
+    }
+  },
+  {
+    "model": "clinic_management.patient",
+    "pk": "P42",
+    "fields": {
+      "Name": "Nathan Reed",
+      "Phone": "9123456782",
+      "Email": "nathan.reed@mail.com",
+      "Birthdate": "1990-07-22",
+      "EmergencyContact": "9345678903",
+      "Weight": "92kg",
+      "Height": "185cm"
+    }
+  },
+  {
+    "model": "clinic_management.patient",
+    "pk": "P43",
+    "fields": {
+      "Name": "Olivia Parker",
+      "Phone": "9123456783",
+      "Email": "olivia.parker@mail.com",
+      "Birthdate": "2002-05-11",
+      "EmergencyContact": "9456789014",
+      "Weight": "58kg",
+      "Height": "160cm"
+    }
+  },
+  {
+    "model": "clinic_management.patient",
+    "pk": "P44",
+    "fields": {
+      "Name": "William Scott",
+      "Phone": "9123456784",
+      "Email": "william.scott@mail.com",
+      "Birthdate": "1985-11-08",
+      "EmergencyContact": "9567890125",
+      "Weight": "88kg",
+      "Height": "182cm"
+    }
+  },
+  {
+    "model": "clinic_management.patient",
+    "pk": "P45",
+    "fields": {
+      "Name": "Isabella Wright",
+      "Phone": "9123456785",
+      "Email": "isabella.wright@mail.com",
+      "Birthdate": "1996-04-27",
+      "EmergencyContact": "9678901236",
+      "Weight": "70kg",
+      "Height": "170cm"
+    }
+  },
+  {
+    "model": "clinic_management.patient",
+    "pk": "P46",
+    "fields": {
+      "Name": "James Hughes",
+      "Phone": "9123456786",
+      "Email": "james.hughes@mail.com",
+      "Birthdate": "1978-09-15",
+      "EmergencyContact": "9789012347",
+      "Weight": "85kg",
+      "Height": "180cm"
+    }
+  },
+  {
+    "model": "clinic_management.patient",
+    "pk": "P47",
+    "fields": {
+      "Name": "Charlotte Morris",
+      "Phone": "9123456787",
+      "Email": "charlotte.morris@mail.com",
+      "Birthdate": "1989-12-21",
+      "EmergencyContact": "9890123458",
+      "Weight": "63kg",
+      "Height": "168cm"
+    }
+  },
+  {
+    "model": "clinic_management.patient",
+    "pk": "P48",
+    "fields": {
+      "Name": "Daniel Cooper",
+      "Phone": "9123456788",
+      "Email": "daniel.cooper@mail.com",
+      "Birthdate": "1984-06-18",
+      "EmergencyContact": "9991234569",
+      "Weight": "90kg",
+      "Height": "187cm"
+    }
+  },
+  {
+    "model": "clinic_management.patient",
+    "pk": "P49",
+    "fields": {
+      "Name": "Amelia Brooks",
+      "Phone": "9123456789",
+      "Email": "amelia.brooks@mail.com",
+      "Birthdate": "2000-02-07",
+      "EmergencyContact": "9112345670",
+      "Weight": "60kg",
+      "Height": "163cm"
+    }
+  },
+  {
+    "model": "clinic_management.patient",
+    "pk": "P50",
+    "fields": {
+      "Name": "Ethan Rivera",
+      "Phone": "9123456790",
+      "Email": "ethan.rivera@mail.com",
+      "Birthdate": "1993-01-01",
+      "EmergencyContact": "9213456781",
+      "Weight": "78kg",
+      "Height": "175cm"
+    }
   }
 ]
+
 
