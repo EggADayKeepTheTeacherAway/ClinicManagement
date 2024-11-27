@@ -1,0 +1,51 @@
+{% extends 'base_add_data.html' %}
+{% load custom_filters %}
+
+{% block title %}
+    <h2 class="mt-4">Edit {{ model_name }}</h2>
+{% endblock %}
+
+{% block content %}
+    <div class="container my-4">
+        <form method="POST" class="form-group" onsubmit="trimInputFields()">
+            {% csrf_token %}
+
+            <div class="row">
+                {% for field, label in fields %}
+                    <div class="col-md-4 mb-3">
+                        <label for="{{ field }}_{{ object.pk }}">{{ label }}</label>
+                        <input type="{{ input_types|get_item:field }}"
+                               class="form-control"
+                               id="{{ field }}_{{ object.pk }}"
+                               name="{{ field }}"
+                               {% if input_types|get_item:field == 'number' %}
+                                   value="{% if object|get_model_field:field %}{{ object|get_model_field:field }}{% endif %}"
+                               {% elif input_types|get_item:field == 'date' %}
+                                   value="{% if object|get_model_field:field %}{{ object|get_model_field:field|date:"Y-m-d" }}{% endif %}"
+                               {% else %}
+                                   value="{% if field == 'DoctorID' %}{{ object.DoctorID.DoctorID }}
+                                   {% elif field == 'PatientID' %}{{ object.PatientID.PatientID }}
+                                   {% elif field == 'MedicationID' %}{{ object.MedicationID.MedicationID }}
+                                   {% elif field == 'DiseaseID' %}{{ object.DiseaseID.DiseaseID }}
+                                   {% elif field == 'TreatmentID' %}{{ object.TreatmentID.TreatmentID }}
+                                   {% else %}{{ object|get_model_field:field }}
+                                   {% endif %}"
+                               {% endif %}
+                               required>
+                    </div>
+                {% endfor %}
+            </div>
+
+            <button type="submit" class="btn btn-primary">Save Changes</button>
+        </form>
+    </div>
+
+    <script>
+        function trimInputFields() {
+            var inputs = document.querySelectorAll("input");
+            inputs.forEach(function(input) {
+                input.value = input.value.trim();
+            });
+        }
+    </script>
+{% endblock %}

@@ -33,6 +33,9 @@
                             {% csrf_token %}
                             <button type="submit" class="btn btn-danger btn-sm">Delete</button>
                         </form>
+                        <a href="{% url 'edit_treatment' treatment.TreatmentID %}" class="btn btn-warning btn-sm">
+                            Edit
+                        </a>
                     </td>
                 </tr>
                 {% endfor %}
