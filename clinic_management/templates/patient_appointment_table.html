@@ -1,14 +1,15 @@
-{% extends 'base.html' %}
+{% extends 'base_timetable.html' %}
 
 {% block title %}
-<h2 class="mt-4">{{ patient.Name }}'s Appointments</h2>
 <a href="{% url 'patient_list' %}" class="btn btn-primary mb-3">
-    Patient List
+    Back to Patient List
 </a>
+<h2 class="mt-4">{{ patient.Name }}'s Appointments</h2>
 {% endblock %}
 
 {% block content %}
 <div class="container my-4">
+    <hr>
     <h3>Scheduled Appointments</h3>
     {% if appointment_list %}
         <table class="table table-bordered">
