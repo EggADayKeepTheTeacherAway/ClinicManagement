@@ -116,8 +116,8 @@ class Medicine(models.Model):
 class Dosage(models.Model):
     DosageID = models.CharField(max_length=30, primary_key=True, editable=False)
     MedicationID = models.ForeignKey(Medicine, on_delete=models.CASCADE, db_column='MedicationID')
-    MinWeight = models.CharField(max_length=50)
-    MaxWeight = models.CharField(max_length=50)
+    MinWeight = models.PositiveIntegerField()
+    MaxWeight = models.PositiveIntegerField()
     MinAge = models.PositiveIntegerField()
     MaxAge = models.PositiveIntegerField()
     RecommendDosage = models.CharField(max_length=100)
