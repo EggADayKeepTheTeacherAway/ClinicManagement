@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<h2 class="mt-4">{{ patient.Name }}'s Appointments</h2>
+<a href="{% url 'patient_list' %}" class="btn btn-primary mb-3">
+    Patient List
+</a>
+{% endblock %}
+
+{% block content %}
+<div class="container my-4">
+    <h3>Scheduled Appointments</h3>
+    {% if appointment_list %}
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>No.</th>
+                    <th>Day</th>
+                    <th>Date</th>
+                    <th>Doctor</th>
+                    <th>Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for appointment in appointment_list %}
+                    <tr>
+                        <td>{{ forloop.counter }}</td>
+                        <td>{{ appointment.day }}</td>
+                        <td>{{ appointment.date }}</td>
+                        <td>{{ appointment.doctor }}</td>
+                        <td>
+                            {{ appointment.start_time|time:"H:i" }} - {{ appointment.end_time|time:"H:i" }}
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p>No appointments found for this patient.</p>
+    {% endif %}
+</div>
+{% endblock %}
