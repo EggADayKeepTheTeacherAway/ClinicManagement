@@ -7,7 +7,7 @@ A repository for the Database 2024 project
 - Have fun doing this project (not much fun due to the time limit).
 
 ## Installation Guide
-### 1. Clone the reposity
+### 1. Clone the repository
 - `git clone https://github.com/EggADayKeepTheTeacherAway/ClinicManagement.git`
 ### 2. Migrate
 - `python manage.py migrate`
