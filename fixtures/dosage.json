@@ -1,7 +1,7 @@
 [
   {
     "model": "clinic_management.dosage",
-    "pk": "DO01",
+    "pk": "D01",
     "fields": {
       "MedicationID": "M03",
       "MinWeight": "20kg",
@@ -15,7 +15,7 @@
   },
   {
     "model": "clinic_management.dosage",
-    "pk": "DO02",
+    "pk": "D02",
     "fields": {
       "MedicationID": "M01",
       "MinWeight": "50kg",
@@ -29,7 +29,7 @@
   },
   {
     "model": "clinic_management.dosage",
-    "pk": "DO03",
+    "pk": "D03",
     "fields": {
       "MedicationID": "M03",
       "MinWeight": "40kg",
@@ -43,7 +43,7 @@
   },
   {
     "model": "clinic_management.dosage",
-    "pk": "DO04",
+    "pk": "D04",
     "fields": {
       "MedicationID": "M02",
       "MinWeight": "30kg",
@@ -57,7 +57,7 @@
   },
   {
     "model": "clinic_management.dosage",
-    "pk": "DO05",
+    "pk": "D05",
     "fields": {
       "MedicationID": "M04",
       "MinWeight": "50kg",
@@ -71,7 +71,7 @@
   },
   {
     "model": "clinic_management.dosage",
-    "pk": "DO06",
+    "pk": "D06",
     "fields": {
       "MedicationID": "M06",
       "MinWeight": "20kg",
@@ -85,7 +85,7 @@
   },
   {
     "model": "clinic_management.dosage",
-    "pk": "DO07",
+    "pk": "D07",
     "fields": {
       "MedicationID": "M07",
       "MinWeight": 40,
@@ -99,7 +99,7 @@
   },
   {
     "model": "clinic_management.dosage",
-    "pk": "DO08",
+    "pk": "D08",
     "fields": {
       "MedicationID": "M09",
       "MinWeight": 50,
@@ -113,7 +113,7 @@
   },
   {
     "model": "clinic_management.dosage",
-    "pk": "DO09",
+    "pk": "D09",
     "fields": {
       "MedicationID": "M10",
       "MinWeight": 40,
@@ -127,7 +127,7 @@
   },
   {
     "model": "clinic_management.dosage",
-    "pk": "DO10",
+    "pk": "D10",
     "fields": {
       "MedicationID": "M11",
       "MinWeight": "Any",
@@ -141,7 +141,7 @@
   },
   {
     "model": "clinic_management.dosage",
-    "pk": "DO11",
+    "pk": "D11",
     "fields": {
       "MedicationID": "M16",
       "MinWeight": "50kg",
@@ -155,7 +155,7 @@
   },
   {
     "model": "clinic_management.dosage",
-    "pk": "DO12",
+    "pk": "D12",
     "fields": {
       "MedicationID": "M15",
       "MinWeight": "Any",
@@ -169,7 +169,7 @@
   },
   {
     "model": "clinic_management.dosage",
-    "pk": "DO13",
+    "pk": "D13",
     "fields": {
       "MedicationID": "M14",
       "MinWeight": "40kg",
@@ -183,7 +183,7 @@
   },
   {
     "model": "clinic_management.dosage",
-    "pk": "DO14",
+    "pk": "D14",
     "fields": {
       "MedicationID": "M13",
       "MinWeight": "Any",
@@ -197,7 +197,7 @@
   },
   {
     "model": "clinic_management.dosage",
-    "pk": "DO15",
+    "pk": "D15",
     "fields": {
       "MedicationID": "M12",
       "MinWeight": "Any",
@@ -211,7 +211,7 @@
   },
   {
     "model": "clinic_management.dosage",
-    "pk": "DO16",
+    "pk": "D16",
     "fields": {
       "MedicationID": "M05",
       "MinWeight": "40kg",
@@ -225,7 +225,7 @@
   },
   {
     "model": "clinic_management.dosage",
-    "pk": "DO17",
+    "pk": "D17",
     "fields": {
       "MedicationID": "M03",
       "MinWeight": "50kg",
@@ -239,7 +239,7 @@
   },
   {
     "model": "clinic_management.dosage",
-    "pk": "O18",
+    "pk": "D18",
     "fields": {
       "MedicationID": "M06",
       "MinWeight": "40kg",
@@ -253,7 +253,7 @@
   },
   {
     "model": "clinic_management.dosage",
-    "pk": "DO19",
+    "pk": "D19",
     "fields": {
       "MedicationID": "M12",
       "MinWeight": "50kg",
@@ -267,7 +267,7 @@
   },
   {
     "model": "clinic_management.dosage",
-    "pk": "DO20",
+    "pk": "D20",
     "fields": {
       "MedicationID": "M03",
       "MinWeight": "50kg",
@@ -281,7 +281,7 @@
   },
   {
     "model": "clinic_management.dosage",
-    "pk": "DO21",
+    "pk": "D21",
     "fields": {
       "MedicationID": "M04",
       "MinWeight": "50kg",
@@ -295,7 +295,7 @@
   },
   {
     "model": "clinic_management.dosage",
-    "pk": "DO22",
+    "pk": "D22",
     "fields": {
       "MedicationID": "M07",
       "MinWeight": "50kg",
@@ -309,7 +309,7 @@
   },
   {
     "model": "clinic_management.dosage",
-    "pk": "DO23",
+    "pk": "D23",
     "fields": {
       "MedicationID": "M08",
       "MinWeight": "50kg",
@@ -323,7 +323,7 @@
   },
   {
     "model": "clinic_management.dosage",
-    "pk": "DO24",
+    "pk": "D24",
     "fields": {
       "MedicationID": "M11",
       "MinWeight": "40kg",
@@ -337,7 +337,7 @@
   },
   {
     "model": "clinic_management.dosage",
-    "pk": "DO25",
+    "pk": "D25",
     "fields": {
       "MedicationID": "M09",
       "MinWeight": "40kg",
@@ -351,7 +351,7 @@
   },
   {
     "model": "clinic_management.dosage",
-    "pk": "DO26",
+    "pk": "D26",
     "fields": {
       "MedicationID": "M13",
       "MinWeight": "50kg",
@@ -365,7 +365,7 @@
   },
   {
     "model": "clinic_management.dosage",
-    "pk": "DO27",
+    "pk": "D27",
     "fields": {
       "MedicationID": "M14",
       "MinWeight": "45kg",
@@ -379,7 +379,7 @@
   },
   {
     "model": "clinic_management.dosage",
-    "pk": "DO28",
+    "pk": "D28",
     "fields": {
       "MedicationID": "M10",
       "MinWeight": "50kg",
@@ -393,7 +393,7 @@
   },
   {
     "model": "clinic_management.dosage",
-    "pk": "DO29",
+    "pk": "D29",
     "fields": {
       "MedicationID": "M12",
       "MinWeight": "40kg",
@@ -407,7 +407,7 @@
   },
   {
     "model": "clinic_management.dosage",
-    "pk": "DO30",
+    "pk": "D30",
     "fields": {
       "MedicationID": "M15",
       "MinWeight": "Any",
@@ -421,7 +421,7 @@
   },
   {
     "model": "clinic_management.dosage",
-    "pk": "DO31",
+    "pk": "D31",
     "fields": {
       "MedicationID": "M10",
       "MinWeight": "50kg",
@@ -435,7 +435,7 @@
   },
   {
     "model": "clinic_management.dosage",
-    "pk": "DO32",
+    "pk": "D32",
     "fields": {
       "MedicationID": "M11",
       "MinWeight": "45kg",
@@ -449,7 +449,7 @@
   },
   {
     "model": "clinic_management.dosage",
-    "pk": "DO33",
+    "pk": "D33",
     "fields": {
       "MedicationID": "M14",
       "MinWeight": "Any",
@@ -463,7 +463,7 @@
   },
   {
     "model": "clinic_management.dosage",
-    "pk": "DO34",
+    "pk": "D34",
     "fields": {
       "MedicationID": "M05",
       "MinWeight": "40kg",
@@ -477,7 +477,7 @@
   },
   {
     "model": "clinic_management.dosage",
-    "pk": "DO35",
+    "pk": "D35",
     "fields": {
       "MedicationID": "M10",
       "MinWeight": "50kg",
@@ -491,7 +491,7 @@
   },
   {
     "model": "clinic_management.dosage",
-    "pk": "DO36",
+    "pk": "D36",
     "fields": {
       "MedicationID": "M12",
       "MinWeight": "60kg",
@@ -504,3 +504,6 @@
     }
   }
 ]
+
+
+
