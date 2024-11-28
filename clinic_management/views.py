@@ -845,8 +845,8 @@ def add_patient(request):
         phone = request.POST.get('Phone').strip()
         email = request.POST.get('Email').strip()
         birthdate = request.POST.get('Birthdate')
-        weight = request.POST.get('Weight').strip()
-        height = request.POST.get('Height').strip()
+        weight = request.POST.get('Weight')
+        height = request.POST.get('Height')
         emergency_contact = request.POST.get('EmergencyContact').strip()
 
         patient = Patient(
@@ -867,8 +867,8 @@ def add_patient(request):
         ('Phone', 'Phone'),
         ('Email', 'Email'),
         ('Birthdate', 'Birthdate'),
-        ('Weight', 'Weight'),
-        ('Height', 'Height'),
+        ('Weight', 'Weight (kg)'),
+        ('Height', 'Height (cm)'),
         ('EmergencyContact', 'Emergency Contact')
     ]
     input_types = {
@@ -876,8 +876,8 @@ def add_patient(request):
         'Phone': 'text',
         'Email': 'email',
         'Birthdate': 'date',
-        'Weight': 'text',
-        'Height': 'text',
+        'Weight': 'number',
+        'Height': 'number',
         'EmergencyContact': 'text'
     }
 
@@ -905,8 +905,8 @@ def edit_patient(request, patient_id):
         ('Phone', 'Phone'),
         ('Email', 'Email'),
         ('Birthdate', 'Birthdate'),
-        ('Weight', 'Weight'),
-        ('Height', 'Height'),
+        ('Weight', 'Weight (kg)'),
+        ('Height', 'Height (cm)'),
         ('EmergencyContact', 'Emergency Contact')
     ]
 
@@ -915,8 +915,8 @@ def edit_patient(request, patient_id):
         'Phone': 'text',
         'Email': 'email',
         'Birthdate': 'date',
-        'Weight': 'text',
-        'Height': 'text',
+        'Weight': 'number',
+        'Height': 'number',
         'EmergencyContact': 'text'
     }
 
@@ -925,8 +925,8 @@ def edit_patient(request, patient_id):
         patient.Phone = request.POST['Phone'].strip()
         patient.Email = request.POST['Email'].strip()
         patient.Birthdate = request.POST['Birthdate']
-        patient.Weight = request.POST['Weight'].strip()
-        patient.Height = request.POST['Height'].strip()
+        patient.Weight = request.POST['Weight']
+        patient.Height = request.POST['Height']
         patient.EmergencyContact = request.POST['EmergencyContact'].strip()
         patient.save()
 

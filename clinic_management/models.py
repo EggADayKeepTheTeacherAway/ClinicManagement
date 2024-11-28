@@ -140,8 +140,8 @@ class Patient(models.Model):
     Email = models.EmailField()
     Birthdate = models.DateField()
     EmergencyContact = models.CharField(max_length=100)
-    Weight = models.CharField(max_length=50)
-    Height = models.CharField(max_length=50)
+    Weight = models.PositiveIntegerField()
+    Height = models.PositiveIntegerField()
 
     def save(self, *args, **kwargs):
         if not self.PatientID:
