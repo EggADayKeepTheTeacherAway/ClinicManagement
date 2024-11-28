@@ -1517,3 +1517,23 @@ def doctor_timetable(request, doctor_id):
         'appointments_by_day': appointments_by_day,
         'days': days,
     })
+
+def patient_appointment_table(request, patient_id):
+    patient = get_object_or_404(Patient, PatientID=patient_id)
+    appointments = Appointment.objects.filter(PatientID=patient_id).order_by('Date', 'StartTime')
+
+    # Flatten appointments with additional information
+    appointment_list = []
+    for appointment in appointments:
+        appointment_list.append({
+            'day': appointment.Date.strftime('%A'),  # Day name (e.g., Monday)
+            'date': appointment.Date,
+            'doctor': appointment.DoctorID.Name,
+            'start_time': appointment.StartTime,
+            'end_time': appointment.EndTime,
+        })
+
+    return render(request, 'patient_appointment_table.html', {
+        'patient': patient,
+        'appointment_list': appointment_list,
+    })
